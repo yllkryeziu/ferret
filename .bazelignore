@@ -1,0 +1,3 @@
+# Local-only directories that hold BUILD files Bazel must not load.
+.parked
+eval/.venv

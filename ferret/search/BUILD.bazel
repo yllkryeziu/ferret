@@ -1,0 +1,334 @@
+load("@rules_cc//cc:cc_library.bzl", "cc_library")
+load("@rules_cc//cc:cc_test.bzl", "cc_test")
+load("//bazel:copts.bzl", "FERRET_DEFAULT_COPTS", "FERRET_TEST_COPTS")
+
+package(default_visibility = ["//visibility:private"])
+
+cc_library(
+    name = "search_types",
+    hdrs = ["search_types.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        "//ferret/git:oid",
+        "//ferret/index:rank_key",
+        "//ferret/text:lexer",
+        "@abseil-cpp//absl/time",
+    ],
+)
+
+cc_library(
+    name = "kept_lines",
+    srcs = ["kept_lines.cc"],
+    hdrs = ["kept_lines.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        ":search_types",
+        "//ferret/text:line_counter",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/types:span",
+    ],
+)
+
+cc_library(
+    name = "verifier",
+    srcs = ["verifier.cc"],
+    hdrs = ["verifier.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        "//ferret/regex:compile",
+        "//ferret/text:line_counter",
+        "//ferret/text:literal_finder",
+        "@abseil-cpp//absl/functional:function_ref",
+        "@abseil-cpp//absl/strings",
+        "@re2",
+    ],
+)
+
+cc_test(
+    name = "verifier_test",
+    # The randomized reference test takes about 45 s under TSan.
+    size = "medium",
+    srcs = ["verifier_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":verifier",
+        "//ferret/regex:compile",
+        "//ferret/regex:regex_gen",
+        "//ferret/testing:test_seed",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+        "@re2",
+    ],
+)
+
+cc_library(
+    name = "ranking",
+    srcs = ["ranking.cc"],
+    hdrs = ["ranking.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        ":router",
+        ":search_types",
+        "//ferret/index:rank_key",
+        "//ferret/text:fold",
+        "//ferret/text:lexer",
+    ],
+)
+
+cc_test(
+    name = "ranking_test",
+    size = "small",
+    srcs = ["ranking_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":ranking",
+        ":search_types",
+        "//ferret/index:rank_key",
+        "//ferret/text:lexer",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_library(
+    name = "searcher",
+    srcs = ["searcher.cc"],
+    hdrs = ["searcher.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        ":kept_lines",
+        ":ranking",
+        ":search_types",
+        ":verifier",
+        "//ferret/base:stage_clock",
+        "//ferret/base:system_info",
+        "//ferret/base:thread_pool",
+        "@abseil-cpp//absl/crc:crc32c",
+        "@abseil-cpp//absl/functional:function_ref",
+        "//ferret/git:oid",
+        "//ferret/git:path_glob",
+        "//ferret/index:blob_registry",
+        "//ferret/index:memtable",
+        "//ferret/index:rank_key",
+        "//ferret/index:read_state",
+        "//ferret/index:segment",
+        "//ferret/index:version_set",
+        "//ferret/postings:ids",
+        "//ferret/postings:list_ops",
+        "//ferret/postings:posting_list",
+        "//ferret/query:evaluator",
+        "//ferret/query:trigram_query",
+        "//ferret/regex:compile",
+        "//ferret/text:language",
+        "//ferret/text:lexer",
+        "//ferret/text:line_counter",
+        "//ferret/text:literal_finder",
+        "//ferret/text:trigram",
+        "//ferret/text:trigram_extractor",
+        "//ferret/workspace:path_table",
+        "//ferret/workspace:view_state",
+        "@abseil-cpp//absl/base",
+        "@abseil-cpp//absl/base:no_destructor",
+        "@abseil-cpp//absl/container:flat_hash_map",
+        "@abseil-cpp//absl/container:flat_hash_set",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_macros",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/time",
+        "@abseil-cpp//absl/synchronization",
+        "@abseil-cpp//absl/types:span",
+        "@re2",
+    ],
+)
+
+cc_test(
+    name = "searcher_test",
+    size = "medium",
+    srcs = ["searcher_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    # The brute-force and many-corpus tests take most of a TSan run's
+    # timeout on one shard.
+    shard_count = 4,
+    deps = [
+        ":ranking",
+        ":search_types",
+        ":searcher",
+        "//ferret/base:env",
+        "//ferret/base:stage_clock",
+        "//ferret/git:blob_hash",
+        "//ferret/index:rank_key",
+        "//ferret/index:segment",
+        "//ferret/index:segment_writer",
+        "//ferret/regex:compile",
+        "//ferret/regex:regex_gen",
+        "//ferret/testing:brute_force_search",
+        "//ferret/testing:status_matchers",
+        "//ferret/testing:temp_dir",
+        "//ferret/testing:test_seed",
+        "//ferret/text:language",
+        "//ferret/text:lexer",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_matchers",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/time",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_test(
+    name = "search_view_test",
+    size = "medium",
+    srcs = ["search_view_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":searcher",
+        ":search_types",
+        "//ferret/base:env",
+        "//ferret/git:blob_hash",
+        "//ferret/git:oid",
+        "//ferret/git:path_glob",
+        "//ferret/index:blob_registry",
+        "//ferret/index:index",
+        "//ferret/index:memtable",
+        "//ferret/index:rank_key",
+        "//ferret/index:read_state",
+        "//ferret/index:segment",
+        "//ferret/testing:brute_force_search",
+        "//ferret/testing:status_matchers",
+        "//ferret/testing:temp_dir",
+        "//ferret/testing:test_seed",
+        "//ferret/text:language",
+        "//ferret/workspace:path_table",
+        "//ferret/workspace:view_state",
+        "@abseil-cpp//absl/container:btree",
+        "@abseil-cpp//absl/functional:function_ref",
+        "@abseil-cpp//absl/status:status_matchers",
+        "@abseil-cpp//absl/strings",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_test(
+    name = "search_parallel_test",
+    size = "medium",
+    srcs = ["search_parallel_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":searcher",
+        ":search_types",
+        "//ferret/base:env",
+        "//ferret/base:thread_pool",
+        "//ferret/git:blob_hash",
+        "//ferret/git:oid",
+        "//ferret/index:blob_registry",
+        "//ferret/index:index",
+        "//ferret/index:rank_key",
+        "//ferret/index:read_state",
+        "//ferret/index:segment",
+        "//ferret/index:segment_writer",
+        "//ferret/index:version_set",
+        "//ferret/postings:ids",
+        "//ferret/postings:list_ops",
+        "//ferret/regex:compile",
+        "//ferret/testing:status_matchers",
+        "//ferret/testing:temp_dir",
+        "//ferret/testing:test_seed",
+        "//ferret/text:language",
+        "//ferret/workspace:path_table",
+        "//ferret/workspace:view_state",
+        "@abseil-cpp//absl/functional:function_ref",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_matchers",
+        "@abseil-cpp//absl/strings",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_library(
+    name = "router",
+    srcs = ["router.cc"],
+    hdrs = ["router.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [":search_types", "//ferret/text:utf8", "@abseil-cpp//absl/strings"],
+)
+
+cc_test(
+    name = "router_test",
+    size = "small",
+    srcs = ["router_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [":router", ":search_types", "@googletest//:gtest", "@googletest//:gtest_main"],
+)
+
+cc_library(
+    name = "formatter",
+    srcs = ["formatter.cc"],
+    hdrs = ["formatter.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        ":search_types",
+        "//ferret/text:utf8",
+        "@abseil-cpp//absl/log:check",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+    ],
+)
+
+cc_library(
+    name = "structural_response",
+    srcs = ["structural_response.cc"],
+    hdrs = ["structural_response.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        ":formatter", ":search_types", "//ferret/text:utf8",
+        "//ferret/text:lexer",
+        "//ferret/workspace:workspace", "@abseil-cpp//absl/strings",
+    ],
+)
+
+cc_test(
+    name = "structural_response_test",
+    size = "small",
+    srcs = ["structural_response_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":structural_response", ":formatter", ":search_types",
+        "//ferret/workspace:workspace", "//ferret/symbols:symbol_kind",
+        "//ferret/text:lexer", "@abseil-cpp//absl/strings",
+        "@googletest//:gtest", "@googletest//:gtest_main",
+    ],
+)
+
+cc_test(
+    name = "formatter_test",
+    size = "small",
+    srcs = ["formatter_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":formatter",
+        ":search_types",
+        "//ferret/testing:test_seed",
+        "//ferret/text:utf8",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_matchers",
+        "@abseil-cpp//absl/strings",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)

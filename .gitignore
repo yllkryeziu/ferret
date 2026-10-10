@@ -1,0 +1,21 @@
+# Bazel
+/bazel-*
+user.bazelrc
+
+# Python (eval/, bench/)
+__pycache__/
+*.pyc
+.venv
+.pytest_cache/
+
+# Local artifacts
+/out/
+*.ferret-index/
+.DS_Store
+compile_commands.json
+/.tidy.*/
+.cache/
+.ruff_cache/
+
+# go build output of the Zoekt harness
+/bench/zoekt/zoekt

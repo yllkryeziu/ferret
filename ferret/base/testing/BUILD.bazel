@@ -1,0 +1,48 @@
+load("@rules_cc//cc:cc_library.bzl", "cc_library")
+load("@rules_cc//cc:cc_test.bzl", "cc_test")
+load("//bazel:copts.bzl", "FERRET_DEFAULT_COPTS", "FERRET_TEST_COPTS")
+
+package(default_visibility = ["//visibility:private"])
+
+cc_library(
+    name = "fault_injection_env",
+    testonly = True,
+    srcs = ["fault_injection_env.cc"],
+    hdrs = ["fault_injection_env.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        "//ferret/base:env",
+        "//ferret/base:mapped_file",
+        "@abseil-cpp//absl/base:core_headers",
+        "@abseil-cpp//absl/base:nullability",
+        "@abseil-cpp//absl/container:flat_hash_map",
+        "@abseil-cpp//absl/log",
+        "@abseil-cpp//absl/log:check",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_macros",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/synchronization",
+    ],
+)
+
+cc_test(
+    name = "fault_injection_env_test",
+    size = "medium",
+    srcs = ["fault_injection_env_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":fault_injection_env",
+        "//ferret/base:env",
+        "//ferret/testing:status_matchers",
+        "//ferret/testing:temp_dir",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_macros",
+        "@abseil-cpp//absl/status:status_matchers",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)

@@ -1,0 +1,24 @@
+load("@rules_cc//cc:cc_binary.bzl", "cc_binary")
+load("//bazel:copts.bzl", "FERRET_DEFAULT_COPTS")
+
+cc_binary(
+    name = "search_agents",
+    srcs = ["search_agents.cc"],
+    copts = FERRET_DEFAULT_COPTS,
+    deps = [
+        "//bench/ferret:result_set",
+        "//ferret/base:env",
+        "//ferret/engine:engine",
+        "//ferret/engine:ripgrep_backend",
+        "//ferret/search:search_types",
+        "//ferret/workspace",
+        "@abseil-cpp//absl/flags:flag",
+        "@abseil-cpp//absl/flags:parse",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/synchronization",
+        "@abseil-cpp//absl/time",
+        "@nlohmann_json//:json",
+    ],
+)

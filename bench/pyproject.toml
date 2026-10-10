@@ -1,0 +1,9 @@
+# Copyright 2026 The Ferret Authors.
+# SPDX-License-Identifier: Apache-2.0
+
+[tool.ruff]
+line-length = 88
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "RUF"]

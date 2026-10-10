@@ -1,0 +1,26 @@
+load("@rules_cc//cc:cc_library.bzl", "cc_library")
+load("//bazel:copts.bzl", "FERRET_DEFAULT_COPTS")
+
+# Test-only MCP tools.
+package(default_visibility = ["//visibility:private"])
+
+cc_library(
+    name = "fake_mcp_tools",
+    testonly = True,
+    srcs = ["fake_mcp_tools.cc"],
+    hdrs = ["fake_mcp_tools.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        "//ferret/mcp:mcp_tool",
+        "//ferret/rpc:json_codec",
+        "@abseil-cpp//absl/base:core_headers",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_macros",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/synchronization",
+        "@abseil-cpp//absl/time",
+        "@nlohmann_json//:json",
+    ],
+)

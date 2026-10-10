@@ -1,0 +1,47 @@
+# C++ language level and host parity.
+common --enable_platform_specific_config
+build --cxxopt=-std=c++20 --host_cxxopt=-std=c++20
+build --conlyopt=-std=c11 --host_conlyopt=-std=c11
+# Ferret targets macOS 13+ (posix_spawn chdir, F_BARRIERFSYNC, FSEvents
+# file-level events).
+build:macos --macos_minimum_os=13.0 --host_macos_minimum_os=13.0
+build --incompatible_strict_action_env
+# Every #include must be backed by a direct dep (Clang modules).
+build --features=layering_check
+build --disk_cache=~/.cache/ferret-bazel-disk
+# Bazel trims the cache to this size, oldest entries first, when its server is
+# idle; unbounded, it grew past 60 GB.
+build --experimental_disk_cache_gc_max_size=10G
+
+# Keep frame pointers so `sample`, Instruments, and perf give usable stacks.
+build --copt=-fno-omit-frame-pointer
+
+test --test_output=errors
+test --test_summary=terse
+
+# Release build used for every benchmark number in docs/RESULTS.md.
+build:opt --compilation_mode=opt
+build:opt --copt=-O3
+
+# Sanitizer configurations: `bazel test --config=asan //...`.
+build:asan --copt=-fsanitize=address --linkopt=-fsanitize=address
+build:asan --copt=-O1 --strip=never
+# apple_support passes -D_FORTIFY_SOURCE=1, which clang predefines as 0 under
+# ASan; the redefinition would otherwise fail every -Werror target.
+build:asan --copt=-Wno-macro-redefined
+build:tsan --copt=-fsanitize=thread --linkopt=-fsanitize=thread
+build:tsan --copt=-O1 --strip=never
+build:ubsan --copt=-fsanitize=undefined --linkopt=-fsanitize=undefined
+build:ubsan --copt=-fno-sanitize-recover=all --strip=never
+
+# Source-based coverage for tools/coverage.sh, which supplies llvm-cov and
+# llvm-profdata from xcrun: Apple clang emits LLVM coverage maps, not gcov
+# data. Benchmarks and tools are not built.
+coverage:coverage --experimental_use_llvm_covmap
+coverage:coverage --experimental_generate_llvm_lcov
+coverage:coverage --combined_report=lcov
+coverage:coverage --instrumentation_filter=^//ferret[/:]
+coverage:coverage --build_tests_only
+
+# Per-user overrides (not checked in).
+try-import %workspace%/user.bazelrc

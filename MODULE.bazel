@@ -1,0 +1,56 @@
+"""Ferret: a fresh, shared, agent-facing code search engine."""
+
+module(
+    name = "ferret",
+    version = "0.1.0",
+    compatibility_level = 1,
+)
+
+bazel_dep(name = "abseil-cpp", version = "20260817.0")
+bazel_dep(name = "boringssl", version = "0.20260813.0")
+bazel_dep(name = "nlohmann_json", version = "3.12.0.bcr.2")
+bazel_dep(name = "platforms", version = "1.1.0")
+bazel_dep(name = "re2", version = "2025-11-05.bcr.1")
+bazel_dep(name = "rules_cc", version = "0.2.25")
+
+# The trigram planner analyzes RE2's own parse tree (re2::Regexp) so that the
+# planner and the matcher can never disagree about syntax. RE2 keeps regexp.h
+# private; this patch only moves three headers from `srcs` to `hdrs`.
+single_version_override(
+    module_name = "re2",
+    patch_strip = 1,
+    patches = ["//third_party/re2:0001-expose-regexp-headers.patch"],
+    version = "2025-11-05.bcr.1",
+)
+
+bazel_dep(name = "google_benchmark", version = "1.9.5", dev_dependency = True)
+bazel_dep(name = "googletest", version = "1.18.0.bcr.1", dev_dependency = True)
+
+# tree-sitter and its grammars are not in the Bazel Central Registry; they are
+# fetched as pinned source archives. See third_party/tree_sitter/extensions.bzl.
+tree_sitter = use_extension("//third_party/tree_sitter:extensions.bzl", "tree_sitter")
+use_repo(
+    tree_sitter,
+    "tree_sitter",
+    "tree_sitter_c",
+    "tree_sitter_cpp",
+    "tree_sitter_python",
+)
+
+# Official ripgrep 15.2.0 binaries. The hashes are of the release tarballs,
+# verified against independently downloaded copies with SHA-256.
+http_archive = use_repo_rule("@bazel_tools//tools/build_defs/repo:http.bzl", "http_archive")
+http_archive(
+    name = "ripgrep_macos",
+    urls = ["https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-aarch64-apple-darwin.tar.gz"],
+    sha256 = "3750b2e93f37e0c692657da574d7019a101c0084da05a790c83fd335bad973e4",
+    strip_prefix = "ripgrep-15.2.0-aarch64-apple-darwin",
+    build_file_content = 'exports_files(["rg"])',
+)
+http_archive(
+    name = "ripgrep_linux",
+    urls = ["https://github.com/BurntSushi/ripgrep/releases/download/15.2.0/ripgrep-15.2.0-x86_64-unknown-linux-musl.tar.gz"],
+    sha256 = "33e15bcf1624b25cdd2a55813a47a2f95dbe126268203e76aa6a585d1e7b149c",
+    strip_prefix = "ripgrep-15.2.0-x86_64-unknown-linux-musl",
+    build_file_content = 'exports_files(["rg"])',
+)

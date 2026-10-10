@@ -1,0 +1,32 @@
+{"send_raw": "this is not json"}
+{"expect": {"jsonrpc": "2.0", "id": null, "error": {"code": -32700, "message": "PLACEHOLDER"}}}
+{"send_raw": "{\"jsonrpc\": \"2.0\", \"id\": 1, \"method\": \"ping\""}
+{"expect": {"jsonrpc": "2.0", "id": null, "error": {"code": -32700, "message": "PLACEHOLDER"}}}
+{"send_raw": ""}
+{"expect": {"jsonrpc": "2.0", "id": null, "error": {"code": -32700, "message": "PLACEHOLDER"}}}
+{"send_raw": "{\"jsonrpc\": \"2.0\", \"id\": 2, \"method\": \"ping\", \"params\": {\"a\": [[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[[]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]]}}"}
+{"expect": {"jsonrpc": "2.0", "id": null, "error": {"code": -32700, "message": "Parse error: json nesting exceeds the limit of 64"}}}
+{"send": [{"jsonrpc": "2.0", "id": 3, "method": "ping"}, {"jsonrpc": "2.0", "id": 4, "method": "ping"}]}
+{"expect": {"jsonrpc": "2.0", "id": null, "error": {"code": -32600, "message": "Invalid request: batch requests are not supported"}}}
+{"send": {"jsonrpc": "1.0", "id": 5, "method": "ping"}}
+{"expect": {"jsonrpc": "2.0", "id": 5, "error": {"code": -32600, "message": "Invalid request: /jsonrpc: expected \"2.0\""}}}
+{"send": {"id": 6, "method": "ping"}}
+{"expect": {"jsonrpc": "2.0", "id": 6, "error": {"code": -32600, "message": "Invalid request: /jsonrpc: missing required member"}}}
+{"send": "ping"}
+{"expect": {"jsonrpc": "2.0", "id": null, "error": {"code": -32600, "message": "Invalid request: (root): expected object, got string"}}}
+{"send": {"jsonrpc": "2.0", "id": 7}}
+{"expect": {"jsonrpc": "2.0", "id": 7, "error": {"code": -32600, "message": "Invalid request: message has none of method, result, and error"}}}
+{"send": {"jsonrpc": "2.0", "id": null, "method": "ping"}}
+{"expect": {"jsonrpc": "2.0", "id": null, "error": {"code": -32600, "message": "Invalid request: /id: expected integer or string, got null"}}}
+{"send": {"jsonrpc": "2.0", "id": 1.5, "method": "ping"}}
+{"expect": {"jsonrpc": "2.0", "id": null, "error": {"code": -32600, "message": "Invalid request: /id: expected integer or string, got number"}}}
+{"send": {"jsonrpc": "2.0", "id": 8, "method": 8}}
+{"expect": {"jsonrpc": "2.0", "id": 8, "error": {"code": -32600, "message": "Invalid request: /method: expected string, got integer"}}}
+{"send": {"jsonrpc": "2.0", "id": 9, "method": "ping", "params": "x"}}
+{"expect": {"jsonrpc": "2.0", "id": 9, "error": {"code": -32600, "message": "Invalid request: /params: expected object or array, got string"}}}
+{"send": {"jsonrpc": "2.0", "id": 10, "method": "tools/list", "params": [1, 2]}}
+{"expect": {"jsonrpc": "2.0", "id": 10, "error": {"code": -32602, "message": "Invalid params: /params: expected object, got array"}}}
+{"send": {"jsonrpc": "2.0", "method": "notifications/no_such_thing"}}
+{"send": {"jsonrpc": "2.0", "id": 11, "result": {}}}
+{"send": {"jsonrpc": "2.0", "id": 12, "method": "ping"}}
+{"expect": {"jsonrpc": "2.0", "id": 12, "result": {}}}

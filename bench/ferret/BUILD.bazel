@@ -1,0 +1,244 @@
+load("@rules_cc//cc:cc_binary.bzl", "cc_binary")
+load("@rules_cc//cc:cc_library.bzl", "cc_library")
+load("@rules_cc//cc:cc_test.bzl", "cc_test")
+load("//bazel:copts.bzl", "FERRET_DEFAULT_COPTS", "FERRET_TEST_COPTS")
+
+package(default_visibility = ["//visibility:private"])
+
+cc_library(
+    name = "result_set",
+    srcs = ["result_set.cc"],
+    hdrs = ["result_set.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//bench:__pkg__"],
+    deps = [
+        "//ferret/search:search_types",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/types:span",
+        "@boringssl//:crypto",
+    ],
+)
+
+cc_library(
+    name = "query_set",
+    srcs = ["query_set.cc"],
+    hdrs = ["query_set.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret/workspace:__pkg__"],
+    deps = [
+        "//ferret/regex:compile",
+        "//ferret/rpc:json_codec",
+        "@abseil-cpp//absl/container:flat_hash_map",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_macros",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@nlohmann_json//:json",
+    ],
+)
+
+cc_library(
+    name = "file_list",
+    srcs = ["file_list.cc"],
+    hdrs = ["file_list.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    deps = [
+        "//ferret/base:env",
+        "//ferret/git:path_glob",
+        "//ferret/git:worktree_files",
+        "//ferret/text:eligibility",
+        "//ferret/text:trigram_extractor",
+        "@abseil-cpp//absl/container:flat_hash_map",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_macros",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+    ],
+)
+
+cc_library(
+    name = "search_bench",
+    srcs = ["search_bench.cc"],
+    hdrs = ["search_bench.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    deps = [
+        "//ferret/base:ablation",
+        "//ferret/base:thread_pool",
+        "//ferret/index:blob_registry",
+        "//ferret/index:segment",
+        "//ferret/index:read_state",
+        "//ferret/postings:ids",
+        "//ferret/regex:compile",
+        "//ferret/rpc:json_codec",
+        "//ferret/rpc:search_codec",
+        "//ferret/search:ranking",
+        "//ferret/workspace",
+        "//ferret/search:search_types",
+        "//ferret/search:searcher",
+        "//ferret/text:literal_finder",
+        "//ferret/workspace:path_table",
+        "//ferret/workspace:view_state",
+        ":query_set",
+        ":result_set",
+        "@abseil-cpp//absl/container:flat_hash_set",
+        "@abseil-cpp//absl/functional:function_ref",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_macros",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/time",
+        "@abseil-cpp//absl/types:span",
+        "@nlohmann_json//:json",
+    ],
+)
+
+cc_library(
+    name = "rpc_bench",
+    srcs = ["rpc_bench.cc"],
+    hdrs = ["rpc_bench.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    deps = [
+        ":query_set",
+        ":result_set",
+        ":search_bench",
+        "//ferret/engine",
+        "//ferret/search:search_types",
+        "//ferret/workspace",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_macros",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/types:span",
+    ],
+)
+
+cc_binary(
+    name = "ferret_bench",
+    srcs = ["main.cc"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//visibility:public"],
+    deps = [
+        "//ferret/base:env",
+        "//ferret/base:thread_pool",
+        "//ferret/engine",
+        "//ferret/rpc:rpc_client",
+        "//ferret/git:blob_hash",
+        "//ferret/index:blob_registry",
+        "//ferret/index:bulk_build",
+        "//ferret/postings:ids",
+        "//ferret/index:segment",
+        "//ferret/index:read_state",
+        "//ferret/index:segment_writer",
+        "//ferret/index:version_set",
+        "//ferret/workspace:path_table",
+        "//ferret/workspace:view_state",
+        "//ferret/rpc:json_codec",
+        "//ferret/search:searcher",
+        "//ferret/text:eligibility",
+        ":file_list",
+        ":query_set",
+        ":rpc_bench",
+        ":search_bench",
+        "@abseil-cpp//absl/flags:commandlineflag",
+        "@abseil-cpp//absl/flags:flag",
+        "@abseil-cpp//absl/flags:parse",
+        "@abseil-cpp//absl/flags:reflection",
+        "@abseil-cpp//absl/flags:usage",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_macros",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/time",
+        "@nlohmann_json//:json",
+    ],
+)
+
+cc_test(
+    name = "result_set_test",
+    srcs = ["result_set_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        "//ferret/search:search_types",
+        ":result_set",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_test(
+    name = "query_set_test",
+    srcs = ["query_set_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":query_set",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_matchers",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_test(
+    name = "file_list_test",
+    srcs = ["file_list_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        "//ferret/base:env",
+        "//ferret/git/testing:git_repo_builder",
+        "//ferret/testing:status_matchers",
+        "//ferret/testing:temp_dir",
+        "//ferret/text:eligibility",
+        ":file_list",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_matchers",
+        "@abseil-cpp//absl/strings",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_test(
+    name = "search_bench_test",
+    srcs = ["search_bench_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        "//ferret/base:ablation",
+        "//ferret/base:env",
+        "//ferret/index:bulk_build",
+        "//ferret/index:segment",
+        "//ferret/search:search_types",
+        "//ferret/testing:status_matchers",
+        "//ferret/testing:temp_dir",
+        ":query_set",
+        ":result_set",
+        "@nlohmann_json//:json",
+        ":search_bench",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_matchers",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/time",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_test(
+    name = "ferret_bench_test",
+    srcs = ["ferret_bench_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    data = [":ferret_bench"],
+    deps = [
+        "//ferret/base:env",
+        "//ferret/base:subprocess",
+        "//ferret/git/testing:git_repo_builder",
+        "//ferret/rpc:json_codec",
+        "//ferret/testing:status_matchers",
+        "//ferret/testing:temp_dir",
+        "@abseil-cpp//absl/status:status_matchers",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+        "@nlohmann_json//:json",
+    ],
+)

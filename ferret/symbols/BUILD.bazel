@@ -1,0 +1,202 @@
+load("@rules_cc//cc:cc_binary.bzl", "cc_binary")
+load("@rules_cc//cc:cc_library.bzl", "cc_library")
+load("@rules_cc//cc:cc_test.bzl", "cc_test")
+load("//bazel:copts.bzl", "FERRET_DEFAULT_COPTS", "FERRET_STRICT_SIGN_COPTS", "FERRET_TEST_COPTS")
+
+package(default_visibility = ["//visibility:private"])
+
+cc_library(
+    name = "symbol_kind",
+    srcs = ["symbol_kind.cc"],
+    hdrs = ["symbol_kind.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = ["@abseil-cpp//absl/strings"],
+)
+
+cc_test(
+    name = "symbol_kind_test",
+    size = "small",
+    srcs = ["symbol_kind_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":symbol_kind",
+        "@abseil-cpp//absl/strings",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+# Wraps each query in a C++ raw string literal, so the extractor never reads
+# files at run time.
+genrule(
+    name = "embedded_queries_h",
+    srcs = [
+        "queries/c.scm",
+        "queries/cpp.scm",
+        "queries/python.scm",
+    ],
+    outs = ["internal/embedded_queries.h"],
+    cmd = """
+set -eu
+embed() {
+  if grep -qF ')scm"' "$$2"; then
+    echo "$$2 contains the raw string delimiter" >&2
+    exit 1
+  fi
+  printf '\\ninline constexpr absl::string_view %s = R"scm(' "$$1"
+  cat "$$2"
+  printf ')scm";\\n'
+}
+{
+  printf '%s\\n' \\
+    '// Copyright 2026 The Ferret Authors.' \\
+    '// SPDX-License-Identifier: Apache-2.0' \\
+    '//' \\
+    '// Generated from ferret/symbols/queries/*.scm by' \\
+    '// //ferret/symbols:embedded_queries_h. Do not edit.' \\
+    '' \\
+    '#ifndef FERRET_SYMBOLS_INTERNAL_EMBEDDED_QUERIES_H_' \\
+    '#define FERRET_SYMBOLS_INTERNAL_EMBEDDED_QUERIES_H_' \\
+    '' \\
+    '#include "absl/strings/string_view.h"' \\
+    '' \\
+    'namespace ferret::symbols_internal {'
+  embed kCQuery $(location queries/c.scm)
+  embed kCppQuery $(location queries/cpp.scm)
+  embed kPythonQuery $(location queries/python.scm)
+  printf '%s\\n' \\
+    '' \\
+    '}  // namespace ferret::symbols_internal' \\
+    '' \\
+    '#endif  // FERRET_SYMBOLS_INTERNAL_EMBEDDED_QUERIES_H_'
+} > $@
+""",
+)
+
+cc_library(
+    name = "embedded_queries",
+    hdrs = ["internal/embedded_queries.h"],
+    deps = ["@abseil-cpp//absl/strings"],
+)
+
+cc_library(
+    name = "export_macros",
+    srcs = ["internal/export_macros.cc"],
+    hdrs = ["internal/export_macros.h"],
+    copts = FERRET_DEFAULT_COPTS + FERRET_STRICT_SIGN_COPTS,
+    deps = [
+        "@abseil-cpp//absl/base:core_headers",
+        "@abseil-cpp//absl/strings",
+    ],
+)
+
+cc_test(
+    name = "export_macros_test",
+    size = "small",
+    srcs = ["internal/export_macros_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":export_macros",
+        "@abseil-cpp//absl/strings",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_library(
+    name = "symbol_extractor",
+    srcs = ["symbol_extractor.cc"],
+    hdrs = ["symbol_extractor.h"],
+    copts = FERRET_DEFAULT_COPTS + FERRET_STRICT_SIGN_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        ":embedded_queries",
+        ":export_macros",
+        ":symbol_kind",
+        "//ferret/text:language",
+        "@abseil-cpp//absl/container:inlined_vector",
+        "@abseil-cpp//absl/log",
+        "@abseil-cpp//absl/log:check",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/types:span",
+        "@tree_sitter//:tree_sitter",
+        "@tree_sitter_c//:grammar",
+        "@tree_sitter_cpp//:grammar",
+        "@tree_sitter_python//:grammar",
+    ],
+)
+
+cc_test(
+    name = "symbol_extractor_test",
+    size = "small",
+    srcs = ["symbol_extractor_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":symbol_extractor",
+        ":symbol_kind",
+        "//ferret/symbols/testing:sample_sources",
+        "//ferret/testing:status_matchers",
+        "//ferret/testing:test_seed",
+        "//ferret/text:language",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_matchers",
+        "@abseil-cpp//absl/strings",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_test(
+    name = "symbol_queries_test",
+    size = "small",
+    srcs = ["symbol_queries_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":symbol_extractor",
+        ":symbol_kind",
+        "//ferret/symbols/testing:sample_sources",
+        "//ferret/testing:status_matchers",
+        "//ferret/text:language",
+        "@abseil-cpp//absl/strings",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_binary(
+    name = "symbol_extractor_benchmark",
+    testonly = True,
+    srcs = ["symbol_extractor_benchmark.cc"],
+    copts = FERRET_DEFAULT_COPTS,
+    tags = ["benchmark"],
+    deps = [
+        ":symbol_extractor",
+        "//ferret/symbols/testing:sample_sources",
+        "//ferret/text:language",
+        "@abseil-cpp//absl/log:check",
+        "@abseil-cpp//absl/strings",
+        "@google_benchmark//:benchmark_main",
+    ],
+)
+
+# Manual read-only corpus smoke test; invoke with a Linux checkout root.
+cc_binary(
+    name = "linux_corpus",
+    srcs = ["linux_corpus.cc"],
+    copts = FERRET_DEFAULT_COPTS,
+    tags = ["manual"],
+    deps = [
+        ":symbol_extractor",
+        ":symbol_kind",
+        "//ferret/base:env",
+        "//ferret/text:language",
+        "@abseil-cpp//absl/container:btree",
+        "@abseil-cpp//absl/log:initialize",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/time",
+    ],
+)

@@ -1,0 +1,18 @@
+load("@rules_cc//cc:cc_library.bzl", "cc_library")
+load("//bazel:copts.bzl", "FERRET_DEFAULT_COPTS")
+
+# Test-only helpers for //ferret/postings.
+package(default_visibility = ["//visibility:private"])
+
+cc_library(
+    name = "random_posting_lists",
+    testonly = True,
+    srcs = ["random_posting_lists.cc"],
+    hdrs = ["random_posting_lists.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret/postings:__pkg__"],
+    deps = [
+        "//ferret/postings:ids",
+        "@abseil-cpp//absl/log:check",
+    ],
+)

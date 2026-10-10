@@ -1,0 +1,200 @@
+{"id": "chromium-0008", "class": "literal", "kind": "literal", "pattern": "if (current == ancestor", "case_sensitive": false, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0012", "class": "identifier", "kind": "literal", "pattern": "third", "case_sensitive": true, "tercile": 3, "df": 4341, "template": null}
+{"id": "chromium-0020", "class": "literal", "kind": "literal", "pattern": "owns Covered", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0024", "class": "identifier", "kind": "literal", "pattern": "CertNetFetcherURLRequestTestWithHangingReadHandler", "case_sensitive": false, "tercile": 1, "df": 1, "template": null}
+{"id": "chromium-0026", "class": "regex", "kind": "regex", "pattern": "^[ \\t]*collectProfiles\\b", "case_sensitive": false, "tercile": null, "df": null, "template": "line_start"}
+{"id": "chromium-0035", "class": "literal", "kind": "literal", "pattern": "id=\"7384004438856720753\">palasyo</translation", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0038", "class": "literal", "kind": "literal", "pattern": "2470654816840674524\">Was", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0040", "class": "literal", "kind": "literal", "pattern": "47:fe:bf", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0048", "class": "literal", "kind": "literal", "pattern": "natural_size=*/kResolution, kNotPremapped", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0050", "class": "identifier", "kind": "literal", "pattern": "GetMixinDimensions", "case_sensitive": true, "tercile": 1, "df": 3, "template": null}
+{"id": "chromium-0053", "class": "literal", "kind": "literal", "pattern": "var windowsToClose", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0054", "class": "regex", "kind": "regex", "pattern": "\\bCalculateNumOfActiveStudents\\b", "case_sensitive": false, "tercile": null, "df": null, "template": "word"}
+{"id": "chromium-0057", "class": "regex", "kind": "regex", "pattern": "translation.*sitio", "case_sensitive": true, "tercile": null, "df": null, "template": "co_occurrence"}
+{"id": "chromium-0060", "class": "identifier", "kind": "literal", "pattern": "mergedProperties", "case_sensitive": false, "tercile": 1, "df": 5, "template": null}
+{"id": "chromium-0074", "class": "identifier", "kind": "literal", "pattern": "startDetection", "case_sensitive": true, "tercile": 1, "df": 2, "template": null}
+{"id": "chromium-0078", "class": "literal", "kind": "literal", "pattern": "namespace capi", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0083", "class": "identifier", "kind": "literal", "pattern": "ccRecipients", "case_sensitive": true, "tercile": 1, "df": 1, "template": null}
+{"id": "chromium-0090", "class": "identifier", "kind": "literal", "pattern": "resources", "case_sensitive": true, "tercile": 3, "df": 72442, "template": null}
+{"id": "chromium-0096", "class": "identifier", "kind": "literal", "pattern": "checked", "case_sensitive": true, "tercile": 3, "df": 5728, "template": null}
+{"id": "chromium-0100", "class": "identifier", "kind": "literal", "pattern": "ExtractBalancerAddresses", "case_sensitive": true, "tercile": 1, "df": 1, "template": null}
+{"id": "chromium-0101", "class": "identifier", "kind": "literal", "pattern": "lightgreen", "case_sensitive": true, "tercile": 2, "df": 1110, "template": null}
+{"id": "chromium-0108", "class": "literal", "kind": "literal", "pattern": "class for recursive", "case_sensitive": false, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0110", "class": "identifier", "kind": "literal", "pattern": "modules", "case_sensitive": true, "tercile": 3, "df": 6086, "template": null}
+{"id": "chromium-0114", "class": "regex", "kind": "regex", "pattern": "\\bHasMoreInput\\b", "case_sensitive": true, "tercile": null, "df": null, "template": "word"}
+{"id": "chromium-0122", "class": "identifier", "kind": "literal", "pattern": "ApplicationStatus", "case_sensitive": true, "tercile": 2, "df": 233, "template": null}
+{"id": "chromium-0126", "class": "identifier", "kind": "literal", "pattern": "meta_dbus_x11_proxy_g_properties_changed", "case_sensitive": true, "tercile": 1, "df": 1, "template": null}
+{"id": "chromium-0132", "class": "regex", "kind": "regex", "pattern": "\\bnoContentImgSelector\\b", "case_sensitive": true, "tercile": null, "df": null, "template": "word"}
+{"id": "chromium-0135", "class": "identifier", "kind": "literal", "pattern": "Charset", "case_sensitive": true, "tercile": 2, "df": 71, "template": null}
+{"id": "chromium-0144", "class": "regex", "kind": "regex", "pattern": "setUngroupBarStatusHandler[ \\t]*\\(", "case_sensitive": false, "tercile": null, "df": null, "template": "call"}
+{"id": "chromium-0145", "class": "identifier", "kind": "literal", "pattern": "GIO_DEPRECATED_ENUMERATOR_IN_2_32", "case_sensitive": true, "tercile": 1, "df": 1, "template": null}
+{"id": "chromium-0147", "class": "identifier", "kind": "literal", "pattern": "selectable", "case_sensitive": true, "tercile": 2, "df": 641, "template": null}
+{"id": "chromium-0148", "class": "regex", "kind": "regex", "pattern": "test\\w*Removal", "case_sensitive": false, "tercile": null, "df": null, "template": "prefix_suffix"}
+{"id": "chromium-0149", "class": "identifier", "kind": "literal", "pattern": "GetExpectedSnappedBounds", "case_sensitive": true, "tercile": 1, "df": 2, "template": null}
+{"id": "chromium-0155", "class": "regex", "kind": "regex", "pattern": "Mock_glGetTransformFeedbackVarying[ \\t]*\\(", "case_sensitive": true, "tercile": null, "df": null, "template": "call"}
+{"id": "chromium-0156", "class": "literal", "kind": "literal", "pattern": "std::unique_ptr<TestSelectionDeviceManager", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0159", "class": "identifier", "kind": "literal", "pattern": "LayerTreeHostImplPrepareToDrawTest", "case_sensitive": false, "tercile": 1, "df": 1, "template": null}
+{"id": "chromium-0169", "class": "identifier", "kind": "literal", "pattern": "unistd", "case_sensitive": true, "tercile": 2, "df": 880, "template": null}
+{"id": "chromium-0170", "class": "literal", "kind": "literal", "pattern": "const auto primary_id = src_cs", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0177", "class": "identifier", "kind": "literal", "pattern": "p_top_list", "case_sensitive": true, "tercile": 1, "df": 1, "template": null}
+{"id": "chromium-0180", "class": "identifier", "kind": "literal", "pattern": "WeakPtrFactory", "case_sensitive": false, "tercile": 3, "df": 8857, "template": null}
+{"id": "chromium-0181", "class": "identifier", "kind": "literal", "pattern": "FcNameGetConstant", "case_sensitive": true, "tercile": 1, "df": 3, "template": null}
+{"id": "chromium-0185", "class": "identifier", "kind": "literal", "pattern": "clear", "case_sensitive": true, "tercile": 3, "df": 15122, "template": null}
+{"id": "chromium-0187", "class": "identifier", "kind": "literal", "pattern": "still", "case_sensitive": false, "tercile": 3, "df": 18162, "template": null}
+{"id": "chromium-0198", "class": "regex", "kind": "regex", "pattern": "optional.*SharedQuadStateLayerId", "case_sensitive": true, "tercile": null, "df": null, "template": "co_occurrence"}
+{"id": "chromium-0200", "class": "identifier", "kind": "literal", "pattern": "RecordHistogram", "case_sensitive": true, "tercile": 2, "df": 677, "template": null}
+{"id": "chromium-0201", "class": "identifier", "kind": "literal", "pattern": "getRoutinedPassedStatusItem", "case_sensitive": true, "tercile": 1, "df": 1, "template": null}
+{"id": "chromium-0207", "class": "literal", "kind": "literal", "pattern": "base::DictValue", "case_sensitive": false, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0208", "class": "identifier", "kind": "literal", "pattern": "officeTitle", "case_sensitive": true, "tercile": 1, "df": 1, "template": null}
+{"id": "chromium-0209", "class": "identifier", "kind": "literal", "pattern": "check", "case_sensitive": true, "tercile": 3, "df": 28534, "template": null}
+{"id": "chromium-0217", "class": "literal", "kind": "literal", "pattern": "actual_play_consent.play_terms_of_service_hash", "case_sensitive": false, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0220", "class": "literal", "kind": "literal", "pattern": "a representation in GPU", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0232", "class": "identifier", "kind": "literal", "pattern": "stop", "case_sensitive": false, "tercile": 3, "df": 7280, "template": null}
+{"id": "chromium-0234", "class": "regex", "kind": "regex", "pattern": "meta_dbus_display_config_proxy_set_property_cb[ \\t]*\\(", "case_sensitive": true, "tercile": null, "df": null, "template": "call"}
+{"id": "chromium-0240", "class": "regex", "kind": "regex", "pattern": "(?:ufmt_getDate|XKB_KEY_3270_PA3)", "case_sensitive": false, "tercile": null, "df": null, "template": "alternation"}
+{"id": "chromium-0243", "class": "identifier", "kind": "literal", "pattern": "expected_version", "case_sensitive": true, "tercile": 2, "df": 86, "template": null}
+{"id": "chromium-0244", "class": "identifier", "kind": "literal", "pattern": "depending", "case_sensitive": true, "tercile": 3, "df": 4131, "template": null}
+{"id": "chromium-0247", "class": "regex", "kind": "regex", "pattern": "\\bonBookmarkItemsRemoved\\b", "case_sensitive": true, "tercile": null, "df": null, "template": "word"}
+{"id": "chromium-0255", "class": "identifier", "kind": "literal", "pattern": "InvalidValue", "case_sensitive": false, "tercile": 2, "df": 197, "template": null}
+{"id": "chromium-0267", "class": "literal", "kind": "literal", "pattern": "template-columns': 'repeat(auto", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0268", "class": "identifier", "kind": "literal", "pattern": "TabModelUtils", "case_sensitive": true, "tercile": 2, "df": 124, "template": null}
+{"id": "chromium-0270", "class": "regex", "kind": "regex", "pattern": "\\breceives\\b", "case_sensitive": true, "tercile": null, "df": null, "template": "word"}
+{"id": "chromium-0272", "class": "identifier", "kind": "literal", "pattern": "OmniboxPopupSelection", "case_sensitive": true, "tercile": 2, "df": 67, "template": null}
+{"id": "chromium-0277", "class": "regex", "kind": "regex", "pattern": "(?:GetTraceConfig|origEventType)", "case_sensitive": false, "tercile": null, "df": null, "template": "alternation"}
+{"id": "chromium-0281", "class": "regex", "kind": "regex", "pattern": "(?:iftx_state|ConvertToOOBEConfigSource)", "case_sensitive": true, "tercile": null, "df": null, "template": "alternation"}
+{"id": "chromium-0285", "class": "identifier", "kind": "literal", "pattern": "GetDuration", "case_sensitive": true, "tercile": 2, "df": 115, "template": null}
+{"id": "chromium-0290", "class": "literal", "kind": "literal", "pattern": "document.body.appendChild", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0300", "class": "identifier", "kind": "literal", "pattern": "bottom", "case_sensitive": true, "tercile": 3, "df": 16254, "template": null}
+{"id": "chromium-0301", "class": "regex", "kind": "regex", "pattern": "^[ \\t]*SafeBrowsingBlockingPageHashRealTimeCheckTest\\b", "case_sensitive": true, "tercile": null, "df": null, "template": "line_start"}
+{"id": "chromium-0307", "class": "identifier", "kind": "literal", "pattern": "transparent", "case_sensitive": false, "tercile": 3, "df": 4291, "template": null}
+{"id": "chromium-0310", "class": "identifier", "kind": "literal", "pattern": "fclose", "case_sensitive": true, "tercile": 2, "df": 143, "template": null}
+{"id": "chromium-0312", "class": "identifier", "kind": "literal", "pattern": "MAYBE_LazyDispatchDoesNotWakeIncognitoSplitModeWorker", "case_sensitive": true, "tercile": 1, "df": 1, "template": null}
+{"id": "chromium-0324", "class": "identifier", "kind": "literal", "pattern": "FC_EMBOLDEN", "case_sensitive": false, "tercile": 1, "df": 3, "template": null}
+{"id": "chromium-0332", "class": "literal", "kind": "literal", "pattern": "result = (lhs >= rhs", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0337", "class": "literal", "kind": "literal", "pattern": "entry->metadata->size = offset", "case_sensitive": false, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0338", "class": "literal", "kind": "literal", "pattern": "Assert.assertEquals", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0339", "class": "identifier", "kind": "literal", "pattern": "symbols", "case_sensitive": true, "tercile": 2, "df": 2528, "template": null}
+{"id": "chromium-0344", "class": "identifier", "kind": "literal", "pattern": "series", "case_sensitive": true, "tercile": 3, "df": 5049, "template": null}
+{"id": "chromium-0346", "class": "identifier", "kind": "literal", "pattern": "ranges", "case_sensitive": true, "tercile": 3, "df": 6257, "template": null}
+{"id": "chromium-0357", "class": "regex", "kind": "regex", "pattern": "Init\\w*Cell", "case_sensitive": true, "tercile": null, "df": null, "template": "prefix_suffix"}
+{"id": "chromium-0363", "class": "regex", "kind": "regex", "pattern": "Get\\w*Value", "case_sensitive": true, "tercile": null, "df": null, "template": "prefix_suffix"}
+{"id": "chromium-0367", "class": "identifier", "kind": "literal", "pattern": "where", "case_sensitive": false, "tercile": 3, "df": 20877, "template": null}
+{"id": "chromium-0379", "class": "regex", "kind": "regex", "pattern": "branches.*sharing", "case_sensitive": false, "tercile": null, "df": null, "template": "co_occurrence"}
+{"id": "chromium-0385", "class": "regex", "kind": "regex", "pattern": "path.*createPath", "case_sensitive": true, "tercile": null, "df": null, "template": "co_occurrence"}
+{"id": "chromium-0387", "class": "identifier", "kind": "literal", "pattern": "SubCaptureClonesBrowserTestParamsToString", "case_sensitive": true, "tercile": 1, "df": 1, "template": null}
+{"id": "chromium-0392", "class": "literal", "kind": "literal", "pattern": "ninja://chrome", "case_sensitive": false, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0397", "class": "regex", "kind": "regex", "pattern": "(?:NSAccessibilityListMarkerRole|PrintPreviewSystemDialogTest)", "case_sensitive": true, "tercile": null, "df": null, "template": "alternation"}
+{"id": "chromium-0410", "class": "identifier", "kind": "literal", "pattern": "which", "case_sensitive": false, "tercile": 3, "df": 52505, "template": null}
+{"id": "chromium-0418", "class": "regex", "kind": "regex", "pattern": "silk\\w*FIX", "case_sensitive": false, "tercile": null, "df": null, "template": "prefix_suffix"}
+{"id": "chromium-0419", "class": "regex", "kind": "regex", "pattern": "(?:WindowHandler|ConvertSettingsToDictionary)", "case_sensitive": true, "tercile": null, "df": null, "template": "alternation"}
+{"id": "chromium-0422", "class": "regex", "kind": "regex", "pattern": "^[ \\t]*send_bits\\b", "case_sensitive": true, "tercile": null, "df": null, "template": "line_start"}
+{"id": "chromium-0434", "class": "identifier", "kind": "literal", "pattern": "ExtensionActionSetIconFunction", "case_sensitive": false, "tercile": 1, "df": 4, "template": null}
+{"id": "chromium-0435", "class": "literal", "kind": "literal", "pattern": "void removeUrlTextChangeListener(Callback<String", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0439", "class": "identifier", "kind": "literal", "pattern": "size_zip_macro", "case_sensitive": true, "tercile": 1, "df": 1, "template": null}
+{"id": "chromium-0445", "class": "literal", "kind": "literal", "pattern": "vector<PrefetchRequest", "case_sensitive": false, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0447", "class": "literal", "kind": "literal", "pattern": "success = handleGetStatus(intent", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0454", "class": "regex", "kind": "regex", "pattern": "(?:LensPermissionBubbleInteractiveUiTest|BUILD_MODULES_UNIFIED_TESTDATA_LIBC___SUBDIR_BITS_MISSING_H_)", "case_sensitive": false, "tercile": null, "df": null, "template": "alternation"}
+{"id": "chromium-0474", "class": "identifier", "kind": "literal", "pattern": "Todo", "case_sensitive": true, "tercile": 2, "df": 87, "template": null}
+{"id": "chromium-0476", "class": "regex", "kind": "regex", "pattern": "WebInputEventBuilderAndroidTest[ \\t]*\\(", "case_sensitive": true, "tercile": null, "df": null, "template": "call"}
+{"id": "chromium-0478", "class": "literal", "kind": "literal", "pattern": "size, arena", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0480", "class": "regex", "kind": "regex", "pattern": "^[ \\t]*AsyncIOState\\b", "case_sensitive": true, "tercile": null, "df": null, "template": "line_start"}
+{"id": "chromium-0483", "class": "regex", "kind": "regex", "pattern": "parse\\w*paren", "case_sensitive": true, "tercile": null, "df": null, "template": "prefix_suffix"}
+{"id": "chromium-0485", "class": "regex", "kind": "regex", "pattern": "D3DKMDT_PREEMPTION_CAPS[ \\t]*\\(", "case_sensitive": false, "tercile": null, "df": null, "template": "call"}
+{"id": "chromium-0491", "class": "regex", "kind": "regex", "pattern": "proxyUrl[ \\t]*\\(", "case_sensitive": true, "tercile": null, "df": null, "template": "call"}
+{"id": "chromium-0494", "class": "identifier", "kind": "literal", "pattern": "function11InnerFunction1", "case_sensitive": true, "tercile": 1, "df": 1, "template": null}
+{"id": "chromium-0495", "class": "regex", "kind": "regex", "pattern": "\\bTestUtil\\b", "case_sensitive": true, "tercile": null, "df": null, "template": "word"}
+{"id": "chromium-0499", "class": "literal", "kind": "literal", "pattern": "case AccessPoint", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0510", "class": "literal", "kind": "literal", "pattern": "execution_mode\": \"TEST", "case_sensitive": false, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0516", "class": "regex", "kind": "regex", "pattern": "(?:getVerticalSnapPreference|GetTargetDeviceName)", "case_sensitive": false, "tercile": null, "df": null, "template": "alternation"}
+{"id": "chromium-0526", "class": "literal", "kind": "literal", "pattern": "aura::Window", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0538", "class": "identifier", "kind": "literal", "pattern": "unicode", "case_sensitive": true, "tercile": 3, "df": 4540, "template": null}
+{"id": "chromium-0549", "class": "regex", "kind": "regex", "pattern": "resolve.*reject", "case_sensitive": true, "tercile": null, "df": null, "template": "co_occurrence"}
+{"id": "chromium-0557", "class": "regex", "kind": "regex", "pattern": "^[ \\t]*grpc_cronet_stream_ref\\b", "case_sensitive": true, "tercile": null, "df": null, "template": "line_start"}
+{"id": "chromium-0560", "class": "literal", "kind": "literal", "pattern": "under block caret shape", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0563", "class": "identifier", "kind": "literal", "pattern": "detail", "case_sensitive": false, "tercile": 3, "df": 4702, "template": null}
+{"id": "chromium-0571", "class": "identifier", "kind": "literal", "pattern": "active", "case_sensitive": true, "tercile": 3, "df": 15003, "template": null}
+{"id": "chromium-0573", "class": "identifier", "kind": "literal", "pattern": "GetJudgmenet", "case_sensitive": true, "tercile": 1, "df": 1, "template": null}
+{"id": "chromium-0576", "class": "identifier", "kind": "literal", "pattern": "shown", "case_sensitive": false, "tercile": 3, "df": 10760, "template": null}
+{"id": "chromium-0586", "class": "literal", "kind": "literal", "pattern": "return cdm", "case_sensitive": false, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0587", "class": "literal", "kind": "literal", "pattern": "SiteInstanceImpl* site_instance_shell_otr_tab2", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0591", "class": "identifier", "kind": "literal", "pattern": "DEVICE_BLUETOOTH_CHROMEOS_BLUETOOTH_UTILS_H_", "case_sensitive": true, "tercile": 1, "df": 1, "template": null}
+{"id": "chromium-0595", "class": "literal", "kind": "literal", "pattern": "and kicks", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0597", "class": "regex", "kind": "regex", "pattern": "^[ \\t]*DidFindRegistration\\b", "case_sensitive": true, "tercile": null, "df": null, "template": "line_start"}
+{"id": "chromium-0600", "class": "literal", "kind": "literal", "pattern": "gs-results-bucket=chromium", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0601", "class": "literal", "kind": "literal", "pattern": "kMaxValue = kSignInFailed", "case_sensitive": false, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0610", "class": "identifier", "kind": "literal", "pattern": "middle", "case_sensitive": true, "tercile": 3, "df": 4267, "template": null}
+{"id": "chromium-0616", "class": "identifier", "kind": "literal", "pattern": "clickMenuItemWithUrlAndTitle", "case_sensitive": true, "tercile": 1, "df": 2, "template": null}
+{"id": "chromium-0617", "class": "literal", "kind": "literal", "pattern": "Node* text = target->nextSibling", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0622", "class": "regex", "kind": "regex", "pattern": "^[ \\t]*ImageThunkData\\b", "case_sensitive": true, "tercile": null, "df": null, "template": "line_start"}
+{"id": "chromium-0634", "class": "identifier", "kind": "literal", "pattern": "materials", "case_sensitive": true, "tercile": 3, "df": 5220, "template": null}
+{"id": "chromium-0635", "class": "identifier", "kind": "literal", "pattern": "whose", "case_sensitive": true, "tercile": 3, "df": 5185, "template": null}
+{"id": "chromium-0642", "class": "literal", "kind": "literal", "pattern": "150, h: 50", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0643", "class": "identifier", "kind": "literal", "pattern": "FilePath", "case_sensitive": true, "tercile": 3, "df": 10587, "template": null}
+{"id": "chromium-0656", "class": "identifier", "kind": "literal", "pattern": "selector", "case_sensitive": true, "tercile": 3, "df": 4231, "template": null}
+{"id": "chromium-0670", "class": "regex", "kind": "regex", "pattern": "CreateValidDnsConfig[ \\t]*\\(", "case_sensitive": true, "tercile": null, "df": null, "template": "call"}
+{"id": "chromium-0678", "class": "identifier", "kind": "literal", "pattern": "IsIgnored", "case_sensitive": true, "tercile": 2, "df": 111, "template": null}
+{"id": "chromium-0679", "class": "identifier", "kind": "literal", "pattern": "getData", "case_sensitive": true, "tercile": 2, "df": 525, "template": null}
+{"id": "chromium-0686", "class": "identifier", "kind": "literal", "pattern": "related", "case_sensitive": false, "tercile": 3, "df": 7793, "template": null}
+{"id": "chromium-0697", "class": "literal", "kind": "literal", "pattern": "string|undefined", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0698", "class": "identifier", "kind": "literal", "pattern": "encodeToByteBuffer", "case_sensitive": true, "tercile": 1, "df": 1, "template": null}
+{"id": "chromium-0699", "class": "regex", "kind": "regex", "pattern": "Search\\w*Binder", "case_sensitive": false, "tercile": null, "df": null, "template": "prefix_suffix"}
+{"id": "chromium-0702", "class": "identifier", "kind": "literal", "pattern": "RASSUBENTRYA", "case_sensitive": true, "tercile": 1, "df": 1, "template": null}
+{"id": "chromium-0705", "class": "regex", "kind": "regex", "pattern": "\\bGL_NUM_SAMPLE_COUNTS\\b", "case_sensitive": false, "tercile": null, "df": null, "template": "word"}
+{"id": "chromium-0706", "class": "regex", "kind": "regex", "pattern": "shape.*width", "case_sensitive": false, "tercile": null, "df": null, "template": "co_occurrence"}
+{"id": "chromium-0710", "class": "regex", "kind": "regex", "pattern": "get\\w*Filename", "case_sensitive": false, "tercile": null, "df": null, "template": "prefix_suffix"}
+{"id": "chromium-0717", "class": "regex", "kind": "regex", "pattern": "^[ \\t]*vp8_bilinear_predict8x4_c\\b", "case_sensitive": true, "tercile": null, "df": null, "template": "line_start"}
+{"id": "chromium-0718", "class": "identifier", "kind": "literal", "pattern": "emscripten", "case_sensitive": false, "tercile": 2, "df": 117, "template": null}
+{"id": "chromium-0726", "class": "regex", "kind": "regex", "pattern": "Typed\\w*Keyframe", "case_sensitive": true, "tercile": null, "df": null, "template": "prefix_suffix"}
+{"id": "chromium-0727", "class": "regex", "kind": "regex", "pattern": "pair_sets.*into_values", "case_sensitive": false, "tercile": null, "df": null, "template": "co_occurrence"}
+{"id": "chromium-0731", "class": "identifier", "kind": "literal", "pattern": "small", "case_sensitive": false, "tercile": 3, "df": 6504, "template": null}
+{"id": "chromium-0735", "class": "regex", "kind": "regex", "pattern": "verifyFontScalingSlider[ \\t]*\\(", "case_sensitive": true, "tercile": null, "df": null, "template": "call"}
+{"id": "chromium-0752", "class": "regex", "kind": "regex", "pattern": "average\\w*Rms", "case_sensitive": true, "tercile": null, "df": null, "template": "prefix_suffix"}
+{"id": "chromium-0754", "class": "identifier", "kind": "literal", "pattern": "bitxor", "case_sensitive": true, "tercile": 2, "df": 65, "template": null}
+{"id": "chromium-0767", "class": "identifier", "kind": "literal", "pattern": "XR_TYPE_LIGHT_ESTIMATOR_CREATE_INFO_ANDROID", "case_sensitive": true, "tercile": 1, "df": 2, "template": null}
+{"id": "chromium-0768", "class": "identifier", "kind": "literal", "pattern": "envoy_config_route_v3_HeaderMatcher_header_match_specifier_case", "case_sensitive": true, "tercile": 1, "df": 1, "template": null}
+{"id": "chromium-0769", "class": "identifier", "kind": "literal", "pattern": "ChromeSearchResult", "case_sensitive": true, "tercile": 2, "df": 86, "template": null}
+{"id": "chromium-0778", "class": "identifier", "kind": "literal", "pattern": "MessageEvent", "case_sensitive": true, "tercile": 2, "df": 223, "template": null}
+{"id": "chromium-0789", "class": "regex", "kind": "regex", "pattern": "\\bSignedExchangePageLoadMetricsObserverTest\\b", "case_sensitive": true, "tercile": null, "df": null, "template": "word"}
+{"id": "chromium-0791", "class": "literal", "kind": "literal", "pattern": "enforced online", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0796", "class": "identifier", "kind": "literal", "pattern": "focused", "case_sensitive": true, "tercile": 3, "df": 4656, "template": null}
+{"id": "chromium-0799", "class": "identifier", "kind": "literal", "pattern": "GetDeviceId", "case_sensitive": true, "tercile": 2, "df": 170, "template": null}
+{"id": "chromium-0807", "class": "regex", "kind": "regex", "pattern": "testOnFuseboxStateChange_StopsEarlyToDisabled[ \\t]*\\(", "case_sensitive": false, "tercile": null, "df": null, "template": "call"}
+{"id": "chromium-0812", "class": "literal", "kind": "literal", "pattern": "password-list", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0815", "class": "literal", "kind": "literal", "pattern": "EXPECT_EQ(OK, stream_->InitializeStream", "case_sensitive": false, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0835", "class": "identifier", "kind": "literal", "pattern": "FAIL", "case_sensitive": true, "tercile": 3, "df": 9878, "template": null}
+{"id": "chromium-0837", "class": "identifier", "kind": "literal", "pattern": "WebAppTest", "case_sensitive": false, "tercile": 2, "df": 108, "template": null}
+{"id": "chromium-0838", "class": "identifier", "kind": "literal", "pattern": "test_support", "case_sensitive": true, "tercile": 3, "df": 5058, "template": null}
+{"id": "chromium-0840", "class": "identifier", "kind": "literal", "pattern": "WallpaperLayout", "case_sensitive": true, "tercile": 2, "df": 66, "template": null}
+{"id": "chromium-0849", "class": "identifier", "kind": "literal", "pattern": "pattern", "case_sensitive": true, "tercile": 3, "df": 4750, "template": null}
+{"id": "chromium-0853", "class": "identifier", "kind": "literal", "pattern": "Number", "case_sensitive": true, "tercile": 3, "df": 5507, "template": null}
+{"id": "chromium-0863", "class": "identifier", "kind": "literal", "pattern": "IsPortalledState", "case_sensitive": true, "tercile": 1, "df": 1, "template": null}
+{"id": "chromium-0864", "class": "literal", "kind": "literal", "pattern": "base::UTF16ToUTF8(params->content", "case_sensitive": false, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0866", "class": "identifier", "kind": "literal", "pattern": "ABORT", "case_sensitive": false, "tercile": 2, "df": 106, "template": null}
+{"id": "chromium-0875", "class": "identifier", "kind": "literal", "pattern": "SHCopyKeyW", "case_sensitive": false, "tercile": 1, "df": 1, "template": null}
+{"id": "chromium-0876", "class": "identifier", "kind": "literal", "pattern": "fully", "case_sensitive": true, "tercile": 3, "df": 4843, "template": null}
+{"id": "chromium-0880", "class": "literal", "kind": "literal", "pattern": "SadTabViewMode::RELOAD", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0885", "class": "identifier", "kind": "literal", "pattern": "insertBefore", "case_sensitive": true, "tercile": 2, "df": 848, "template": null}
+{"id": "chromium-0888", "class": "identifier", "kind": "literal", "pattern": "play", "case_sensitive": true, "tercile": 2, "df": 2710, "template": null}
+{"id": "chromium-0890", "class": "regex", "kind": "regex", "pattern": "MOJO_LEGACY_SEND_INVITATION_FLAG_ELEVATED[ \\t]*\\(", "case_sensitive": true, "tercile": null, "df": null, "template": "call"}
+{"id": "chromium-0894", "class": "identifier", "kind": "literal", "pattern": "invoke", "case_sensitive": true, "tercile": 2, "df": 2806, "template": null}
+{"id": "chromium-0895", "class": "identifier", "kind": "literal", "pattern": "speech", "case_sensitive": true, "tercile": 2, "df": 1259, "template": null}
+{"id": "chromium-0910", "class": "literal", "kind": "literal", "pattern": "self.twiddles_im[8], x5m14", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0914", "class": "literal", "kind": "literal", "pattern": "MockPointer* pointer = server", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0916", "class": "identifier", "kind": "literal", "pattern": "createBuffer", "case_sensitive": true, "tercile": 2, "df": 174, "template": null}
+{"id": "chromium-0919", "class": "identifier", "kind": "literal", "pattern": "testNoEnoughTimeInBackgroundForSelfFreeze", "case_sensitive": true, "tercile": 1, "df": 1, "template": null}
+{"id": "chromium-0927", "class": "identifier", "kind": "literal", "pattern": "defining", "case_sensitive": false, "tercile": 2, "df": 889, "template": null}
+{"id": "chromium-0928", "class": "identifier", "kind": "literal", "pattern": "passes", "case_sensitive": true, "tercile": 3, "df": 22376, "template": null}
+{"id": "chromium-0932", "class": "literal", "kind": "literal", "pattern": "test.assertTrue(files[0", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0933", "class": "regex", "kind": "regex", "pattern": "\\btest_defer_success_2\\b", "case_sensitive": true, "tercile": null, "df": null, "template": "word"}
+{"id": "chromium-0944", "class": "literal", "kind": "literal", "pattern": "include \"base/notreached", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0947", "class": "identifier", "kind": "literal", "pattern": "Refresh", "case_sensitive": true, "tercile": 2, "df": 757, "template": null}
+{"id": "chromium-0951", "class": "literal", "kind": "literal", "pattern": "org.chromium.base.PackageManagerUtils", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0956", "class": "identifier", "kind": "literal", "pattern": "PrinterSetupInfoElement", "case_sensitive": false, "tercile": 1, "df": 2, "template": null}
+{"id": "chromium-0957", "class": "literal", "kind": "literal", "pattern": "intm.org/img", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0968", "class": "literal", "kind": "literal", "pattern": "assertTrue(tab1.getIsPinned", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0975", "class": "identifier", "kind": "literal", "pattern": "description", "case_sensitive": true, "tercile": 3, "df": 17326, "template": null}
+{"id": "chromium-0983", "class": "identifier", "kind": "literal", "pattern": "polygon", "case_sensitive": true, "tercile": 2, "df": 652, "template": null}
+{"id": "chromium-0984", "class": "identifier", "kind": "literal", "pattern": "Final", "case_sensitive": true, "tercile": 2, "df": 482, "template": null}
+{"id": "chromium-0989", "class": "literal", "kind": "literal", "pattern": "Set(execution_context", "case_sensitive": false, "tercile": null, "df": null, "template": null}
+{"id": "chromium-0993", "class": "identifier", "kind": "literal", "pattern": "TEST", "case_sensitive": true, "tercile": 3, "df": 12379, "template": null}
+{"id": "chromium-1000", "class": "literal", "kind": "literal", "pattern": "and restoring", "case_sensitive": true, "tercile": null, "df": null, "template": null}

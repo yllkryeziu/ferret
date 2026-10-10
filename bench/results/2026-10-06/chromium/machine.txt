@@ -1,0 +1,7 @@
+date: 2026-10-05T23:33:05Z
+ferret: 4969570 (modified)
+corpus: chromium at d7bd2de3cb
+machine: Mac15,12, 16 GiB, 8 cores, macOS 15.6.1
+power: AC Power
+ripgrep: ripgrep 15.2.0
+zoekt: v0.0.0-20260911061844-153817f643cd

@@ -1,0 +1,14 @@
+# Ferret: a fresh, shared code search engine for coding agents.
+
+package(default_visibility = ["//visibility:private"])
+
+# Libraries under //ferret are visible to the rest of the project but not to
+# external repositories.
+package_group(
+    name = "internal",
+    packages = [
+        "//bench/...",
+        "//eval/...",
+        "//ferret/...",
+    ],
+)

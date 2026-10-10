@@ -1,0 +1,376 @@
+load("@rules_cc//cc:cc_binary.bzl", "cc_binary")
+load("@rules_cc//cc:cc_library.bzl", "cc_library")
+load("@rules_cc//cc:cc_test.bzl", "cc_test")
+load("//bazel:copts.bzl", "FERRET_DEFAULT_COPTS", "FERRET_STRICT_SIGN_COPTS", "FERRET_TEST_COPTS")
+
+package(default_visibility = ["//visibility:private"])
+
+cc_library(
+    name = "oid",
+    srcs = ["oid.cc"],
+    hdrs = ["oid.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        "@abseil-cpp//absl/base:core_headers",
+        "@abseil-cpp//absl/log:check",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+    ],
+)
+
+cc_test(
+    name = "oid_test",
+    size = "small",
+    srcs = ["oid_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":oid",
+        "@abseil-cpp//absl/container:flat_hash_set",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_matchers",
+        "@abseil-cpp//absl/strings",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_library(
+    name = "blob_hash",
+    srcs = ["blob_hash.cc"],
+    hdrs = ["blob_hash.h"],
+    copts = FERRET_DEFAULT_COPTS + FERRET_STRICT_SIGN_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        ":oid",
+        "@abseil-cpp//absl/strings",
+        "@boringssl//:crypto",
+    ],
+)
+
+cc_test(
+    name = "blob_hash_test",
+    size = "medium",
+    srcs = ["blob_hash_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":blob_hash",
+        ":oid",
+        "//ferret/git/testing:git_repo_builder",
+        "//ferret/testing:status_matchers",
+        "//ferret/testing:temp_dir",
+        "@abseil-cpp//absl/strings",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_binary(
+    name = "blob_hash_benchmark",
+    testonly = True,
+    srcs = ["blob_hash_benchmark.cc"],
+    copts = FERRET_DEFAULT_COPTS,
+    tags = ["benchmark"],
+    deps = [
+        ":blob_hash",
+        ":oid",
+        "@google_benchmark//:benchmark_main",
+    ],
+)
+
+cc_library(
+    name = "ls_files",
+    srcs = ["ls_files.cc"],
+    hdrs = ["ls_files.h"],
+    copts = FERRET_DEFAULT_COPTS + FERRET_STRICT_SIGN_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        ":git_fields",
+        ":oid",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_macros",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+    ],
+)
+
+cc_test(
+    name = "ls_files_test",
+    size = "small",
+    srcs = ["ls_files_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":ls_files",
+        ":oid",
+        "//ferret/testing:status_matchers",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_matchers",
+        "@abseil-cpp//absl/strings",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_library(
+    name = "porcelain_status",
+    srcs = ["porcelain_status.cc"],
+    hdrs = ["porcelain_status.h"],
+    copts = FERRET_DEFAULT_COPTS + FERRET_STRICT_SIGN_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        ":git_fields",
+        ":oid",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_macros",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/types:span",
+    ],
+)
+
+cc_test(
+    name = "porcelain_status_test",
+    size = "small",
+    srcs = ["porcelain_status_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":porcelain_status",
+        "//ferret/testing:status_matchers",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_matchers",
+        "@abseil-cpp//absl/strings",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+# Package-private building blocks (ferret/git/internal, namespace
+# ferret::git_internal).
+
+cc_library(
+    name = "git_fields",
+    srcs = ["internal/git_fields.cc"],
+    hdrs = ["internal/git_fields.h"],
+    copts = FERRET_DEFAULT_COPTS + FERRET_STRICT_SIGN_COPTS,
+    deps = ["@abseil-cpp//absl/strings"],
+)
+
+cc_test(
+    name = "git_fields_test",
+    size = "small",
+    srcs = ["internal/git_fields_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":git_fields",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_library(
+    name = "wildmatch",
+    srcs = ["internal/wildmatch.cc"],
+    hdrs = ["internal/wildmatch.h"],
+    copts = FERRET_DEFAULT_COPTS + FERRET_STRICT_SIGN_COPTS,
+    deps = [
+        "@abseil-cpp//absl/log:check",
+        "@abseil-cpp//absl/strings",
+    ],
+)
+
+cc_test(
+    name = "wildmatch_test",
+    size = "small",
+    srcs = ["internal/wildmatch_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":wildmatch",
+        "@abseil-cpp//absl/strings",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_library(
+    name = "path_pattern",
+    srcs = ["internal/path_pattern.cc"],
+    hdrs = ["internal/path_pattern.h"],
+    copts = FERRET_DEFAULT_COPTS + FERRET_STRICT_SIGN_COPTS,
+    deps = [
+        ":wildmatch",
+        "@abseil-cpp//absl/log:check",
+        "@abseil-cpp//absl/strings",
+    ],
+)
+
+cc_test(
+    name = "path_pattern_test",
+    size = "small",
+    srcs = ["internal/path_pattern_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":path_pattern",
+        "@abseil-cpp//absl/strings",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_library(
+    name = "path_glob",
+    srcs = ["path_glob.cc"],
+    hdrs = ["path_glob.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        ":path_pattern",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+    ],
+)
+
+cc_test(
+    name = "path_glob_test",
+    size = "small",
+    srcs = ["path_glob_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":path_glob",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_matchers",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_library(
+    name = "worktree_files",
+    srcs = ["worktree_files.cc"],
+    hdrs = ["worktree_files.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        ":ignore",
+        ":ls_files",
+        "//ferret/base:subprocess",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_macros",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+    ],
+)
+
+cc_test(
+    name = "worktree_files_test",
+    size = "medium",
+    srcs = ["worktree_files_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":worktree_files",
+        "//ferret/git/testing:git_repo_builder",
+        "//ferret/testing:status_matchers",
+        "//ferret/testing:temp_dir",
+        "@abseil-cpp//absl/log:check",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_matchers",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_library(
+    name = "ignore",
+    srcs = ["ignore.cc"],
+    hdrs = ["ignore.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        ":path_pattern",
+        "@abseil-cpp//absl/functional:any_invocable",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_macros",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+    ],
+)
+
+cc_test(
+    name = "ignore_test",
+    size = "medium",
+    srcs = ["ignore_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":ignore",
+        ":worktree_files",
+        "//ferret/git/testing:git_repo_builder",
+        "//ferret/testing:status_matchers",
+        "//ferret/testing:temp_dir",
+        "//ferret/testing:test_seed",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_matchers",
+        "@abseil-cpp//absl/strings",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_library(
+    name = "worktree_scanner",
+    srcs = ["worktree_scanner.cc"],
+    hdrs = ["worktree_scanner.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        ":blob_hash",
+        ":ls_files",
+        ":oid",
+        ":porcelain_status",
+        "//ferret/base:env",
+        "//ferret/base:subprocess",
+        "//ferret/base:thread_pool",
+        ":path_pattern",
+        "@abseil-cpp//absl/container:flat_hash_map",
+        "@abseil-cpp//absl/container:flat_hash_set",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_macros",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/time",
+    ],
+)
+
+cc_test(
+    name = "worktree_scanner_test",
+    size = "medium",
+    srcs = ["worktree_scanner_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":blob_hash",
+        ":worktree_scanner",
+        "//ferret/base:env",
+        "//ferret/git/testing:git_repo_builder",
+        "//ferret/testing:status_matchers",
+        "//ferret/testing:temp_dir",
+        "@abseil-cpp//absl/log:check",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_matchers",
+        "@abseil-cpp//absl/strings",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_binary(
+    name = "worktree_scanner_benchmark",
+    testonly = True,
+    srcs = ["worktree_scanner_benchmark.cc"],
+    copts = FERRET_DEFAULT_COPTS,
+    tags = ["benchmark"],
+    deps = [
+        ":worktree_scanner",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/time",
+    ],
+)

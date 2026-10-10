@@ -1,0 +1,22 @@
+---
+BasedOnStyle: Google
+Language: Cpp
+Standard: c++20
+DerivePointerAlignment: false
+PointerAlignment: Left
+IncludeBlocks: Regroup
+IncludeIsMainRegex: '([-_](test|benchmark|scalar|neon|macos|linux))?$'
+IncludeCategories:
+  # C and system headers: <sys/mman.h>, <arm_neon.h>.
+  - Regex: '^<[[:alnum:]_./]+\.h>$'
+    Priority: 1
+  # C++ standard library.
+  - Regex: '^<[[:alnum:]_./]+>$'
+    Priority: 2
+  # First-party headers go last, in their own block.
+  - Regex: '^"ferret/'
+    Priority: 4
+  # Third-party: absl/, re2/, gtest/, benchmark/, nlohmann/, tree_sitter/.
+  - Regex: '.*'
+    Priority: 3
+...

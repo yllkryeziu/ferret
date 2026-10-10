@@ -1,0 +1,33 @@
+--- a/BUILD.bazel	2026-09-23 19:00:17
++++ b/BUILD.bazel	2026-09-23 19:00:17
+@@ -35,7 +35,6 @@
+         "re2/prog.h",
+         "re2/re2.cc",
+         "re2/regexp.cc",
+-        "re2/regexp.h",
+         "re2/set.cc",
+         "re2/simplify.cc",
+         "re2/sparse_array.h",
+@@ -45,17 +44,20 @@
+         "re2/unicode_casefold.h",
+         "re2/unicode_groups.cc",
+         "re2/unicode_groups.h",
+-        "re2/walker-inl.h",
+         "util/rune.cc",
+         "util/strutil.cc",
+         "util/strutil.h",
+-        "util/utf.h",
+     ],
+     hdrs = [
+         "re2/filtered_re2.h",
+         "re2/re2.h",
+         "re2/set.h",
+         "re2/stringpiece.h",
++        # Ferret: expose RE2's parse tree so the trigram planner can analyze
++        # the exact Regexp that RE2 compiles (see //third_party/re2).
++        "re2/regexp.h",
++        "re2/walker-inl.h",
++        "util/utf.h",
+     ],
+     copts = select({
+         # WebAssembly support for threads is... fraught at every level.

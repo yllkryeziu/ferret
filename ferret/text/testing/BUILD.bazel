@@ -1,0 +1,21 @@
+load("@rules_cc//cc:cc_library.bzl", "cc_library")
+load("//bazel:copts.bzl", "FERRET_DEFAULT_COPTS")
+
+# Test-only helpers for //ferret/text tests and benchmarks.
+package(default_visibility = ["//ferret/text:__pkg__"])
+
+cc_library(
+    name = "exact_buffer",
+    testonly = True,
+    hdrs = ["exact_buffer.h"],
+    deps = ["@abseil-cpp//absl/strings"],
+)
+
+cc_library(
+    name = "synthetic_source",
+    testonly = True,
+    srcs = ["synthetic_source.cc"],
+    hdrs = ["synthetic_source.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    deps = ["@abseil-cpp//absl/strings"],
+)

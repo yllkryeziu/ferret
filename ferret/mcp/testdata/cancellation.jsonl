@@ -1,0 +1,17 @@
+{"send": {"jsonrpc": "2.0", "id": 1, "method": "initialize", "params": {"protocolVersion": "2025-11-25", "capabilities": {}, "clientInfo": {"name": "golden-client", "version": "1.0.0"}}}}
+{"expect": {"jsonrpc": "2.0", "id": 1, "result": {"protocolVersion": "2025-11-25", "capabilities": {"tools": {}}, "serverInfo": {"name": "ferret", "version": "0.0.0-test"}}}}
+{"send": {"jsonrpc": "2.0", "method": "notifications/initialized"}}
+{"send": {"jsonrpc": "2.0", "id": "slow-1", "method": "tools/call", "params": {"name": "block"}}}
+{"send": {"jsonrpc": "2.0", "id": 2, "method": "ping"}}
+{"expect": {"jsonrpc": "2.0", "id": 2, "result": {}}}
+{"send": {"jsonrpc": "2.0", "id": "slow-1", "method": "tools/call", "params": {"name": "block"}}}
+{"expect": {"jsonrpc": "2.0", "id": "slow-1", "error": {"code": -32600, "message": "Invalid request: id \"slow-1\" belongs to a pending call"}}}
+{"send": {"jsonrpc": "2.0", "method": "notifications/cancelled", "params": {"requestId": "slow-1", "reason": "user pressed escape"}}}
+{"send": {"jsonrpc": "2.0", "method": "notifications/cancelled", "params": {"requestId": 99}}}
+{"send": {"jsonrpc": "2.0", "method": "notifications/cancelled", "params": {"reason": "no id"}}}
+{"send": {"jsonrpc": "2.0", "id": 3, "method": "tools/call", "params": {"name": "echo", "arguments": {"message": "after"}}}}
+{"expect": {"jsonrpc": "2.0", "id": 3, "result": {"content": [{"type": "text", "text": "after"}], "isError": false, "structuredContent": {"message": "after"}}}}
+{"send": {"jsonrpc": "2.0", "id": 4, "method": "tools/call", "params": {"name": "block", "_meta": {"io.modelcontextprotocol/protocolVersion": "2026-07-28", "io.modelcontextprotocol/clientInfo": {"name": "golden-client", "version": "1.0.0"}, "io.modelcontextprotocol/clientCapabilities": {}}}}}
+{"send": {"jsonrpc": "2.0", "method": "notifications/cancelled", "params": {"requestId": 4}}}
+{"send": {"jsonrpc": "2.0", "id": 5, "method": "tools/call", "params": {"name": "echo", "arguments": {"message": "after"}, "_meta": {"io.modelcontextprotocol/protocolVersion": "2026-07-28", "io.modelcontextprotocol/clientInfo": {"name": "golden-client", "version": "1.0.0"}, "io.modelcontextprotocol/clientCapabilities": {}}}}}
+{"expect": {"jsonrpc": "2.0", "id": 5, "result": {"content": [{"type": "text", "text": "after"}], "isError": false, "structuredContent": {"message": "after"}, "resultType": "complete", "_meta": {"io.modelcontextprotocol/serverInfo": {"name": "ferret", "version": "0.0.0-test"}}}}}

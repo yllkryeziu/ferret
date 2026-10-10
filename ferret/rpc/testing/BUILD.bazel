@@ -1,0 +1,15 @@
+load("@rules_cc//cc:cc_library.bzl", "cc_library")
+load("//bazel:copts.bzl", "FERRET_DEFAULT_COPTS")
+
+# Test-only helpers for RPC transports.
+package(default_visibility = ["//visibility:private"])
+
+cc_library(
+    name = "test_pipe",
+    testonly = True,
+    srcs = ["test_pipe.cc"],
+    hdrs = ["test_pipe.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = ["@abseil-cpp//absl/log:check"],
+)

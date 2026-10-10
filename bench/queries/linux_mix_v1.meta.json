@@ -1,0 +1,33 @@
+{
+  "case_insensitive_share": 0.25,
+  "class_counts": {
+    "identifier": 400,
+    "literal": 200,
+    "regex": 200,
+    "short": 100,
+    "zero": 100
+  },
+  "corpus": "linux",
+  "count": 1000,
+  "definitions": 2531230,
+  "files": 95759,
+  "files_sha256": "23ecea8717e01651b1235b527f95641c05d1b236804b0c49798032c5b3742958",
+  "generator": "bench/queries/gen_mix.py",
+  "python": "3.13.5",
+  "schema_version": 1,
+  "seed": 1,
+  "tercile_df_ranges": [
+    [
+      1,
+      38
+    ],
+    [
+      39,
+      1505
+    ],
+    [
+      1508,
+      58460
+    ]
+  ]
+}

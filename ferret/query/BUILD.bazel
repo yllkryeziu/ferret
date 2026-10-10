@@ -1,0 +1,88 @@
+load("@rules_cc//cc:cc_library.bzl", "cc_library")
+load("@rules_cc//cc:cc_test.bzl", "cc_test")
+load("//bazel:copts.bzl", "FERRET_DEFAULT_COPTS", "FERRET_TEST_COPTS")
+
+package(default_visibility = ["//visibility:private"])
+
+cc_library(
+    name = "trigram_query",
+    srcs = ["trigram_query.cc"],
+    hdrs = ["trigram_query.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        "//ferret/text:trigram",
+        "@abseil-cpp//absl/functional:function_ref",
+        "@abseil-cpp//absl/log:check",
+        "@abseil-cpp//absl/types:span",
+    ],
+)
+
+cc_test(
+    name = "trigram_query_test",
+    size = "small",
+    srcs = ["trigram_query_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":trigram_query",
+        "//ferret/text:trigram",
+        "@abseil-cpp//absl/strings",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_test(
+    name = "query_algebra_test",
+    size = "small",
+    srcs = ["query_algebra_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":trigram_query",
+        "//ferret/text:trigram",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/types:span",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_library(
+    name = "evaluator",
+    srcs = ["evaluator.cc"],
+    hdrs = ["evaluator.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        ":trigram_query",
+        "//ferret/postings:ids",
+        "//ferret/postings:list_ops",
+        "//ferret/postings:posting_list",
+        "//ferret/text:trigram",
+        "@abseil-cpp//absl/container:inlined_vector",
+        "@abseil-cpp//absl/functional:function_ref",
+        "@abseil-cpp//absl/types:span",
+    ],
+)
+
+cc_test(
+    name = "evaluator_test",
+    size = "small",
+    srcs = ["evaluator_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":evaluator",
+        ":trigram_query",
+        "//ferret/postings:ids",
+        "//ferret/postings:list_ops",
+        "//ferret/postings:posting_list",
+        "//ferret/testing:test_seed",
+        "//ferret/text:trigram",
+        "@abseil-cpp//absl/log:check",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/types:span",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)

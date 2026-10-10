@@ -1,0 +1,7 @@
+date: 2026-10-05T22:35:45Z
+ferret: 4969570
+corpus: linux-v7.3-rc1 at cee9395ac
+machine: Mac15,12, 16 GiB, 8 cores, macOS 15.6.1
+power: AC Power
+ripgrep: ripgrep 15.2.0
+zoekt: v0.0.0-20260911061844-153817f643cd

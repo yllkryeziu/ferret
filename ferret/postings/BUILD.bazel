@@ -1,0 +1,190 @@
+load("@rules_cc//cc:cc_binary.bzl", "cc_binary")
+load("@rules_cc//cc:cc_library.bzl", "cc_library")
+load("@rules_cc//cc:cc_test.bzl", "cc_test")
+load("//bazel:copts.bzl", "FERRET_DEFAULT_COPTS", "FERRET_STRICT_SIGN_COPTS", "FERRET_TEST_COPTS")
+
+package(default_visibility = ["//visibility:private"])
+
+cc_library(
+    name = "ids",
+    hdrs = ["ids.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+)
+
+cc_library(
+    name = "varint",
+    srcs = ["varint.cc"],
+    hdrs = ["varint.h"],
+    copts = FERRET_DEFAULT_COPTS + FERRET_STRICT_SIGN_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = ["@abseil-cpp//absl/strings"],
+)
+
+cc_test(
+    name = "varint_test",
+    size = "small",
+    srcs = ["varint_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":varint",
+        "//ferret/postings/testing:random_posting_lists",
+        "//ferret/testing:test_seed",
+        "@abseil-cpp//absl/strings",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_library(
+    name = "bitpack",
+    srcs = ["bitpack_scalar.cc"] + select({
+        "@platforms//cpu:aarch64": ["bitpack_neon.cc"],
+        "//conditions:default": [],
+    }),
+    hdrs = ["bitpack.h"],
+    copts = FERRET_DEFAULT_COPTS + FERRET_STRICT_SIGN_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        "//ferret/base:ablation",
+        "@abseil-cpp//absl/base:nullability",
+        "@abseil-cpp//absl/log:check",
+        "@abseil-cpp//absl/types:span",
+    ],
+)
+
+cc_test(
+    name = "bitpack_test",
+    size = "small",
+    srcs = ["bitpack_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":bitpack",
+        "//ferret/postings/testing:random_posting_lists",
+        "//ferret/testing:test_seed",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_binary(
+    name = "bitpack_benchmark",
+    testonly = True,
+    srcs = ["bitpack_benchmark.cc"],
+    copts = FERRET_DEFAULT_COPTS,
+    tags = ["benchmark"],
+    deps = [
+        ":bitpack",
+        "@google_benchmark//:benchmark",
+        "@google_benchmark//:benchmark_main",
+    ],
+)
+
+# The encoder and the view implement one format and share its layout
+# details, so they form one library.
+cc_library(
+    name = "posting_list",
+    srcs = [
+        "internal/posting_list_format.h",
+        "posting_list.cc",
+        "posting_list_encoder.cc",
+    ],
+    hdrs = [
+        "posting_list.h",
+        "posting_list_encoder.h",
+    ],
+    copts = FERRET_DEFAULT_COPTS + FERRET_STRICT_SIGN_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        ":bitpack",
+        ":ids",
+        ":varint",
+        "@abseil-cpp//absl/base:core_headers",
+        "@abseil-cpp//absl/base:nullability",
+        "@abseil-cpp//absl/log:check",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/types:span",
+    ],
+)
+
+cc_test(
+    name = "posting_list_encoder_test",
+    size = "small",
+    srcs = ["posting_list_encoder_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":ids",
+        ":posting_list",
+        "@abseil-cpp//absl/strings",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_test(
+    name = "posting_list_test",
+    size = "small",
+    srcs = ["posting_list_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":ids",
+        ":posting_list",
+        ":varint",
+        "//ferret/postings/testing:random_posting_lists",
+        "//ferret/testing:status_matchers",
+        "//ferret/testing:test_seed",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_matchers",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/types:span",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_library(
+    name = "list_ops",
+    srcs = ["list_ops.cc"],
+    hdrs = ["list_ops.h"],
+    copts = FERRET_DEFAULT_COPTS + FERRET_STRICT_SIGN_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        ":ids",
+        ":posting_list",
+        "//ferret/base:ablation",
+        "//ferret/base:stage_clock",
+        "//ferret/simd:dispatch",
+        "//ferret/simd:intersect",
+        "//ferret/simd:union",
+        "@abseil-cpp//absl/base:nullability",
+        "@abseil-cpp//absl/container:inlined_vector",
+        "@abseil-cpp//absl/log:check",
+        "@abseil-cpp//absl/types:span",
+    ],
+)
+
+cc_test(
+    name = "list_ops_test",
+    size = "small",
+    srcs = ["list_ops_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        "//ferret/base:ablation",
+        "//ferret/base:stage_clock",
+        ":ids",
+        ":list_ops",
+        ":posting_list",
+        "//ferret/postings/testing:random_posting_lists",
+        "//ferret/simd:dispatch",
+        "//ferret/testing:test_seed",
+        "@abseil-cpp//absl/log:check",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/types:span",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)

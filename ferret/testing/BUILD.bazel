@@ -1,0 +1,91 @@
+load("@rules_cc//cc:cc_library.bzl", "cc_library")
+load("@rules_cc//cc:cc_test.bzl", "cc_test")
+load("//bazel:copts.bzl", "FERRET_DEFAULT_COPTS", "FERRET_TEST_COPTS")
+
+# Test-only helpers shared across packages.
+package(default_visibility = ["//visibility:private"])
+
+cc_library(
+    name = "status_matchers",
+    testonly = True,
+    hdrs = ["status_matchers.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = ["@googletest//:gtest"],
+)
+
+cc_library(
+    name = "temp_dir",
+    testonly = True,
+    srcs = ["temp_dir.cc"],
+    hdrs = ["temp_dir.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        "@abseil-cpp//absl/log:check",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_macros",
+        "@abseil-cpp//absl/strings",
+    ],
+)
+
+cc_test(
+    name = "temp_dir_test",
+    size = "medium",
+    srcs = ["temp_dir_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":temp_dir",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_matchers",
+        "@abseil-cpp//absl/strings",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_library(
+    name = "test_seed",
+    testonly = True,
+    srcs = ["test_seed.cc"],
+    hdrs = ["test_seed.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        "@abseil-cpp//absl/log:check",
+        "@abseil-cpp//absl/strings",
+    ],
+)
+
+cc_test(
+    name = "test_seed_test",
+    size = "small",
+    srcs = ["test_seed_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":test_seed",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_library(
+    name = "brute_force_search",
+    testonly = True,
+    srcs = ["brute_force_search.cc"],
+    hdrs = ["brute_force_search.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        "//ferret/git:path_glob",
+        "//ferret/regex:compile",
+        "//ferret/search:ranking",
+        "//ferret/search:search_types",
+        "//ferret/index:rank_key",
+        "@abseil-cpp//absl/status:status_macros",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/types:span",
+        "@re2",
+    ],
+)

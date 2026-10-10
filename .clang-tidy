@@ -1,0 +1,50 @@
+---
+# Disabled beyond the bugprone defaults:
+# - performance-enum-size: enum widths are chosen per use, and some enums are
+#   part of persisted or wire formats.
+# - bugprone-throw-keyword-missing: Ferret builds with -fno-exceptions, and the
+#   check misfires on Abseil status macros.
+Checks: >
+  -*,
+  abseil-*,
+  bugprone-*,
+  -bugprone-easily-swappable-parameters,
+  -bugprone-exception-escape,
+  -bugprone-throw-keyword-missing,
+  google-*,
+  -google-readability-todo,
+  misc-include-cleaner,
+  misc-unused-using-decls,
+  modernize-make-unique,
+  modernize-use-equals-default,
+  modernize-use-equals-delete,
+  modernize-use-nullptr,
+  modernize-use-override,
+  modernize-use-using,
+  performance-*,
+  -performance-enum-size,
+  readability-container-size-empty,
+  readability-identifier-naming,
+  readability-redundant-*
+WarningsAsErrors: '*'
+HeaderFilterRegex: '(^|/)ferret/'
+CheckOptions:
+  readability-identifier-naming.NamespaceCase: lower_case
+  readability-identifier-naming.ClassCase: CamelCase
+  readability-identifier-naming.StructCase: CamelCase
+  readability-identifier-naming.EnumCase: CamelCase
+  readability-identifier-naming.EnumConstantCase: CamelCase
+  readability-identifier-naming.EnumConstantPrefix: k
+  readability-identifier-naming.ConstexprVariableCase: CamelCase
+  readability-identifier-naming.ConstexprVariablePrefix: k
+  readability-identifier-naming.GlobalConstantCase: CamelCase
+  readability-identifier-naming.GlobalConstantPrefix: k
+  readability-identifier-naming.PrivateMemberSuffix: _
+  readability-identifier-naming.ProtectedMemberSuffix: _
+  readability-identifier-naming.ParameterCase: lower_case
+  readability-identifier-naming.LocalVariableCase: lower_case
+  readability-identifier-naming.MacroDefinitionCase: UPPER_CASE
+  readability-identifier-naming.MacroDefinitionIgnoredRegexp: '^FERRET_[A-Z0-9_]+_H_$'
+  # FSEvents is only accessible through the CoreServices framework umbrella.
+  misc-include-cleaner.IgnoreHeaders: 'arm_neon\.h;nlohmann/.*;.*FSEvents\.h;sys/_types/.*'
+...

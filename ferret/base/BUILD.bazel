@@ -1,0 +1,201 @@
+load("@rules_cc//cc:cc_library.bzl", "cc_library")
+load("@rules_cc//cc:cc_test.bzl", "cc_test")
+load("//bazel:copts.bzl", "FERRET_DEFAULT_COPTS", "FERRET_STRICT_SIGN_COPTS", "FERRET_TEST_COPTS")
+
+package(default_visibility = ["//visibility:private"])
+
+cc_library(
+    name = "ablation",
+    hdrs = ["ablation.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+)
+
+cc_library(
+    name = "stage_clock",
+    hdrs = ["stage_clock.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+)
+
+cc_library(
+    name = "bitset",
+    srcs = ["bitset.cc"],
+    hdrs = ["bitset.h"],
+    copts = FERRET_DEFAULT_COPTS + FERRET_STRICT_SIGN_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        "@abseil-cpp//absl/functional:function_ref",
+        "@abseil-cpp//absl/log:check",
+    ],
+)
+
+cc_test(
+    name = "bitset_test",
+    size = "small",
+    srcs = ["bitset_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":bitset",
+        "//ferret/testing:test_seed",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_library(
+    name = "env",
+    srcs = ["env.cc"],
+    hdrs = ["env.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        ":mapped_file",
+        "@abseil-cpp//absl/base:no_destructor",
+        "@abseil-cpp//absl/base:nullability",
+        "@abseil-cpp//absl/cleanup",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_macros",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+    ],
+)
+
+cc_test(
+    name = "env_test",
+    size = "medium",
+    srcs = ["env_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":env",
+        ":mapped_file",
+        "//ferret/testing:status_matchers",
+        "//ferret/testing:temp_dir",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_matchers",
+        "@abseil-cpp//absl/strings",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_library(
+    name = "mapped_file",
+    srcs = ["mapped_file.cc"],
+    hdrs = ["mapped_file.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        ":system_info",
+        "@abseil-cpp//absl/base:config",
+        "@abseil-cpp//absl/base:core_headers",
+        "@abseil-cpp//absl/cleanup",
+        "@abseil-cpp//absl/log",
+        "@abseil-cpp//absl/log:check",
+        "@abseil-cpp//absl/memory",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+    ],
+)
+
+cc_test(
+    name = "mapped_file_test",
+    size = "medium",
+    srcs = ["mapped_file_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":mapped_file",
+        ":system_info",
+        "//ferret/testing:status_matchers",
+        "//ferret/testing:temp_dir",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_matchers",
+        "@abseil-cpp//absl/strings",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_library(
+    name = "subprocess",
+    srcs = ["subprocess.cc"],
+    hdrs = ["subprocess.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        "@abseil-cpp//absl/cleanup",
+        "@abseil-cpp//absl/functional:function_ref",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_macros",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/time",
+        "@abseil-cpp//absl/types:span",
+    ],
+)
+
+cc_test(
+    name = "subprocess_test",
+    size = "small",
+    srcs = ["subprocess_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":subprocess",
+        "//ferret/testing:status_matchers",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_matchers",
+        "@abseil-cpp//absl/time",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_library(
+    name = "system_info",
+    srcs = ["system_info.cc"],
+    hdrs = ["system_info.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = ["@abseil-cpp//absl/log:check"],
+)
+
+cc_test(
+    name = "system_info_test",
+    size = "small",
+    srcs = ["system_info_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":system_info",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_library(
+    name = "thread_pool",
+    srcs = ["thread_pool.cc"],
+    hdrs = ["thread_pool.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        "@abseil-cpp//absl/base:core_headers",
+        "@abseil-cpp//absl/functional:any_invocable",
+        "@abseil-cpp//absl/functional:function_ref",
+        "@abseil-cpp//absl/log:check",
+        "@abseil-cpp//absl/synchronization",
+    ],
+)
+
+cc_test(
+    name = "thread_pool_test",
+    size = "medium",
+    srcs = ["thread_pool_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":thread_pool",
+        "@abseil-cpp//absl/synchronization",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)

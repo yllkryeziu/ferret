@@ -1,0 +1,23 @@
+load("@rules_cc//cc:cc_library.bzl", "cc_library")
+load("//bazel:copts.bzl", "FERRET_DEFAULT_COPTS")
+
+package(default_visibility = ["//visibility:private"])
+
+cc_library(
+    name = "git_repo_builder",
+    testonly = True,
+    srcs = ["git_repo_builder.cc"],
+    hdrs = ["git_repo_builder.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        "//ferret/base:subprocess",
+        "//ferret/testing:temp_dir",
+        "@abseil-cpp//absl/base:nullability",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_macros",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/types:span",
+    ],
+)

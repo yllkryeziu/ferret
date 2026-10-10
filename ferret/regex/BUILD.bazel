@@ -1,0 +1,131 @@
+load("@rules_cc//cc:cc_library.bzl", "cc_library")
+load("@rules_cc//cc:cc_test.bzl", "cc_test")
+load("//bazel:copts.bzl", "FERRET_DEFAULT_COPTS", "FERRET_TEST_COPTS")
+
+package(default_visibility = ["//visibility:private"])
+
+cc_library(
+    name = "analyze",
+    srcs = ["analyze.cc"],
+    hdrs = ["analyze.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        "//ferret/query:trigram_query",
+        "//ferret/text:fold",
+        "//ferret/text:trigram",
+        "@abseil-cpp//absl/algorithm:container",
+        "@abseil-cpp//absl/log:check",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/types:span",
+        "@re2",
+    ],
+)
+
+cc_library(
+    name = "compile",
+    srcs = ["compile.cc"],
+    hdrs = ["compile.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        ":analyze",
+        "//ferret/query:trigram_query",
+        "//ferret/text:literal_finder",
+        "@abseil-cpp//absl/algorithm:container",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_macros",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@re2",
+    ],
+)
+
+cc_library(
+    name = "regex_gen",
+    testonly = True,
+    srcs = ["testing/regex_gen.cc"],
+    hdrs = ["testing/regex_gen.h"],
+    copts = FERRET_TEST_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/strings:str_format",
+        "@abseil-cpp//absl/types:span",
+        "@re2",
+    ],
+)
+
+cc_test(
+    name = "analyze_soundness_test",
+    size = "large",
+    srcs = ["analyze_soundness_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    shard_count = 8,
+    deps = [
+        ":analyze",
+        ":compile",
+        ":regex_gen",
+        "//ferret/testing:test_seed",
+        "//ferret/text:fold",
+        "//ferret/text:trigram",
+        "//ferret/text:trigram_extractor",
+        "@abseil-cpp//absl/container:flat_hash_set",
+        "@abseil-cpp//absl/functional:function_ref",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+        "@re2",
+    ],
+)
+
+cc_test(
+    name = "compile_test",
+    size = "small",
+    srcs = ["compile_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":compile",
+        "//ferret/query:trigram_query",
+        "@abseil-cpp//absl/log:check",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_matchers",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+        "@re2",
+    ],
+)
+
+cc_test(
+    name = "analyze_test",
+    size = "small",
+    srcs = ["analyze_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":analyze",
+        ":compile",
+        "//ferret/query:trigram_query",
+        "@abseil-cpp//absl/log:check",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+        "@re2",
+    ],
+)
+
+cc_test(
+    name = "fold_exceptions_test",
+    size = "small",
+    srcs = ["fold_exceptions_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        "//ferret/text:fold",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+        "@re2",
+    ],
+)

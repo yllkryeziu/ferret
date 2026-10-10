@@ -1,0 +1,29 @@
+{
+ "kind": "chain",
+ "seed": 1,
+ "base": "d7bd2de3cbd60774daefcb77a0f0a98f7dbb4293",
+ "files_per_step": 2309,
+ "commits": [
+  {
+   "k": 1,
+   "branch": "m3/k1",
+   "commit": "d7bd2de3cbd60774daefcb77a0f0a98f7dbb4293",
+   "files": 0,
+   "bytes": 0
+  },
+  {
+   "k": 2,
+   "branch": "m3/k2",
+   "commit": "7673a9b0b531a6ff0105c9a1183310c542e801ad",
+   "files": 2309,
+   "bytes": 10763680
+  },
+  {
+   "k": 3,
+   "branch": "m3/k3",
+   "commit": "b4aeae1b21cebdfca896e07d5438266a3070d6c9",
+   "files": 2309,
+   "bytes": 12594222
+  }
+ ]
+}

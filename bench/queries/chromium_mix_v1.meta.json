@@ -1,0 +1,33 @@
+{
+  "case_insensitive_share": 0.25,
+  "class_counts": {
+    "identifier": 400,
+    "literal": 200,
+    "regex": 200,
+    "short": 100,
+    "zero": 100
+  },
+  "corpus": "chromium",
+  "count": 1000,
+  "definitions": 714423,
+  "files": 461767,
+  "files_sha256": "93059431ff9369a70af008c2f0ef8fd79b12ed4a4b3570017736641aef7965e9",
+  "generator": "bench/queries/gen_mix.py",
+  "python": "3.13.5",
+  "schema_version": 1,
+  "seed": 1,
+  "tercile_df_ranges": [
+    [
+      1,
+      63
+    ],
+    [
+      64,
+      4089
+    ],
+    [
+      4119,
+      262121
+    ]
+  ]
+}

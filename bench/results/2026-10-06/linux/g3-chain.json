@@ -1,0 +1,64 @@
+{
+ "kind": "chain",
+ "seed": 1,
+ "base": "cee9395acd8043be0644b25c34bfa86623f2b935",
+ "files_per_step": 479,
+ "commits": [
+  {
+   "k": 1,
+   "branch": "m3/k1",
+   "commit": "cee9395acd8043be0644b25c34bfa86623f2b935",
+   "files": 0,
+   "bytes": 0
+  },
+  {
+   "k": 2,
+   "branch": "m3/k2",
+   "commit": "22505ba36fede76db78006800c273a3db6b5f997",
+   "files": 479,
+   "bytes": 5862790
+  },
+  {
+   "k": 3,
+   "branch": "m3/k3",
+   "commit": "e3c6f22c866bc27d2be5e6229a5e1177a1dab9b0",
+   "files": 479,
+   "bytes": 5467665
+  },
+  {
+   "k": 4,
+   "branch": "m3/k4",
+   "commit": "3e5bad572faee42d3f7ae6c8f8077962f55a15ab",
+   "files": 479,
+   "bytes": 5065290
+  },
+  {
+   "k": 5,
+   "branch": "m3/k5",
+   "commit": "45bbbb84d899dd2130771af91e55a106e055702d",
+   "files": 479,
+   "bytes": 5783161
+  },
+  {
+   "k": 6,
+   "branch": "m3/k6",
+   "commit": "8b1224bb1195bd26daa26a82d0c9b48d9fc3096e",
+   "files": 479,
+   "bytes": 4978320
+  },
+  {
+   "k": 7,
+   "branch": "m3/k7",
+   "commit": "546f359f0bcae69f13489bc3b1fc9cc04f3fb3ec",
+   "files": 479,
+   "bytes": 5557363
+  },
+  {
+   "k": 8,
+   "branch": "m3/k8",
+   "commit": "a9b876403a4b849588848c3d2fddb80010cadea5",
+   "files": 479,
+   "bytes": 4849832
+  }
+ ]
+}

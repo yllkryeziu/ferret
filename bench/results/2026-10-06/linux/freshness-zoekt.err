@@ -1,0 +1,377 @@
+2026/10/06 01:30:20 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00000.zoekt: 295108473 index bytes (overhead 2.8), 18468 files processed 
+2026/10/06 01:30:29 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00001.zoekt: 289073418 index bytes (overhead 2.8), 13331 files processed 
+2026/10/06 01:30:39 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00002.zoekt: 283415955 index bytes (overhead 2.7), 6262 files processed 
+2026/10/06 01:30:48 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00003.zoekt: 252006156 index bytes (overhead 2.4), 3290 files processed 
+2026/10/06 01:30:58 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00004.zoekt: 288880418 index bytes (overhead 2.8), 7576 files processed 
+2026/10/06 01:31:08 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00005.zoekt: 289467820 index bytes (overhead 2.8), 6222 files processed 
+2026/10/06 01:31:18 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00006.zoekt: 286445050 index bytes (overhead 2.7), 5221 files processed 
+2026/10/06 01:31:28 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00007.zoekt: 286184913 index bytes (overhead 2.7), 5977 files processed 
+2026/10/06 01:31:39 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00008.zoekt: 288670386 index bytes (overhead 2.8), 8298 files processed 
+2026/10/06 01:31:48 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00009.zoekt: 293678526 index bytes (overhead 2.8), 8643 files processed 
+2026/10/06 01:31:56 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00010.zoekt: 286014845 index bytes (overhead 2.7), 7617 files processed 
+2026/10/06 01:31:57 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00011.zoekt: 71224839 index bytes (overhead 2.8), 4854 files processed 
+2026/10/06 01:31:57 [INFO] loading 12 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 7 more
+2026/10/06 01:31:57 [INFO] loading 12 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 7 more
+2026/10/06 01:32:13 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00012.zoekt: 7974 index bytes (overhead 8.1), 1 files processed 
+2026/10/06 01:32:13 [INFO] loading 3 shard(s): zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00006.zoekt, zoekt-repo_v16.00009.zoekt
+2026/10/06 01:32:13 [INFO] loading 10 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00005.zoekt... 5 more
+2026/10/06 01:32:13 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00013.zoekt: 16573 index bytes (overhead 7.9), 1 files processed 
+2026/10/06 01:32:13 [INFO] loading 1 shard(s): zoekt-repo_v16.00005.zoekt
+2026/10/06 01:32:13 [INFO] loading 13 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 8 more
+2026/10/06 01:32:13 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00014.zoekt: 205047 index bytes (overhead 3.0), 1 files processed 
+2026/10/06 01:32:13 [INFO] loading 2 shard(s): zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00008.zoekt
+2026/10/06 01:32:13 [INFO] loading 13 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt... 8 more
+2026/10/06 01:32:14 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00015.zoekt: 17861 index bytes (overhead 9.1), 1 files processed 
+2026/10/06 01:32:14 [INFO] loading 3 shard(s): zoekt-repo_v16.00010.zoekt, zoekt-repo_v16.00011.zoekt, zoekt-repo_v16.00014.zoekt
+2026/10/06 01:32:14 [INFO] loading 13 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 8 more
+2026/10/06 01:32:14 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00016.zoekt: 14837 index bytes (overhead 7.6), 1 files processed 
+2026/10/06 01:32:14 [INFO] loading 1 shard(s): zoekt-repo_v16.00004.zoekt
+2026/10/06 01:32:14 [INFO] loading 16 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00005.zoekt... 11 more
+2026/10/06 01:32:14 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00017.zoekt: 23541 index bytes (overhead 8.8), 1 files processed 
+2026/10/06 01:32:14 [INFO] loading 1 shard(s): zoekt-repo_v16.00009.zoekt
+2026/10/06 01:32:14 [INFO] loading 17 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 12 more
+2026/10/06 01:32:14 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00018.zoekt: 136664 index bytes (overhead 4.7), 1 files processed 
+2026/10/06 01:32:14 [INFO] loading 3 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt
+2026/10/06 01:32:14 [INFO] loading 16 shard(s): zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt, zoekt-repo_v16.00006.zoekt, zoekt-repo_v16.00007.zoekt... 11 more
+2026/10/06 01:32:14 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00019.zoekt: 8996 index bytes (overhead 13.1), 1 files processed 
+2026/10/06 01:32:14 [INFO] loading 1 shard(s): zoekt-repo_v16.00005.zoekt
+2026/10/06 01:32:14 [INFO] loading 19 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 14 more
+2026/10/06 01:32:15 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00020.zoekt: 15728 index bytes (overhead 6.3), 1 files processed 
+2026/10/06 01:32:15 [INFO] loading 1 shard(s): zoekt-repo_v16.00004.zoekt
+2026/10/06 01:32:15 [INFO] loading 20 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00005.zoekt... 15 more
+2026/10/06 01:32:15 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00021.zoekt: 21303 index bytes (overhead 7.5), 1 files processed 
+2026/10/06 01:32:15 [INFO] loading 3 shard(s): zoekt-repo_v16.00011.zoekt, zoekt-repo_v16.00012.zoekt, zoekt-repo_v16.00015.zoekt
+2026/10/06 01:32:15 [INFO] loading 19 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 14 more
+2026/10/06 01:32:15 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00022.zoekt: 18036 index bytes (overhead 10.0), 1 files processed 
+2026/10/06 01:32:15 [INFO] loading 3 shard(s): zoekt-repo_v16.00012.zoekt, zoekt-repo_v16.00015.zoekt, zoekt-repo_v16.00016.zoekt
+2026/10/06 01:32:15 [INFO] loading 5 shard(s): zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00006.zoekt, zoekt-repo_v16.00014.zoekt
+2026/10/06 01:32:15 [INFO] loading 15 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00005.zoekt, zoekt-repo_v16.00007.zoekt, zoekt-repo_v16.00008.zoekt... 10 more
+2026/10/06 01:32:15 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00023.zoekt: 24739 index bytes (overhead 4.6), 1 files processed 
+2026/10/06 01:32:15 [INFO] loading 1 shard(s): zoekt-repo_v16.00007.zoekt
+2026/10/06 01:32:15 [INFO] loading 23 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 18 more
+2026/10/06 01:32:16 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00024.zoekt: 70609 index bytes (overhead 4.8), 1 files processed 
+2026/10/06 01:32:16 [INFO] loading 1 shard(s): zoekt-repo_v16.00000.zoekt
+2026/10/06 01:32:16 [INFO] loading 24 shard(s): zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt... 19 more
+2026/10/06 01:32:16 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00025.zoekt: 54444 index bytes (overhead 4.7), 1 files processed 
+2026/10/06 01:32:16 [INFO] loading 1 shard(s): zoekt-repo_v16.00007.zoekt
+2026/10/06 01:32:16 [INFO] loading 25 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 20 more
+2026/10/06 01:32:16 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00026.zoekt: 26166 index bytes (overhead 7.0), 1 files processed 
+2026/10/06 01:32:16 [INFO] loading 3 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00011.zoekt
+2026/10/06 01:32:16 [INFO] loading 24 shard(s): zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt, zoekt-repo_v16.00006.zoekt... 19 more
+2026/10/06 01:32:16 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00027.zoekt: 11446 index bytes (overhead 8.9), 1 files processed 
+2026/10/06 01:32:16 [INFO] loading 2 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00004.zoekt
+2026/10/06 01:32:16 [INFO] loading 26 shard(s): zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00005.zoekt, zoekt-repo_v16.00006.zoekt... 21 more
+2026/10/06 01:32:17 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00028.zoekt: 37577 index bytes (overhead 8.2), 1 files processed 
+2026/10/06 01:32:17 [INFO] loading 3 shard(s): zoekt-repo_v16.00009.zoekt, zoekt-repo_v16.00010.zoekt, zoekt-repo_v16.00014.zoekt
+2026/10/06 01:32:17 [INFO] loading 26 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 21 more
+2026/10/06 01:32:17 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00029.zoekt: 27018 index bytes (overhead 6.9), 1 files processed 
+2026/10/06 01:32:17 [INFO] loading 3 shard(s): zoekt-repo_v16.00007.zoekt, zoekt-repo_v16.00012.zoekt, zoekt-repo_v16.00023.zoekt
+2026/10/06 01:32:17 [INFO] loading 27 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 22 more
+2026/10/06 01:32:17 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00030.zoekt: 9299 index bytes (overhead 11.3), 1 files processed 
+2026/10/06 01:32:17 [INFO] loading 2 shard(s): zoekt-repo_v16.00005.zoekt, zoekt-repo_v16.00014.zoekt
+2026/10/06 01:32:17 [INFO] loading 29 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 24 more
+2026/10/06 01:32:17 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00031.zoekt: 4619 index bytes (overhead 14.7), 1 files processed 
+2026/10/06 01:32:17 [INFO] loading 2 shard(s): zoekt-repo_v16.00006.zoekt, zoekt-repo_v16.00015.zoekt
+2026/10/06 01:32:17 [INFO] loading 30 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 25 more
+2026/10/06 01:32:18 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00032.zoekt: 27248 index bytes (overhead 6.3), 1 files processed 
+2026/10/06 01:32:18 [INFO] loading 3 shard(s): zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt
+2026/10/06 01:32:18 [INFO] loading 30 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt, zoekt-repo_v16.00006.zoekt, zoekt-repo_v16.00007.zoekt... 25 more
+2026/10/06 01:32:18 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00033.zoekt: 4888 index bytes (overhead 13.9), 1 files processed 
+2026/10/06 01:32:18 [INFO] loading 2 shard(s): zoekt-repo_v16.00013.zoekt, zoekt-repo_v16.00024.zoekt
+2026/10/06 01:32:18 [INFO] loading 7 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00006.zoekt, zoekt-repo_v16.00008.zoekt, zoekt-repo_v16.00011.zoekt, zoekt-repo_v16.00026.zoekt... 2 more
+2026/10/06 01:32:18 [INFO] loading 25 shard(s): zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt... 20 more
+2026/10/06 01:32:18 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00034.zoekt: 66736 index bytes (overhead 5.9), 1 files processed 
+2026/10/06 01:32:18 [INFO] loading 2 shard(s): zoekt-repo_v16.00025.zoekt, zoekt-repo_v16.00032.zoekt
+2026/10/06 01:32:18 [INFO] loading 5 shard(s): zoekt-repo_v16.00006.zoekt, zoekt-repo_v16.00011.zoekt, zoekt-repo_v16.00021.zoekt, zoekt-repo_v16.00028.zoekt, zoekt-repo_v16.00029.zoekt
+2026/10/06 01:32:18 [INFO] loading 28 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 23 more
+2026/10/06 01:32:18 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00035.zoekt: 9725 index bytes (overhead 11.6), 1 files processed 
+2026/10/06 01:32:18 [INFO] loading 1 shard(s): zoekt-repo_v16.00003.zoekt
+2026/10/06 01:32:18 [INFO] loading 35 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt... 30 more
+2026/10/06 01:32:19 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00036.zoekt: 12453 index bytes (overhead 10.9), 1 files processed 
+2026/10/06 01:32:19 [INFO] loading 3 shard(s): zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00012.zoekt
+2026/10/06 01:32:19 [INFO] loading 34 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt, zoekt-repo_v16.00006.zoekt... 29 more
+2026/10/06 01:32:19 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00037.zoekt: 16786 index bytes (overhead 7.1), 1 files processed 
+2026/10/06 01:32:19 [INFO] loading 4 shard(s): zoekt-repo_v16.00021.zoekt, zoekt-repo_v16.00022.zoekt, zoekt-repo_v16.00025.zoekt, zoekt-repo_v16.00033.zoekt
+2026/10/06 01:32:19 [INFO] loading 8 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00005.zoekt, zoekt-repo_v16.00007.zoekt, zoekt-repo_v16.00013.zoekt, zoekt-repo_v16.00016.zoekt... 3 more
+2026/10/06 01:32:19 [INFO] loading 26 shard(s): zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00006.zoekt... 21 more
+2026/10/06 01:32:19 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00038.zoekt: 27360 index bytes (overhead 5.8), 1 files processed 
+2026/10/06 01:32:19 [INFO] loading 2 shard(s): zoekt-repo_v16.00028.zoekt, zoekt-repo_v16.00031.zoekt
+2026/10/06 01:32:19 [INFO] loading 4 shard(s): zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00020.zoekt, zoekt-repo_v16.00024.zoekt
+2026/10/06 01:32:19 [INFO] loading 33 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt, zoekt-repo_v16.00006.zoekt... 28 more
+2026/10/06 01:32:19 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00039.zoekt: 28996 index bytes (overhead 5.2), 1 files processed 
+2026/10/06 01:32:19 [INFO] loading 1 shard(s): zoekt-repo_v16.00022.zoekt
+2026/10/06 01:32:19 [INFO] loading 6 shard(s): zoekt-repo_v16.00015.zoekt, zoekt-repo_v16.00018.zoekt, zoekt-repo_v16.00020.zoekt, zoekt-repo_v16.00028.zoekt, zoekt-repo_v16.00034.zoekt... 1 more
+2026/10/06 01:32:19 [INFO] loading 7 shard(s): zoekt-repo_v16.00006.zoekt, zoekt-repo_v16.00008.zoekt, zoekt-repo_v16.00010.zoekt, zoekt-repo_v16.00027.zoekt, zoekt-repo_v16.00030.zoekt... 2 more
+2026/10/06 01:32:19 [INFO] loading 26 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 21 more
+2026/10/06 01:32:19 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00040.zoekt: 10314 index bytes (overhead 8.5), 1 files processed 
+2026/10/06 01:32:19 [INFO] loading 2 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00012.zoekt
+2026/10/06 01:32:19 [INFO] loading 39 shard(s): zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt... 34 more
+2026/10/06 01:32:20 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00041.zoekt: 2899 index bytes (overhead 23.8), 1 files processed 
+2026/10/06 01:32:20 [INFO] loading 1 shard(s): zoekt-repo_v16.00040.zoekt
+2026/10/06 01:32:20 [INFO] loading 5 shard(s): zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00012.zoekt, zoekt-repo_v16.00024.zoekt, zoekt-repo_v16.00030.zoekt, zoekt-repo_v16.00038.zoekt
+2026/10/06 01:32:20 [INFO] loading 36 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00005.zoekt... 31 more
+2026/10/06 01:32:20 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00042.zoekt: 196062 index bytes (overhead 3.9), 1 files processed 
+2026/10/06 01:32:20 [INFO] loading 5 shard(s): zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00008.zoekt, zoekt-repo_v16.00013.zoekt, zoekt-repo_v16.00018.zoekt, zoekt-repo_v16.00041.zoekt
+2026/10/06 01:32:20 [INFO] loading 38 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00005.zoekt... 33 more
+2026/10/06 01:32:20 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00043.zoekt: 73988 index bytes (overhead 4.9), 1 files processed 
+2026/10/06 01:32:20 [INFO] loading 1 shard(s): zoekt-repo_v16.00000.zoekt
+2026/10/06 01:32:20 [INFO] loading 43 shard(s): zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt... 38 more
+2026/10/06 01:32:20 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00044.zoekt: 7869 index bytes (overhead 12.1), 1 files processed 
+2026/10/06 01:32:20 [INFO] loading 17 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00006.zoekt, zoekt-repo_v16.00011.zoekt, zoekt-repo_v16.00012.zoekt... 12 more
+2026/10/06 01:32:20 [INFO] loading 28 shard(s): zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt, zoekt-repo_v16.00007.zoekt... 23 more
+2026/10/06 01:32:21 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00045.zoekt: 78735 index bytes (overhead 5.1), 1 files processed 
+2026/10/06 01:32:21 [INFO] loading 5 shard(s): zoekt-repo_v16.00005.zoekt, zoekt-repo_v16.00007.zoekt, zoekt-repo_v16.00014.zoekt, zoekt-repo_v16.00020.zoekt, zoekt-repo_v16.00022.zoekt
+2026/10/06 01:32:21 [INFO] loading 41 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 36 more
+2026/10/06 01:32:21 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00046.zoekt: 5386 index bytes (overhead 17.2), 1 files processed 
+2026/10/06 01:32:21 [INFO] loading 3 shard(s): zoekt-repo_v16.00006.zoekt, zoekt-repo_v16.00011.zoekt, zoekt-repo_v16.00026.zoekt
+2026/10/06 01:32:21 [INFO] loading 44 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 39 more
+2026/10/06 01:32:21 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00047.zoekt: 32327 index bytes (overhead 5.9), 1 files processed 
+2026/10/06 01:32:21 [INFO] loading 4 shard(s): zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00023.zoekt, zoekt-repo_v16.00027.zoekt, zoekt-repo_v16.00029.zoekt
+2026/10/06 01:32:21 [INFO] loading 44 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00005.zoekt... 39 more
+2026/10/06 01:32:21 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00048.zoekt: 109210 index bytes (overhead 4.5), 1 files processed 
+2026/10/06 01:32:21 [INFO] loading 4 shard(s): zoekt-repo_v16.00012.zoekt, zoekt-repo_v16.00023.zoekt, zoekt-repo_v16.00032.zoekt, zoekt-repo_v16.00048.zoekt
+2026/10/06 01:32:21 [INFO] loading 7 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00009.zoekt, zoekt-repo_v16.00021.zoekt, zoekt-repo_v16.00040.zoekt... 2 more
+2026/10/06 01:32:21 [INFO] loading 38 shard(s): zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00005.zoekt, zoekt-repo_v16.00006.zoekt... 33 more
+2026/10/06 01:32:22 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00049.zoekt: 12462 index bytes (overhead 10.4), 1 files processed 
+2026/10/06 01:32:22 [INFO] loading 6 shard(s): zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00008.zoekt, zoekt-repo_v16.00016.zoekt, zoekt-repo_v16.00031.zoekt, zoekt-repo_v16.00035.zoekt... 1 more
+2026/10/06 01:32:22 [INFO] loading 44 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt... 39 more
+2026/10/06 01:32:22 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00050.zoekt: 66986 index bytes (overhead 3.6), 1 files processed 
+2026/10/06 01:32:22 [INFO] loading 4 shard(s): zoekt-repo_v16.00007.zoekt, zoekt-repo_v16.00031.zoekt, zoekt-repo_v16.00033.zoekt, zoekt-repo_v16.00050.zoekt
+2026/10/06 01:32:22 [INFO] loading 47 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 42 more
+2026/10/06 01:32:22 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00051.zoekt: 69320 index bytes (overhead 5.8), 1 files processed 
+2026/10/06 01:32:22 [INFO] loading 1 shard(s): zoekt-repo_v16.00031.zoekt
+2026/10/06 01:32:22 [INFO] loading 7 shard(s): zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00009.zoekt, zoekt-repo_v16.00036.zoekt, zoekt-repo_v16.00037.zoekt, zoekt-repo_v16.00040.zoekt... 2 more
+2026/10/06 01:32:22 [INFO] loading 44 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt... 39 more
+2026/10/06 01:32:22 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00052.zoekt: 699689 index bytes (overhead 3.4), 1 files processed 
+2026/10/06 01:32:22 [INFO] loading 6 shard(s): zoekt-repo_v16.00006.zoekt, zoekt-repo_v16.00009.zoekt, zoekt-repo_v16.00012.zoekt, zoekt-repo_v16.00023.zoekt, zoekt-repo_v16.00032.zoekt... 1 more
+2026/10/06 01:32:22 [INFO] loading 47 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 42 more
+2026/10/06 01:32:23 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00053.zoekt: 64412 index bytes (overhead 5.6), 1 files processed 
+2026/10/06 01:32:23 [INFO] loading 1 shard(s): zoekt-repo_v16.00047.zoekt
+2026/10/06 01:32:23 [INFO] loading 5 shard(s): zoekt-repo_v16.00006.zoekt, zoekt-repo_v16.00011.zoekt, zoekt-repo_v16.00026.zoekt, zoekt-repo_v16.00033.zoekt, zoekt-repo_v16.00038.zoekt
+2026/10/06 01:32:23 [INFO] loading 48 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 43 more
+2026/10/06 01:32:23 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00054.zoekt: 6182 index bytes (overhead 14.5), 1 files processed 
+2026/10/06 01:32:23 [INFO] loading 2 shard(s): zoekt-repo_v16.00013.zoekt, zoekt-repo_v16.00036.zoekt
+2026/10/06 01:32:23 [INFO] loading 6 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00020.zoekt, zoekt-repo_v16.00021.zoekt, zoekt-repo_v16.00027.zoekt... 1 more
+2026/10/06 01:32:23 [INFO] loading 47 shard(s): zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt, zoekt-repo_v16.00006.zoekt... 42 more
+2026/10/06 01:32:23 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00055.zoekt: 28114 index bytes (overhead 5.9), 1 files processed 
+2026/10/06 01:32:23 [INFO] loading 4 shard(s): zoekt-repo_v16.00014.zoekt, zoekt-repo_v16.00017.zoekt, zoekt-repo_v16.00025.zoekt, zoekt-repo_v16.00031.zoekt
+2026/10/06 01:32:23 [INFO] loading 10 shard(s): zoekt-repo_v16.00019.zoekt, zoekt-repo_v16.00020.zoekt, zoekt-repo_v16.00024.zoekt, zoekt-repo_v16.00028.zoekt, zoekt-repo_v16.00032.zoekt... 5 more
+2026/10/06 01:32:23 [INFO] loading 9 shard(s): zoekt-repo_v16.00007.zoekt, zoekt-repo_v16.00012.zoekt, zoekt-repo_v16.00015.zoekt, zoekt-repo_v16.00016.zoekt, zoekt-repo_v16.00023.zoekt... 4 more
+2026/10/06 01:32:23 [INFO] loading 33 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 28 more
+2026/10/06 01:32:23 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00056.zoekt: 3796 index bytes (overhead 20.5), 1 files processed 
+2026/10/06 01:32:23 [INFO] loading 1 shard(s): zoekt-repo_v16.00034.zoekt
+2026/10/06 01:32:23 [INFO] loading 5 shard(s): zoekt-repo_v16.00007.zoekt, zoekt-repo_v16.00012.zoekt, zoekt-repo_v16.00039.zoekt, zoekt-repo_v16.00050.zoekt, zoekt-repo_v16.00054.zoekt
+2026/10/06 01:32:24 [INFO] loading 51 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 46 more
+2026/10/06 01:32:24 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00057.zoekt: 108449 index bytes (overhead 3.9), 1 files processed 
+2026/10/06 01:32:24 [INFO] loading 2 shard(s): zoekt-repo_v16.00009.zoekt, zoekt-repo_v16.00054.zoekt
+2026/10/06 01:32:24 [INFO] loading 56 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 51 more
+2026/10/06 01:32:24 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00058.zoekt: 166684 index bytes (overhead 4.0), 1 files processed 
+2026/10/06 01:32:24 [INFO] loading 2 shard(s): zoekt-repo_v16.00050.zoekt, zoekt-repo_v16.00057.zoekt
+2026/10/06 01:32:24 [INFO] loading 8 shard(s): zoekt-repo_v16.00011.zoekt, zoekt-repo_v16.00017.zoekt, zoekt-repo_v16.00020.zoekt, zoekt-repo_v16.00023.zoekt, zoekt-repo_v16.00025.zoekt... 3 more
+2026/10/06 01:32:24 [INFO] loading 49 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 44 more
+2026/10/06 01:32:24 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00059.zoekt: 31782 index bytes (overhead 6.4), 1 files processed 
+2026/10/06 01:32:24 [INFO] loading 4 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00026.zoekt, zoekt-repo_v16.00027.zoekt, zoekt-repo_v16.00047.zoekt
+2026/10/06 01:32:24 [INFO] loading 56 shard(s): zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt... 51 more
+2026/10/06 01:32:25 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00060.zoekt: 49108 index bytes (overhead 5.3), 1 files processed 
+2026/10/06 01:32:25 [INFO] loading 4 shard(s): zoekt-repo_v16.00005.zoekt, zoekt-repo_v16.00028.zoekt, zoekt-repo_v16.00045.zoekt, zoekt-repo_v16.00046.zoekt
+2026/10/06 01:32:25 [INFO] loading 57 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 52 more
+2026/10/06 01:32:25 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00061.zoekt: 58228 index bytes (overhead 5.5), 1 files processed 
+2026/10/06 01:32:25 [INFO] loading 7 shard(s): zoekt-repo_v16.00016.zoekt, zoekt-repo_v16.00017.zoekt, zoekt-repo_v16.00018.zoekt, zoekt-repo_v16.00021.zoekt, zoekt-repo_v16.00042.zoekt... 2 more
+2026/10/06 01:32:25 [INFO] loading 9 shard(s): zoekt-repo_v16.00005.zoekt, zoekt-repo_v16.00023.zoekt, zoekt-repo_v16.00028.zoekt, zoekt-repo_v16.00038.zoekt, zoekt-repo_v16.00039.zoekt... 4 more
+2026/10/06 01:32:25 [INFO] loading 46 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 41 more
+2026/10/06 01:32:25 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00062.zoekt: 111090 index bytes (overhead 3.6), 1 files processed 
+2026/10/06 01:32:25 [INFO] loading 2 shard(s): zoekt-repo_v16.00016.zoekt, zoekt-repo_v16.00044.zoekt
+2026/10/06 01:32:25 [INFO] loading 10 shard(s): zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00017.zoekt, zoekt-repo_v16.00022.zoekt, zoekt-repo_v16.00026.zoekt... 5 more
+2026/10/06 01:32:25 [INFO] loading 51 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00005.zoekt, zoekt-repo_v16.00006.zoekt... 46 more
+2026/10/06 01:32:26 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00063.zoekt: 40716 index bytes (overhead 6.0), 1 files processed 
+2026/10/06 01:32:26 [INFO] loading 4 shard(s): zoekt-repo_v16.00021.zoekt, zoekt-repo_v16.00032.zoekt, zoekt-repo_v16.00054.zoekt, zoekt-repo_v16.00058.zoekt
+2026/10/06 01:32:26 [INFO] loading 8 shard(s): zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00028.zoekt, zoekt-repo_v16.00043.zoekt, zoekt-repo_v16.00047.zoekt, zoekt-repo_v16.00052.zoekt... 3 more
+2026/10/06 01:32:26 [INFO] loading 52 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt... 47 more
+2026/10/06 01:32:26 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00064.zoekt: 6314 index bytes (overhead 12.1), 1 files processed 
+2026/10/06 01:32:26 [INFO] loading 5 shard(s): zoekt-repo_v16.00008.zoekt, zoekt-repo_v16.00018.zoekt, zoekt-repo_v16.00031.zoekt, zoekt-repo_v16.00053.zoekt, zoekt-repo_v16.00057.zoekt
+2026/10/06 01:32:26 [INFO] loading 60 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 55 more
+2026/10/06 01:32:26 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00065.zoekt: 13597 index bytes (overhead 8.4), 1 files processed 
+2026/10/06 01:32:26 [INFO] loading 6 shard(s): zoekt-repo_v16.00031.zoekt, zoekt-repo_v16.00034.zoekt, zoekt-repo_v16.00035.zoekt, zoekt-repo_v16.00045.zoekt, zoekt-repo_v16.00047.zoekt... 1 more
+2026/10/06 01:32:26 [INFO] loading 8 shard(s): zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00005.zoekt, zoekt-repo_v16.00006.zoekt, zoekt-repo_v16.00007.zoekt, zoekt-repo_v16.00019.zoekt... 3 more
+2026/10/06 01:32:26 [INFO] loading 52 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00008.zoekt... 47 more
+2026/10/06 01:32:26 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00066.zoekt: 23808 index bytes (overhead 5.5), 1 files processed 
+2026/10/06 01:32:26 [INFO] loading 4 shard(s): zoekt-repo_v16.00038.zoekt, zoekt-repo_v16.00041.zoekt, zoekt-repo_v16.00052.zoekt, zoekt-repo_v16.00060.zoekt
+2026/10/06 01:32:26 [INFO] loading 11 shard(s): zoekt-repo_v16.00007.zoekt, zoekt-repo_v16.00009.zoekt, zoekt-repo_v16.00013.zoekt, zoekt-repo_v16.00028.zoekt, zoekt-repo_v16.00032.zoekt... 6 more
+2026/10/06 01:32:26 [INFO] loading 47 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 42 more
+2026/10/06 01:32:26 [INFO] loading 5 shard(s): zoekt-repo_v16.00006.zoekt, zoekt-repo_v16.00015.zoekt, zoekt-repo_v16.00019.zoekt, zoekt-repo_v16.00033.zoekt, zoekt-repo_v16.00057.zoekt
+2026/10/06 01:32:27 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00067.zoekt: 77156 index bytes (overhead 3.4), 1 files processed 
+2026/10/06 01:32:27 [INFO] loading 5 shard(s): zoekt-repo_v16.00017.zoekt, zoekt-repo_v16.00022.zoekt, zoekt-repo_v16.00032.zoekt, zoekt-repo_v16.00055.zoekt, zoekt-repo_v16.00063.zoekt
+2026/10/06 01:32:27 [INFO] loading 8 shard(s): zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00016.zoekt, zoekt-repo_v16.00023.zoekt, zoekt-repo_v16.00051.zoekt, zoekt-repo_v16.00056.zoekt... 3 more
+2026/10/06 01:32:27 [INFO] loading 55 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt... 50 more
+2026/10/06 01:32:27 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00068.zoekt: 347116 index bytes (overhead 3.6), 1 files processed 
+2026/10/06 01:32:27 [INFO] loading 4 shard(s): zoekt-repo_v16.00019.zoekt, zoekt-repo_v16.00038.zoekt, zoekt-repo_v16.00057.zoekt, zoekt-repo_v16.00063.zoekt
+2026/10/06 01:32:27 [INFO] loading 10 shard(s): zoekt-repo_v16.00014.zoekt, zoekt-repo_v16.00017.zoekt, zoekt-repo_v16.00020.zoekt, zoekt-repo_v16.00024.zoekt, zoekt-repo_v16.00037.zoekt... 5 more
+2026/10/06 01:32:27 [INFO] loading 8 shard(s): zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00010.zoekt, zoekt-repo_v16.00025.zoekt, zoekt-repo_v16.00033.zoekt... 3 more
+2026/10/06 01:32:27 [INFO] loading 47 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt, zoekt-repo_v16.00006.zoekt... 42 more
+2026/10/06 01:32:27 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00069.zoekt: 10415 index bytes (overhead 11.4), 1 files processed 
+2026/10/06 01:32:27 [INFO] loading 2 shard(s): zoekt-repo_v16.00011.zoekt, zoekt-repo_v16.00016.zoekt
+2026/10/06 01:32:27 [INFO] loading 68 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 63 more
+2026/10/06 01:32:27 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00070.zoekt: 11149 index bytes (overhead 11.4), 1 files processed 
+2026/10/06 01:32:27 [INFO] loading 2 shard(s): zoekt-repo_v16.00005.zoekt, zoekt-repo_v16.00011.zoekt
+2026/10/06 01:32:27 [INFO] loading 69 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 64 more
+2026/10/06 01:32:28 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00071.zoekt: 98411 index bytes (overhead 4.6), 1 files processed 
+2026/10/06 01:32:28 [INFO] loading 4 shard(s): zoekt-repo_v16.00046.zoekt, zoekt-repo_v16.00049.zoekt, zoekt-repo_v16.00057.zoekt, zoekt-repo_v16.00062.zoekt
+2026/10/06 01:32:28 [INFO] loading 9 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00006.zoekt, zoekt-repo_v16.00016.zoekt, zoekt-repo_v16.00017.zoekt, zoekt-repo_v16.00022.zoekt... 4 more
+2026/10/06 01:32:28 [INFO] loading 59 shard(s): zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt... 54 more
+2026/10/06 01:32:28 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00072.zoekt: 260986 index bytes (overhead 4.0), 1 files processed 
+2026/10/06 01:32:28 [INFO] loading 1 shard(s): zoekt-repo_v16.00042.zoekt
+2026/10/06 01:32:28 [INFO] loading 11 shard(s): zoekt-repo_v16.00009.zoekt, zoekt-repo_v16.00020.zoekt, zoekt-repo_v16.00021.zoekt, zoekt-repo_v16.00024.zoekt, zoekt-repo_v16.00029.zoekt... 6 more
+2026/10/06 01:32:28 [INFO] loading 61 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 56 more
+2026/10/06 01:32:28 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00073.zoekt: 27895 index bytes (overhead 7.0), 1 files processed 
+2026/10/06 01:32:28 [INFO] loading 8 shard(s): zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00027.zoekt, zoekt-repo_v16.00028.zoekt, zoekt-repo_v16.00039.zoekt... 3 more
+2026/10/06 01:32:29 [INFO] loading 66 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt, zoekt-repo_v16.00006.zoekt... 61 more
+2026/10/06 01:32:29 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00074.zoekt: 24242 index bytes (overhead 6.6), 1 files processed 
+2026/10/06 01:32:29 [INFO] loading 1 shard(s): zoekt-repo_v16.00072.zoekt
+2026/10/06 01:32:29 [INFO] loading 16 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00008.zoekt, zoekt-repo_v16.00009.zoekt, zoekt-repo_v16.00010.zoekt... 11 more
+2026/10/06 01:32:29 [INFO] loading 58 shard(s): zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00005.zoekt, zoekt-repo_v16.00006.zoekt... 53 more
+2026/10/06 01:32:30 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00075.zoekt: 102837 index bytes (overhead 3.0), 1 files processed 
+2026/10/06 01:32:30 [INFO] loading 9 shard(s): zoekt-repo_v16.00005.zoekt, zoekt-repo_v16.00023.zoekt, zoekt-repo_v16.00024.zoekt, zoekt-repo_v16.00026.zoekt, zoekt-repo_v16.00040.zoekt... 4 more
+2026/10/06 01:32:30 [INFO] loading 67 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 62 more
+2026/10/06 01:32:30 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00076.zoekt: 43197 index bytes (overhead 4.9), 1 files processed 
+2026/10/06 01:32:30 [INFO] loading 4 shard(s): zoekt-repo_v16.00040.zoekt, zoekt-repo_v16.00047.zoekt, zoekt-repo_v16.00053.zoekt, zoekt-repo_v16.00066.zoekt
+2026/10/06 01:32:30 [INFO] loading 9 shard(s): zoekt-repo_v16.00007.zoekt, zoekt-repo_v16.00019.zoekt, zoekt-repo_v16.00027.zoekt, zoekt-repo_v16.00030.zoekt, zoekt-repo_v16.00034.zoekt... 4 more
+2026/10/06 01:32:31 [INFO] loading 64 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 59 more
+2026/10/06 01:32:31 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00077.zoekt: 64814 index bytes (overhead 5.3), 1 files processed 
+2026/10/06 01:32:31 [INFO] loading 5 shard(s): zoekt-repo_v16.00010.zoekt, zoekt-repo_v16.00039.zoekt, zoekt-repo_v16.00048.zoekt, zoekt-repo_v16.00065.zoekt, zoekt-repo_v16.00066.zoekt
+2026/10/06 01:32:31 [INFO] loading 73 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 68 more
+2026/10/06 01:32:32 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00078.zoekt: 191327 index bytes (overhead 3.0), 1 files processed 
+2026/10/06 01:32:32 [INFO] loading 6 shard(s): zoekt-repo_v16.00039.zoekt, zoekt-repo_v16.00046.zoekt, zoekt-repo_v16.00048.zoekt, zoekt-repo_v16.00059.zoekt, zoekt-repo_v16.00062.zoekt... 1 more
+2026/10/06 01:32:32 [INFO] loading 12 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00007.zoekt, zoekt-repo_v16.00009.zoekt... 7 more
+2026/10/06 01:32:32 [INFO] loading 61 shard(s): zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt, zoekt-repo_v16.00006.zoekt, zoekt-repo_v16.00008.zoekt... 56 more
+2026/10/06 01:32:33 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00079.zoekt: 15912 index bytes (overhead 9.3), 1 files processed 
+2026/10/06 01:32:33 [INFO] loading 1 shard(s): zoekt-repo_v16.00063.zoekt
+2026/10/06 01:32:33 [INFO] loading 9 shard(s): zoekt-repo_v16.00011.zoekt, zoekt-repo_v16.00015.zoekt, zoekt-repo_v16.00020.zoekt, zoekt-repo_v16.00029.zoekt, zoekt-repo_v16.00053.zoekt... 4 more
+2026/10/06 01:32:33 [INFO] loading 67 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00005.zoekt... 62 more
+2026/10/06 01:32:33 [INFO] loading 3 shard(s): zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00064.zoekt, zoekt-repo_v16.00073.zoekt
+2026/10/06 01:32:33 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00080.zoekt: 5473 index bytes (overhead 16.6), 1 files processed 
+2026/10/06 01:32:33 [INFO] loading 2 shard(s): zoekt-repo_v16.00017.zoekt, zoekt-repo_v16.00078.zoekt
+2026/10/06 01:32:33 [INFO] loading 11 shard(s): zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00008.zoekt, zoekt-repo_v16.00009.zoekt, zoekt-repo_v16.00021.zoekt, zoekt-repo_v16.00023.zoekt... 6 more
+2026/10/06 01:32:33 [INFO] loading 68 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt... 63 more
+2026/10/06 01:32:33 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00081.zoekt: 70387 index bytes (overhead 4.9), 1 files processed 
+2026/10/06 01:32:34 [INFO] loading 1 shard(s): zoekt-repo_v16.00079.zoekt
+2026/10/06 01:32:34 [INFO] loading 6 shard(s): zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00012.zoekt, zoekt-repo_v16.00016.zoekt, zoekt-repo_v16.00034.zoekt, zoekt-repo_v16.00043.zoekt... 1 more
+2026/10/06 01:32:34 [INFO] loading 75 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt... 70 more
+2026/10/06 01:32:34 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00082.zoekt: 31125 index bytes (overhead 6.5), 1 files processed 
+2026/10/06 01:32:34 [INFO] loading 8 shard(s): zoekt-repo_v16.00008.zoekt, zoekt-repo_v16.00017.zoekt, zoekt-repo_v16.00018.zoekt, zoekt-repo_v16.00021.zoekt, zoekt-repo_v16.00027.zoekt... 3 more
+2026/10/06 01:32:34 [INFO] loading 75 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 70 more
+2026/10/06 01:32:34 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00083.zoekt: 3547 index bytes (overhead 21.1), 1 files processed 
+2026/10/06 01:32:34 [INFO] loading 8 shard(s): zoekt-repo_v16.00021.zoekt, zoekt-repo_v16.00026.zoekt, zoekt-repo_v16.00027.zoekt, zoekt-repo_v16.00060.zoekt, zoekt-repo_v16.00062.zoekt... 3 more
+2026/10/06 01:32:34 [INFO] loading 11 shard(s): zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00008.zoekt, zoekt-repo_v16.00015.zoekt, zoekt-repo_v16.00017.zoekt, zoekt-repo_v16.00034.zoekt... 6 more
+2026/10/06 01:32:34 [INFO] loading 65 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt... 60 more
+2026/10/06 01:32:34 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00084.zoekt: 41325 index bytes (overhead 5.8), 1 files processed 
+2026/10/06 01:32:34 [INFO] loading 16 shard(s): zoekt-repo_v16.00011.zoekt, zoekt-repo_v16.00026.zoekt, zoekt-repo_v16.00031.zoekt, zoekt-repo_v16.00034.zoekt, zoekt-repo_v16.00037.zoekt... 11 more
+2026/10/06 01:32:34 [INFO] loading 61 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00006.zoekt... 56 more
+2026/10/06 01:32:34 [INFO] loading 8 shard(s): zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00005.zoekt, zoekt-repo_v16.00008.zoekt, zoekt-repo_v16.00021.zoekt, zoekt-repo_v16.00056.zoekt... 3 more
+2026/10/06 01:32:35 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00085.zoekt: 9489 index bytes (overhead 10.9), 1 files processed 
+2026/10/06 01:32:35 [INFO] loading 1 shard(s): zoekt-repo_v16.00001.zoekt
+2026/10/06 01:32:35 [INFO] loading 85 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt... 80 more
+2026/10/06 01:32:35 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00086.zoekt: 9839 index bytes (overhead 11.2), 1 files processed 
+2026/10/06 01:32:35 [INFO] loading 3 shard(s): zoekt-repo_v16.00005.zoekt, zoekt-repo_v16.00033.zoekt, zoekt-repo_v16.00040.zoekt
+2026/10/06 01:32:35 [INFO] loading 84 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 79 more
+2026/10/06 01:32:35 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00087.zoekt: 113583 index bytes (overhead 4.6), 1 files processed 
+2026/10/06 01:32:35 [INFO] loading 5 shard(s): zoekt-repo_v16.00006.zoekt, zoekt-repo_v16.00019.zoekt, zoekt-repo_v16.00070.zoekt, zoekt-repo_v16.00072.zoekt, zoekt-repo_v16.00078.zoekt
+2026/10/06 01:32:35 [INFO] loading 83 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 78 more
+2026/10/06 01:32:35 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00088.zoekt: 307001 index bytes (overhead 4.0), 1 files processed 
+2026/10/06 01:32:35 [INFO] loading 2 shard(s): zoekt-repo_v16.00064.zoekt, zoekt-repo_v16.00074.zoekt
+2026/10/06 01:32:35 [INFO] loading 13 shard(s): zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00006.zoekt, zoekt-repo_v16.00007.zoekt, zoekt-repo_v16.00010.zoekt, zoekt-repo_v16.00011.zoekt... 8 more
+2026/10/06 01:32:35 [INFO] loading 74 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt... 69 more
+2026/10/06 01:32:36 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00089.zoekt: 6254 index bytes (overhead 12.2), 1 files processed 
+2026/10/06 01:32:36 [INFO] loading 7 shard(s): zoekt-repo_v16.00017.zoekt, zoekt-repo_v16.00023.zoekt, zoekt-repo_v16.00028.zoekt, zoekt-repo_v16.00032.zoekt, zoekt-repo_v16.00064.zoekt... 2 more
+2026/10/06 01:32:36 [INFO] loading 18 shard(s): zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00008.zoekt, zoekt-repo_v16.00010.zoekt, zoekt-repo_v16.00024.zoekt, zoekt-repo_v16.00031.zoekt... 13 more
+2026/10/06 01:32:36 [INFO] loading 65 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt... 60 more
+2026/10/06 01:32:36 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00090.zoekt: 3097 index bytes (overhead 18.0), 1 files processed 
+2026/10/06 01:32:36 [INFO] loading 2 shard(s): zoekt-repo_v16.00043.zoekt, zoekt-repo_v16.00052.zoekt
+2026/10/06 01:32:36 [INFO] loading 9 shard(s): zoekt-repo_v16.00006.zoekt, zoekt-repo_v16.00007.zoekt, zoekt-repo_v16.00014.zoekt, zoekt-repo_v16.00016.zoekt, zoekt-repo_v16.00050.zoekt... 4 more
+2026/10/06 01:32:36 [INFO] loading 80 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 75 more
+2026/10/06 01:32:36 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00091.zoekt: 15460 index bytes (overhead 9.2), 1 files processed 
+2026/10/06 01:32:36 [INFO] loading 5 shard(s): zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00026.zoekt, zoekt-repo_v16.00039.zoekt, zoekt-repo_v16.00058.zoekt, zoekt-repo_v16.00086.zoekt
+2026/10/06 01:32:36 [INFO] loading 87 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt... 82 more
+2026/10/06 01:32:36 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00092.zoekt: 20547 index bytes (overhead 8.5), 1 files processed 
+2026/10/06 01:32:36 [INFO] loading 12 shard(s): zoekt-repo_v16.00018.zoekt, zoekt-repo_v16.00028.zoekt, zoekt-repo_v16.00030.zoekt, zoekt-repo_v16.00039.zoekt, zoekt-repo_v16.00049.zoekt... 7 more
+2026/10/06 01:32:36 [INFO] loading 17 shard(s): zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00006.zoekt, zoekt-repo_v16.00009.zoekt, zoekt-repo_v16.00015.zoekt, zoekt-repo_v16.00017.zoekt... 12 more
+2026/10/06 01:32:36 [INFO] loading 64 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00005.zoekt... 59 more
+2026/10/06 01:32:37 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00093.zoekt: 35480 index bytes (overhead 7.1), 1 files processed 
+2026/10/06 01:32:37 [INFO] loading 5 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00015.zoekt, zoekt-repo_v16.00039.zoekt, zoekt-repo_v16.00064.zoekt, zoekt-repo_v16.00078.zoekt
+2026/10/06 01:32:37 [INFO] loading 89 shard(s): zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt... 84 more
+2026/10/06 01:32:37 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00094.zoekt: 23509 index bytes (overhead 6.0), 1 files processed 
+2026/10/06 01:32:37 [INFO] loading 5 shard(s): zoekt-repo_v16.00036.zoekt, zoekt-repo_v16.00039.zoekt, zoekt-repo_v16.00041.zoekt, zoekt-repo_v16.00042.zoekt, zoekt-repo_v16.00085.zoekt
+2026/10/06 01:32:37 [INFO] loading 14 shard(s): zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00005.zoekt, zoekt-repo_v16.00009.zoekt, zoekt-repo_v16.00014.zoekt, zoekt-repo_v16.00031.zoekt... 9 more
+2026/10/06 01:32:37 [INFO] loading 41 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00006.zoekt... 36 more
+2026/10/06 01:32:37 [INFO] loading 35 shard(s): zoekt-repo_v16.00007.zoekt, zoekt-repo_v16.00008.zoekt, zoekt-repo_v16.00012.zoekt, zoekt-repo_v16.00013.zoekt, zoekt-repo_v16.00015.zoekt... 30 more
+2026/10/06 01:32:37 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00095.zoekt: 134674 index bytes (overhead 4.3), 1 files processed 
+2026/10/06 01:32:37 [INFO] loading 8 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00006.zoekt, zoekt-repo_v16.00042.zoekt, zoekt-repo_v16.00049.zoekt, zoekt-repo_v16.00069.zoekt... 3 more
+2026/10/06 01:32:37 [INFO] loading 88 shard(s): zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt... 83 more
+2026/10/06 01:32:37 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00096.zoekt: 72045 index bytes (overhead 5.3), 1 files processed 
+2026/10/06 01:32:37 [INFO] loading 5 shard(s): zoekt-repo_v16.00055.zoekt, zoekt-repo_v16.00073.zoekt, zoekt-repo_v16.00075.zoekt, zoekt-repo_v16.00082.zoekt, zoekt-repo_v16.00089.zoekt
+2026/10/06 01:32:37 [INFO] loading 12 shard(s): zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00015.zoekt, zoekt-repo_v16.00024.zoekt, zoekt-repo_v16.00042.zoekt... 7 more
+2026/10/06 01:32:37 [INFO] loading 80 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt, zoekt-repo_v16.00006.zoekt... 75 more
+2026/10/06 01:32:38 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00097.zoekt: 15563 index bytes (overhead 11.1), 1 files processed 
+2026/10/06 01:32:38 [INFO] loading 6 shard(s): zoekt-repo_v16.00022.zoekt, zoekt-repo_v16.00029.zoekt, zoekt-repo_v16.00043.zoekt, zoekt-repo_v16.00052.zoekt, zoekt-repo_v16.00054.zoekt... 1 more
+2026/10/06 01:32:38 [INFO] loading 17 shard(s): zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00014.zoekt, zoekt-repo_v16.00021.zoekt, zoekt-repo_v16.00027.zoekt, zoekt-repo_v16.00028.zoekt... 12 more
+2026/10/06 01:32:38 [INFO] loading 75 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt... 70 more
+2026/10/06 01:32:38 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00098.zoekt: 49813 index bytes (overhead 5.0), 1 files processed 
+2026/10/06 01:32:38 [INFO] loading 10 shard(s): zoekt-repo_v16.00012.zoekt, zoekt-repo_v16.00026.zoekt, zoekt-repo_v16.00035.zoekt, zoekt-repo_v16.00043.zoekt, zoekt-repo_v16.00060.zoekt... 5 more
+2026/10/06 01:32:38 [INFO] loading 12 shard(s): zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00006.zoekt, zoekt-repo_v16.00025.zoekt, zoekt-repo_v16.00028.zoekt, zoekt-repo_v16.00041.zoekt... 7 more
+2026/10/06 01:32:38 [INFO] loading 77 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt... 72 more
+2026/10/06 01:32:38 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00099.zoekt: 11254 index bytes (overhead 12.0), 1 files processed 
+2026/10/06 01:32:38 [INFO] loading 5 shard(s): zoekt-repo_v16.00051.zoekt, zoekt-repo_v16.00073.zoekt, zoekt-repo_v16.00077.zoekt, zoekt-repo_v16.00085.zoekt, zoekt-repo_v16.00094.zoekt
+2026/10/06 01:32:38 [INFO] loading 11 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00009.zoekt, zoekt-repo_v16.00017.zoekt... 6 more
+2026/10/06 01:32:38 [INFO] loading 84 shard(s): zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00005.zoekt, zoekt-repo_v16.00006.zoekt, zoekt-repo_v16.00007.zoekt... 79 more
+2026/10/06 01:32:39 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00100.zoekt: 35552 index bytes (overhead 8.2), 1 files processed 
+2026/10/06 01:32:39 [INFO] loading 4 shard(s): zoekt-repo_v16.00022.zoekt, zoekt-repo_v16.00030.zoekt, zoekt-repo_v16.00088.zoekt, zoekt-repo_v16.00092.zoekt
+2026/10/06 01:32:39 [INFO] loading 11 shard(s): zoekt-repo_v16.00005.zoekt, zoekt-repo_v16.00011.zoekt, zoekt-repo_v16.00020.zoekt, zoekt-repo_v16.00033.zoekt, zoekt-repo_v16.00034.zoekt... 6 more
+2026/10/06 01:32:39 [INFO] loading 85 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 80 more
+2026/10/06 01:32:39 [INFO] loading 1 shard(s): zoekt-repo_v16.00013.zoekt
+2026/10/06 01:32:39 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00101.zoekt: 63412 index bytes (overhead 5.6), 1 files processed 
+2026/10/06 01:32:39 [INFO] loading 2 shard(s): zoekt-repo_v16.00084.zoekt, zoekt-repo_v16.00099.zoekt
+2026/10/06 01:32:39 [INFO] loading 7 shard(s): zoekt-repo_v16.00016.zoekt, zoekt-repo_v16.00028.zoekt, zoekt-repo_v16.00039.zoekt, zoekt-repo_v16.00043.zoekt, zoekt-repo_v16.00048.zoekt... 2 more
+2026/10/06 01:32:39 [INFO] loading 13 shard(s): zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00014.zoekt, zoekt-repo_v16.00017.zoekt, zoekt-repo_v16.00020.zoekt, zoekt-repo_v16.00030.zoekt... 8 more
+2026/10/06 01:32:39 [INFO] loading 80 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt... 75 more
+2026/10/06 01:32:39 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00102.zoekt: 35218 index bytes (overhead 6.5), 1 files processed 
+2026/10/06 01:32:39 [INFO] loading 2 shard(s): zoekt-repo_v16.00067.zoekt, zoekt-repo_v16.00078.zoekt
+2026/10/06 01:32:39 [INFO] loading 10 shard(s): zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00010.zoekt, zoekt-repo_v16.00041.zoekt, zoekt-repo_v16.00053.zoekt... 5 more
+2026/10/06 01:32:39 [INFO] loading 91 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00005.zoekt, zoekt-repo_v16.00006.zoekt... 86 more
+2026/10/06 01:32:39 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00103.zoekt: 19258 index bytes (overhead 7.8), 1 files processed 
+2026/10/06 01:32:39 [INFO] loading 5 shard(s): zoekt-repo_v16.00040.zoekt, zoekt-repo_v16.00045.zoekt, zoekt-repo_v16.00081.zoekt, zoekt-repo_v16.00083.zoekt, zoekt-repo_v16.00099.zoekt
+2026/10/06 01:32:39 [INFO] loading 13 shard(s): zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt, zoekt-repo_v16.00006.zoekt, zoekt-repo_v16.00010.zoekt, zoekt-repo_v16.00014.zoekt... 8 more
+2026/10/06 01:32:39 [INFO] loading 86 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00007.zoekt... 81 more
+2026/10/06 01:32:40 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00104.zoekt: 17231 index bytes (overhead 8.1), 1 files processed 
+2026/10/06 01:32:40 [INFO] loading 9 shard(s): zoekt-repo_v16.00005.zoekt, zoekt-repo_v16.00010.zoekt, zoekt-repo_v16.00018.zoekt, zoekt-repo_v16.00042.zoekt, zoekt-repo_v16.00046.zoekt... 4 more
+2026/10/06 01:32:40 [INFO] loading 96 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 91 more
+2026/10/06 01:32:40 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00105.zoekt: 27468 index bytes (overhead 8.0), 1 files processed 
+2026/10/06 01:32:40 [INFO] loading 9 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00021.zoekt, zoekt-repo_v16.00037.zoekt, zoekt-repo_v16.00041.zoekt, zoekt-repo_v16.00046.zoekt... 4 more
+2026/10/06 01:32:40 [INFO] loading 97 shard(s): zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt... 92 more
+2026/10/06 01:32:40 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00106.zoekt: 29582 index bytes (overhead 5.6), 1 files processed 
+2026/10/06 01:32:40 [INFO] loading 1 shard(s): zoekt-repo_v16.00064.zoekt
+2026/10/06 01:32:40 [INFO] loading 11 shard(s): zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00011.zoekt, zoekt-repo_v16.00019.zoekt, zoekt-repo_v16.00022.zoekt, zoekt-repo_v16.00033.zoekt... 6 more
+2026/10/06 01:32:40 [INFO] loading 95 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt... 90 more
+2026/10/06 01:32:40 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00107.zoekt: 11922 index bytes (overhead 9.9), 1 files processed 
+2026/10/06 01:32:40 [INFO] loading 1 shard(s): zoekt-repo_v16.00102.zoekt
+2026/10/06 01:32:40 [INFO] loading 9 shard(s): zoekt-repo_v16.00008.zoekt, zoekt-repo_v16.00019.zoekt, zoekt-repo_v16.00049.zoekt, zoekt-repo_v16.00061.zoekt, zoekt-repo_v16.00079.zoekt... 4 more
+2026/10/06 01:32:40 [INFO] loading 98 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 93 more
+2026/10/06 01:32:41 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00108.zoekt: 6859 index bytes (overhead 13.1), 1 files processed 
+2026/10/06 01:32:41 [INFO] loading 1 shard(s): zoekt-repo_v16.00093.zoekt
+2026/10/06 01:32:41 [INFO] loading 8 shard(s): zoekt-repo_v16.00012.zoekt, zoekt-repo_v16.00016.zoekt, zoekt-repo_v16.00034.zoekt, zoekt-repo_v16.00060.zoekt, zoekt-repo_v16.00069.zoekt... 3 more
+2026/10/06 01:32:41 [INFO] loading 16 shard(s): zoekt-repo_v16.00005.zoekt, zoekt-repo_v16.00014.zoekt, zoekt-repo_v16.00015.zoekt, zoekt-repo_v16.00021.zoekt, zoekt-repo_v16.00025.zoekt... 11 more
+2026/10/06 01:32:41 [INFO] loading 84 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 79 more
+2026/10/06 01:32:41 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00109.zoekt: 17037 index bytes (overhead 8.2), 1 files processed 
+2026/10/06 01:32:41 [INFO] loading 13 shard(s): zoekt-repo_v16.00024.zoekt, zoekt-repo_v16.00025.zoekt, zoekt-repo_v16.00033.zoekt, zoekt-repo_v16.00047.zoekt, zoekt-repo_v16.00048.zoekt... 8 more
+2026/10/06 01:32:41 [INFO] loading 16 shard(s): zoekt-repo_v16.00007.zoekt, zoekt-repo_v16.00009.zoekt, zoekt-repo_v16.00011.zoekt, zoekt-repo_v16.00018.zoekt, zoekt-repo_v16.00021.zoekt... 11 more
+2026/10/06 01:32:41 [INFO] loading 81 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 76 more
+2026/10/06 01:32:41 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00110.zoekt: 30428 index bytes (overhead 6.7), 1 files processed 
+2026/10/06 01:32:41 [INFO] loading 4 shard(s): zoekt-repo_v16.00072.zoekt, zoekt-repo_v16.00085.zoekt, zoekt-repo_v16.00091.zoekt, zoekt-repo_v16.00092.zoekt
+2026/10/06 01:32:41 [INFO] loading 14 shard(s): zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00013.zoekt, zoekt-repo_v16.00015.zoekt, zoekt-repo_v16.00024.zoekt, zoekt-repo_v16.00029.zoekt... 9 more
+2026/10/06 01:32:41 [INFO] loading 93 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00005.zoekt... 88 more
+2026/10/06 01:32:41 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00111.zoekt: 574616 index bytes (overhead 3.1), 1 files processed 
+2026/10/06 01:32:41 [INFO] loading 4 shard(s): zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00013.zoekt, zoekt-repo_v16.00065.zoekt, zoekt-repo_v16.00083.zoekt
+2026/10/06 01:32:41 [INFO] loading 86 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00006.zoekt, zoekt-repo_v16.00007.zoekt, zoekt-repo_v16.00008.zoekt... 81 more
+2026/10/06 01:32:42 [INFO] loading 22 shard(s): zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00004.zoekt, zoekt-repo_v16.00005.zoekt, zoekt-repo_v16.00010.zoekt, zoekt-repo_v16.00012.zoekt... 17 more
+2026/10/06 01:32:42 finished shard /Volumes/FerretBench/work/m3.rPAz6h/zoekt-fresh/zoekt-repo_v16.00112.zoekt: 4090 index bytes (overhead 14.9), 1 files processed 
+2026/10/06 01:32:42 [INFO] loading 9 shard(s): zoekt-repo_v16.00007.zoekt, zoekt-repo_v16.00012.zoekt, zoekt-repo_v16.00027.zoekt, zoekt-repo_v16.00048.zoekt, zoekt-repo_v16.00050.zoekt... 4 more
+2026/10/06 01:32:42 [INFO] loading 101 shard(s): zoekt-repo_v16.00000.zoekt, zoekt-repo_v16.00001.zoekt, zoekt-repo_v16.00002.zoekt, zoekt-repo_v16.00003.zoekt, zoekt-repo_v16.00004.zoekt... 96 more
+2026/10/06 01:32:42 [INFO] loading 3 shard(s): zoekt-repo_v16.00015.zoekt, zoekt-repo_v16.00029.zoekt, zoekt-repo_v16.00033.zoekt

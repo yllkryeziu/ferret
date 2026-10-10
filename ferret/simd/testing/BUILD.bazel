@@ -1,0 +1,59 @@
+load("@rules_cc//cc:cc_library.bzl", "cc_library")
+load("@rules_cc//cc:cc_test.bzl", "cc_test")
+load("//bazel:copts.bzl", "FERRET_DEFAULT_COPTS", "FERRET_TEST_COPTS")
+
+# Test-only inputs for the id-list kernels in //ferret/simd and their callers.
+package(default_visibility = ["//visibility:private"])
+
+cc_library(
+    name = "exact_id_array",
+    testonly = True,
+    srcs = ["exact_id_array.cc"],
+    hdrs = ["exact_id_array.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        "@abseil-cpp//absl/base:core_headers",
+        "@abseil-cpp//absl/log:check",
+        "@abseil-cpp//absl/types:span",
+    ],
+)
+
+cc_test(
+    name = "exact_id_array_test",
+    size = "small",
+    srcs = ["exact_id_array_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":exact_id_array",
+        "@abseil-cpp//absl/types:span",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_library(
+    name = "random_ids",
+    testonly = True,
+    srcs = ["random_ids.cc"],
+    hdrs = ["random_ids.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        "@abseil-cpp//absl/log:check",
+        "@abseil-cpp//absl/types:span",
+    ],
+)
+
+cc_test(
+    name = "random_ids_test",
+    size = "small",
+    srcs = ["random_ids_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":random_ids",
+        "@abseil-cpp//absl/strings",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)

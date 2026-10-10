@@ -1,0 +1,307 @@
+load("@rules_cc//cc:cc_library.bzl", "cc_library")
+load("@rules_cc//cc:cc_test.bzl", "cc_test")
+load("//bazel:copts.bzl", "FERRET_DEFAULT_COPTS", "FERRET_STRICT_SIGN_COPTS", "FERRET_TEST_COPTS")
+
+package(default_visibility = ["//visibility:private"])
+
+cc_library(
+    name = "json_codec",
+    srcs = ["json_codec.cc"],
+    hdrs = ["json_codec.h"],
+    copts = FERRET_DEFAULT_COPTS + FERRET_STRICT_SIGN_COPTS,
+    # `defines` (not `local_defines`) so that every translation unit that sees
+    # nlohmann::json through this library agrees on its definition.
+    defines = ["JSON_USE_IMPLICIT_CONVERSIONS=0"],
+    visibility = ["//ferret:internal"],
+    deps = [
+        "@abseil-cpp//absl/base:core_headers",
+        "@abseil-cpp//absl/log:check",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_macros",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@nlohmann_json//:json",
+    ],
+)
+
+cc_test(
+    name = "json_codec_test",
+    size = "small",
+    srcs = ["json_codec_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":json_codec",
+        "//ferret/testing:status_matchers",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_matchers",
+        "@abseil-cpp//absl/strings",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+        "@nlohmann_json//:json",
+    ],
+)
+
+cc_library(
+    name = "framing",
+    srcs = ["framing.cc"],
+    hdrs = ["framing.h"],
+    copts = FERRET_DEFAULT_COPTS + FERRET_STRICT_SIGN_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        "@abseil-cpp//absl/base:core_headers",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_macros",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/synchronization",
+    ],
+)
+
+cc_test(
+    name = "framing_test",
+    size = "medium",
+    srcs = ["framing_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":framing",
+        ":json_codec",
+        "//ferret/rpc/testing:test_pipe",
+        "//ferret/testing:status_matchers",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_matchers",
+        "@abseil-cpp//absl/strings",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_library(
+    name = "json_rpc",
+    srcs = ["json_rpc.cc"],
+    hdrs = ["json_rpc.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        ":json_codec",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_macros",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@nlohmann_json//:json",
+    ],
+)
+
+cc_test(
+    name = "json_rpc_test",
+    size = "small",
+    srcs = ["json_rpc_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":json_codec",
+        ":json_rpc",
+        "//ferret/testing:status_matchers",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_matchers",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+        "@nlohmann_json//:json",
+    ],
+)
+
+cc_library(
+    name = "search_codec",
+    srcs = ["search_codec.cc"],
+    hdrs = ["search_codec.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        ":json_codec",
+        "//ferret/engine:engine",
+        "//ferret/git:oid",
+        "//ferret/index:rank_key",
+        "//ferret/search:search_types",
+        "//ferret/text:lexer",
+        "//ferret/workspace:workspace",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_macros",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/time",
+        "@nlohmann_json//:json",
+    ],
+)
+
+cc_test(
+    name = "search_codec_test",
+    srcs = ["search_codec_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":search_codec",
+        ":json_codec",
+        "//ferret/engine:engine",
+        "//ferret/index:rank_key",
+        "//ferret/search:search_types",
+        "//ferret/text:lexer",
+        "//ferret/workspace:workspace",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/time",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_test(
+    name = "symbol_codec_test",
+    srcs = ["symbol_codec_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":symbol_codec",
+        ":json_codec",
+        "//ferret/workspace:workspace",
+        "//ferret/symbols:symbol_kind",
+        "@abseil-cpp//absl/status",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+        "@nlohmann_json//:json",
+    ],
+)
+
+cc_library(
+    name = "symbol_codec",
+    srcs = ["symbol_codec.cc"],
+    hdrs = ["symbol_codec.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        ":json_codec",
+        "//ferret/workspace:workspace",
+        "//ferret/symbols:symbol_kind",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_macros",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@nlohmann_json//:json",
+    ],
+)
+
+cc_library(
+    name = "daemon",
+    srcs = ["daemon.cc"],
+    hdrs = ["daemon.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        ":framing",
+        ":json_codec",
+        ":json_rpc",
+        ":search_codec",
+        ":symbol_codec",
+        "//ferret/base:env",
+        "//ferret/engine:engine",
+        "//ferret/search:search_types",
+        "//ferret/workspace:workspace",
+        "@abseil-cpp//absl/base:core_headers",
+        "@abseil-cpp//absl/container:flat_hash_map",
+        "@abseil-cpp//absl/functional:any_invocable",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_macros",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/synchronization",
+        "@abseil-cpp//absl/time",
+        "@boringssl//:crypto",
+        "@nlohmann_json//:json",
+    ],
+)
+
+cc_library(
+    name = "rpc_client",
+    srcs = ["rpc_client.cc"],
+    hdrs = ["rpc_client.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        ":daemon",
+        ":framing",
+        ":json_codec",
+        ":json_rpc",
+        ":search_codec",
+        ":symbol_codec",
+        "//ferret/engine:engine",
+        "//ferret/search:search_types",
+        "//ferret/workspace:workspace",
+        "@abseil-cpp//absl/base:core_headers",
+        "@abseil-cpp//absl/container:flat_hash_map",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_macros",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/synchronization",
+        "@nlohmann_json//:json",
+    ],
+)
+
+cc_test(
+    name = "daemon_test",
+    size = "medium",
+    srcs = ["daemon_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    data = ["//ferret/cli:ferret"],
+    deps = [
+        ":daemon",
+        ":framing",
+        ":json_codec",
+        ":json_rpc",
+        "//ferret/engine:engine",
+        "//ferret/git/testing:git_repo_builder",
+        "//ferret/testing:temp_dir",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/time",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+        "@nlohmann_json//:json",
+    ],
+)
+
+cc_test(
+    name = "rpc_client_test",
+    size = "medium",
+    srcs = ["rpc_client_test.cc"],
+    data = ["//ferret/cli:ferret"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":rpc_client",
+        ":daemon",
+        ":daemon_test_guard",
+        ":framing",
+        ":json_codec",
+        ":json_rpc",
+        "//ferret/base:subprocess",
+        "//ferret/engine:engine",
+        "//ferret/git/testing:git_repo_builder",
+        "//ferret/search:search_types",
+        "//ferret/workspace:workspace",
+        "//ferret/testing:temp_dir",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/strings",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+        "@nlohmann_json//:json",
+    ],
+)
+
+cc_library(
+    name = "daemon_test_guard",
+    srcs = ["daemon_test_guard.cc"],
+    hdrs = ["daemon_test_guard.h"],
+    copts = FERRET_TEST_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        ":daemon",
+        ":rpc_client",
+        "@abseil-cpp//absl/strings",
+        "@googletest//:gtest",
+    ],
+)

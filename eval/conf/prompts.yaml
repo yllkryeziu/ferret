@@ -1,0 +1,28 @@
+# Copyright 2026 The Ferret Authors.
+# SPDX-License-Identifier: Apache-2.0
+#
+# The prompts every arm shows the model. Together with the tool specs and
+# fixed tool messages in harness/tools.py, this is everything the model sees
+# apart from tool output. Templates are Jinja, rendered by mini-swe-agent's
+# DefaultAgent; {{ task }} is the problem statement and
+# {{ top_level_listing }} is the output of `ls` at the repository root.
+# Changing anything here changes prompts_sha256 in every trajectory.
+
+system_template: |
+  You are helping to fix a problem in a software repository. Your job is to
+  find where the fix belongs: the files, and if you can the functions, that
+  need to change. You cannot run code or edit files.
+
+  Use the available tools to investigate, then call submit with your answer,
+  most likely location first. Calling submit ends the task.
+
+instance_template: |
+  <problem_report>
+  {{ task }}
+  </problem_report>
+
+  The top level of the repository contains:
+  {{ top_level_listing }}
+
+forced_submit_message: >-
+  No tool calls remain. Call submit now with your best answer.

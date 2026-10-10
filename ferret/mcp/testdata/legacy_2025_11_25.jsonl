@@ -1,0 +1,29 @@
+{"send": {"jsonrpc": "2.0", "id": 1, "method": "initialize", "params": {"protocolVersion": "2025-11-25", "capabilities": {}, "clientInfo": {"name": "golden-client", "version": "1.0.0"}}}}
+{"expect": {"jsonrpc": "2.0", "id": 1, "result": {"protocolVersion": "2025-11-25", "capabilities": {"tools": {}}, "serverInfo": {"name": "ferret", "version": "0.0.0-test"}}}}
+{"send": {"jsonrpc": "2.0", "method": "notifications/initialized"}}
+{"send": {"jsonrpc": "2.0", "id": 2, "method": "ping"}}
+{"expect": {"jsonrpc": "2.0", "id": 2, "result": {}}}
+{"send": {"jsonrpc": "2.0", "id": 3, "method": "tools/list"}}
+{"expect": {"jsonrpc": "2.0", "id": 3, "result": {"tools": [{"name": "echo", "description": "Returns its message.", "inputSchema": {"type": "object", "properties": {"message": {"type": "string"}}, "required": ["message"]}, "outputSchema": {"type": "object", "properties": {"message": {"type": "string"}}, "required": ["message"]}}, {"name": "block", "description": "Waits until the test releases it or the call is cancelled.", "inputSchema": {"type": "object"}, "outputSchema": {"type": "object", "properties": {"released": {"type": "boolean"}}, "required": ["released"]}}, {"name": "fail", "description": "Fails: as a tool error, or as a server fault if internal is true.", "inputSchema": {"type": "object", "properties": {"internal": {"type": "boolean"}}}}]}}}
+{"send": {"jsonrpc": "2.0", "id": 4, "method": "tools/call", "params": {"name": "echo", "arguments": {"message": "hello"}}}}
+{"expect": {"jsonrpc": "2.0", "id": 4, "result": {"content": [{"type": "text", "text": "hello"}], "isError": false, "structuredContent": {"message": "hello"}}}}
+{"send": {"jsonrpc": "2.0", "id": "five", "method": "tools/call", "params": {"name": "fail", "arguments": {}}}}
+{"expect": {"jsonrpc": "2.0", "id": "five", "result": {"content": [{"type": "text", "text": "fail: failed, as asked"}], "isError": true}}}
+{"send": {"jsonrpc": "2.0", "id": 6, "method": "tools/call", "params": {"name": "fail", "arguments": {"internal": true}}}}
+{"expect": {"jsonrpc": "2.0", "id": 6, "error": {"code": -32603, "message": "Internal error in tool fail: fail: failed internally, as asked"}}}
+{"send": {"jsonrpc": "2.0", "id": 7, "method": "tools/call", "params": {"name": "search", "arguments": {}}}}
+{"expect": {"jsonrpc": "2.0", "id": 7, "error": {"code": -32602, "message": "Unknown tool: search"}}}
+{"send": {"jsonrpc": "2.0", "id": 8, "method": "tools/call", "params": {"name": "echo", "arguments": {"message": 42}}}}
+{"expect":{"jsonrpc":"2.0","id":8,"result":{"content":[{"type":"text","text":"/message: expected string, got integer"}],"isError":true}}}
+{"send": {"jsonrpc": "2.0", "id": 9, "method": "tools/call", "params": {"name": "echo"}}}
+{"expect":{"jsonrpc":"2.0","id":9,"result":{"content":[{"type":"text","text":"/message: missing required member"}],"isError":true}}}
+{"send": {"jsonrpc": "2.0", "id": 10, "method": "tools/call", "params": {"name": "echo", "arguments": "hello"}}}
+{"expect": {"jsonrpc": "2.0", "id": 10, "error": {"code": -32602, "message": "Invalid params: /params/arguments: expected object, got string"}}}
+{"send": {"jsonrpc": "2.0", "id": 11, "method": "tools/call", "params": {"arguments": {}}}}
+{"expect": {"jsonrpc": "2.0", "id": 11, "error": {"code": -32602, "message": "Invalid params: /params/name: missing required member"}}}
+{"send": {"jsonrpc": "2.0", "id": 12, "method": "tools/list", "params": {"cursor": "page-2"}}}
+{"expect": {"jsonrpc": "2.0", "id": 12, "error": {"code": -32602, "message": "Invalid params: /params/cursor: unknown cursor"}}}
+{"send": {"jsonrpc": "2.0", "id": 13, "method": "resources/list"}}
+{"expect": {"jsonrpc": "2.0", "id": 13, "error": {"code": -32601, "message": "Method not found: resources/list"}}}
+{"send": {"jsonrpc": "2.0", "id": 14, "method": "initialize", "params": {"protocolVersion": "2025-11-25", "capabilities": {}, "clientInfo": {"name": "golden-client", "version": "1.0.0"}}}}
+{"expect": {"jsonrpc": "2.0", "id": 14, "error": {"code": -32600, "message": "Invalid request: initialize was already called in this session"}}}

@@ -1,0 +1,18 @@
+load("@rules_cc//cc:cc_library.bzl", "cc_library")
+load("//bazel:copts.bzl", "FERRET_DEFAULT_COPTS")
+
+# Test-only helpers for //ferret/symbols tests and benchmarks.
+package(default_visibility = ["//ferret/symbols:__pkg__"])
+
+cc_library(
+    name = "sample_sources",
+    testonly = True,
+    srcs = ["sample_sources.cc"],
+    hdrs = ["sample_sources.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    deps = [
+        "//ferret/text:language",
+        "@abseil-cpp//absl/log",
+        "@abseil-cpp//absl/strings",
+    ],
+)

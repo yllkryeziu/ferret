@@ -1,0 +1,115 @@
+load("@rules_cc//cc:cc_library.bzl", "cc_library")
+load("//bazel:copts.bzl", "FERRET_DEFAULT_COPTS")
+
+package(default_visibility = ["//ferret:internal"])
+
+cc_library(
+    name = "engine",
+    srcs = ["engine.cc"],
+    hdrs = ["engine.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    deps = [
+        "//ferret/base:env",
+        "//ferret/base:subprocess",
+        "//ferret/search:search_types",
+        "//ferret/workspace:workspace",
+        "@abseil-cpp//absl/container:flat_hash_map",
+        "@abseil-cpp//absl/container:flat_hash_set",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_macros",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/synchronization",
+        "@abseil-cpp//absl/time",
+        "@boringssl//:crypto",
+    ],
+)
+
+cc_library(
+    name = "ripgrep_backend",
+    srcs = ["ripgrep_backend.cc"],
+    hdrs = ["ripgrep_backend.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    deps = [
+        ":engine",
+        "//ferret/base:env",
+        "//ferret/base:subprocess",
+        "//ferret/git:blob_hash",
+        "//ferret/git:worktree_files",
+        "//ferret/git:oid",
+        "//ferret/git:path_glob",
+        "//ferret/index:rank_key",
+        "//ferret/regex:compile",
+        "//ferret/search:formatter",
+        "//ferret/search:kept_lines",
+        "//ferret/search:ranking",
+        "//ferret/search:search_types",
+        "//ferret/text:eligibility",
+        "//ferret/text:language",
+        "//ferret/text:lexer",
+        "//ferret/text:line_counter",
+        "//ferret/text:trigram_extractor",
+        "//ferret/workspace:workspace",
+        "@abseil-cpp//absl/base:core_headers",
+        "@abseil-cpp//absl/container:flat_hash_map",
+        "@abseil-cpp//absl/container:flat_hash_set",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_macros",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/synchronization",
+        "@abseil-cpp//absl/time",
+        "@re2",
+    ],
+)
+
+load("@rules_cc//cc:cc_test.bzl", "cc_test")
+load("//bazel:copts.bzl", "FERRET_TEST_COPTS")
+
+cc_test(
+    name = "engine_test",
+    size = "medium",
+    srcs = ["engine_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":engine",
+        "//ferret/base:env",
+        "//ferret/base:subprocess",
+        "//ferret/git/testing:git_repo_builder",
+        "//ferret/testing:temp_dir",
+        "//ferret/watch:fake_watcher",
+        "//ferret/watch:watcher_interface",
+        "//ferret/search:search_types",
+        "//ferret/workspace:workspace",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/synchronization",
+        "@abseil-cpp//absl/time",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_test(
+    name = "backend_equivalence_test",
+    size = "medium",
+    srcs = ["backend_equivalence_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    data = ["//third_party/ripgrep:rg"],
+    deps = [
+        ":engine",
+        ":ripgrep_backend",
+        "//ferret/base:env",
+        "//ferret/git:blob_hash",
+        "//ferret/git/testing:git_repo_builder",
+        "//ferret/search:formatter",
+        "//ferret/search:search_types",
+        "//ferret/testing:temp_dir",
+        "//ferret/workspace:workspace",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/time",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)

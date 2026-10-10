@@ -1,0 +1,7 @@
+{"send": {"jsonrpc": "2.0", "id": 1, "method": "initialize", "params": {"protocolVersion": "2025-06-18", "capabilities": {}, "clientInfo": {"name": "golden-client", "version": "1.0.0"}}}}
+{"expect": {"jsonrpc": "2.0", "id": 1, "result": {"protocolVersion": "2025-06-18", "capabilities": {"tools": {}}, "serverInfo": {"name": "ferret", "version": "0.0.0-test"}}}}
+{"send": {"jsonrpc": "2.0", "method": "notifications/initialized"}}
+{"send": {"jsonrpc": "2.0", "id": 2, "method": "tools/list"}}
+{"expect": {"jsonrpc": "2.0", "id": 2, "result": {"tools": [{"name": "echo", "description": "Returns its message.", "inputSchema": {"type": "object", "properties": {"message": {"type": "string"}}, "required": ["message"]}, "outputSchema": {"type": "object", "properties": {"message": {"type": "string"}}, "required": ["message"]}}, {"name": "block", "description": "Waits until the test releases it or the call is cancelled.", "inputSchema": {"type": "object"}, "outputSchema": {"type": "object", "properties": {"released": {"type": "boolean"}}, "required": ["released"]}}, {"name": "fail", "description": "Fails: as a tool error, or as a server fault if internal is true.", "inputSchema": {"type": "object", "properties": {"internal": {"type": "boolean"}}}}]}}}
+{"send": {"jsonrpc": "2.0", "id": 3, "method": "tools/call", "params": {"name": "echo", "arguments": {"message": "hi"}}}}
+{"expect": {"jsonrpc": "2.0", "id": 3, "result": {"content": [{"type": "text", "text": "hi"}], "isError": false, "structuredContent": {"message": "hi"}}}}

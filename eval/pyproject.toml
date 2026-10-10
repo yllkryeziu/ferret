@@ -1,0 +1,35 @@
+[project]
+name = "ferret-eval"
+version = "0.1.0"
+description = "Controlled agent experiment: when does a code index pay for itself for coding agents?"
+requires-python = ">=3.13"
+license = "Apache-2.0"
+dependencies = [
+    "mini-swe-agent==2.4.6",
+    "numpy>=2.2",
+    "scipy>=1.15",
+    "pandas>=2.2",
+    "jsonschema>=4.26",
+    "statsmodels>=0.14.4",
+    "matplotlib>=3.10",
+    "pyyaml>=6.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3",
+    "ruff>=0.11",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+# Makes the top-level packages (harness, models, tasks, ...) importable.
+pythonpath = ["."]
+addopts = "-q"
+
+[tool.ruff]
+line-length = 88
+target-version = "py313"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP", "SIM", "RUF"]

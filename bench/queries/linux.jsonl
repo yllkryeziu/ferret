@@ -1,0 +1,200 @@
+{"id": "linux-0005", "class": "identifier", "kind": "literal", "pattern": "ktime_get_boottime", "case_sensitive": true, "tercile": 2, "df": 50, "template": null}
+{"id": "linux-0008", "class": "literal", "kind": "literal", "pattern": "only from initcalls", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "linux-0012", "class": "identifier", "kind": "literal", "pattern": "hwspinlock", "case_sensitive": true, "tercile": 2, "df": 45, "template": null}
+{"id": "linux-0014", "class": "regex", "kind": "regex", "pattern": "(?:MALIDP_MW_P2_PTR_HIGH|IGC_WUS_EX)", "case_sensitive": true, "tercile": null, "df": null, "template": "alternation"}
+{"id": "linux-0020", "class": "identifier", "kind": "literal", "pattern": "PIN_PA3__GPIO", "case_sensitive": true, "tercile": 1, "df": 3, "template": null}
+{"id": "linux-0024", "class": "identifier", "kind": "literal", "pattern": "devices", "case_sensitive": false, "tercile": 3, "df": 8943, "template": null}
+{"id": "linux-0038", "class": "literal", "kind": "literal", "pattern": "void (*disconnect_cb)(struct", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "linux-0040", "class": "literal", "kind": "literal", "pattern": "but we have", "case_sensitive": false, "tercile": null, "df": null, "template": null}
+{"id": "linux-0048", "class": "identifier", "kind": "literal", "pattern": "schedule_delayed_work", "case_sensitive": true, "tercile": 2, "df": 570, "template": null}
+{"id": "linux-0050", "class": "identifier", "kind": "literal", "pattern": "atao_reset", "case_sensitive": true, "tercile": 1, "df": 1, "template": null}
+{"id": "linux-0051", "class": "identifier", "kind": "literal", "pattern": "PORTD_HOTPLUG_LIVE_STATUS_G4X", "case_sensitive": false, "tercile": 1, "df": 2, "template": null}
+{"id": "linux-0053", "class": "regex", "kind": "regex", "pattern": "\\bOPORTMXCTR3_SRCSEL_PCM\\b", "case_sensitive": false, "tercile": null, "df": null, "template": "word"}
+{"id": "linux-0057", "class": "identifier", "kind": "literal", "pattern": "capture", "case_sensitive": false, "tercile": 3, "df": 2158, "template": null}
+{"id": "linux-0059", "class": "literal", "kind": "literal", "pattern": "spin_lock_bh(&enic->devcmd_lock", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "linux-0060", "class": "literal", "kind": "literal", "pattern": "strength = <6", "case_sensitive": false, "tercile": null, "df": null, "template": null}
+{"id": "linux-0069", "class": "identifier", "kind": "literal", "pattern": "BACKLIGHT_POWER_ON", "case_sensitive": true, "tercile": 2, "df": 49, "template": null}
+{"id": "linux-0074", "class": "literal", "kind": "literal", "pattern": "char *message", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "linux-0083", "class": "identifier", "kind": "literal", "pattern": "KEY_DOWN", "case_sensitive": true, "tercile": 2, "df": 214, "template": null}
+{"id": "linux-0100", "class": "regex", "kind": "regex", "pattern": "(?:SNDRV_GF1_VW_EFFECT_LOW|acpi_get_handle)", "case_sensitive": true, "tercile": null, "df": null, "template": "alternation"}
+{"id": "linux-0101", "class": "identifier", "kind": "literal", "pattern": "R2057_RCCAL_START_R1_Q1_P1", "case_sensitive": true, "tercile": 1, "df": 2, "template": null}
+{"id": "linux-0108", "class": "regex", "kind": "regex", "pattern": "(?:PRD_CALI_RESULT_RECORD_SFT|CCW_CMD_READ_VQ_CONF)", "case_sensitive": true, "tercile": null, "df": null, "template": "alternation"}
+{"id": "linux-0114", "class": "identifier", "kind": "literal", "pattern": "skb_dst", "case_sensitive": true, "tercile": 2, "df": 93, "template": null}
+{"id": "linux-0126", "class": "regex", "kind": "regex", "pattern": "^[ \\t]*RCC_MP_NS_AHB4ENSETR_GPIOEEN\\b", "case_sensitive": true, "tercile": null, "df": null, "template": "line_start"}
+{"id": "linux-0132", "class": "identifier", "kind": "literal", "pattern": "GVE_RXF_UDP", "case_sensitive": true, "tercile": 1, "df": 2, "template": null}
+{"id": "linux-0135", "class": "regex", "kind": "regex", "pattern": "SPT_PMC_BIT_CSME_PMT[ \\t]*\\(", "case_sensitive": true, "tercile": null, "df": null, "template": "call"}
+{"id": "linux-0136", "class": "literal", "kind": "literal", "pattern": "There is a regulator", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "linux-0144", "class": "identifier", "kind": "literal", "pattern": "cec_msg", "case_sensitive": true, "tercile": 2, "df": 47, "template": null}
+{"id": "linux-0145", "class": "identifier", "kind": "literal", "pattern": "example", "case_sensitive": true, "tercile": 3, "df": 4641, "template": null}
+{"id": "linux-0147", "class": "literal", "kind": "literal", "pattern": "unsigned int mode_offset", "case_sensitive": false, "tercile": null, "df": null, "template": null}
+{"id": "linux-0148", "class": "identifier", "kind": "literal", "pattern": "MC_GRUB_PERFCOUNTER_RSLT_CNTL__STOP_TRIGGER_MASK", "case_sensitive": true, "tercile": 1, "df": 1, "template": null}
+{"id": "linux-0149", "class": "literal", "kind": "literal", "pattern": "bdc->devstatus", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "linux-0156", "class": "regex", "kind": "regex", "pattern": "(?:sec_alg_type|HAVE_SCX_ENQ_RESCUE)", "case_sensitive": true, "tercile": null, "df": null, "template": "alternation"}
+{"id": "linux-0159", "class": "identifier", "kind": "literal", "pattern": "parser", "case_sensitive": true, "tercile": 2, "df": 671, "template": null}
+{"id": "linux-0169", "class": "identifier", "kind": "literal", "pattern": "__LINUX_MTD_MAP_H__", "case_sensitive": true, "tercile": 1, "df": 1, "template": null}
+{"id": "linux-0170", "class": "identifier", "kind": "literal", "pattern": "gp2ap020a00f_write_event_threshold", "case_sensitive": true, "tercile": 1, "df": 1, "template": null}
+{"id": "linux-0177", "class": "identifier", "kind": "literal", "pattern": "mode", "case_sensitive": false, "tercile": 3, "df": 19775, "template": null}
+{"id": "linux-0181", "class": "identifier", "kind": "literal", "pattern": "payload", "case_sensitive": false, "tercile": 3, "df": 2239, "template": null}
+{"id": "linux-0184", "class": "identifier", "kind": "literal", "pattern": "priv", "case_sensitive": true, "tercile": 3, "df": 5598, "template": null}
+{"id": "linux-0198", "class": "identifier", "kind": "literal", "pattern": "interfaces", "case_sensitive": true, "tercile": 3, "df": 2312, "template": null}
+{"id": "linux-0200", "class": "literal", "kind": "literal", "pattern": "lpfc_sli.h", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "linux-0201", "class": "literal", "kind": "literal", "pattern": "return offset", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "linux-0207", "class": "identifier", "kind": "literal", "pattern": "memcmp", "case_sensitive": true, "tercile": 3, "df": 1777, "template": null}
+{"id": "linux-0208", "class": "identifier", "kind": "literal", "pattern": "arguments", "case_sensitive": true, "tercile": 3, "df": 1872, "template": null}
+{"id": "linux-0217", "class": "identifier", "kind": "literal", "pattern": "pidfd_create", "case_sensitive": true, "tercile": 1, "df": 1, "template": null}
+{"id": "linux-0220", "class": "literal", "kind": "literal", "pattern": "gpd_data = dev_gpd_data(dev", "case_sensitive": false, "tercile": null, "df": null, "template": null}
+{"id": "linux-0232", "class": "regex", "kind": "regex", "pattern": "(?:_XE_DEFAULTS_H_|to_kplane_st)", "case_sensitive": false, "tercile": null, "df": null, "template": "alternation"}
+{"id": "linux-0234", "class": "identifier", "kind": "literal", "pattern": "ALI_DRW_PMUNAME", "case_sensitive": true, "tercile": 1, "df": 1, "template": null}
+{"id": "linux-0240", "class": "literal", "kind": "literal", "pattern": "struct netlink_ext_ack", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "linux-0242", "class": "literal", "kind": "literal", "pattern": "err = macsec_fs_tx_ft_get(macsec_fs", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "linux-0244", "class": "identifier", "kind": "literal", "pattern": "ics_opal_set_affinity", "case_sensitive": false, "tercile": 1, "df": 1, "template": null}
+{"id": "linux-0247", "class": "literal", "kind": "literal", "pattern": "cache_display_cfg.plane.HTaps", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "linux-0263", "class": "regex", "kind": "regex", "pattern": "nodes.*reset", "case_sensitive": true, "tercile": null, "df": null, "template": "co_occurrence"}
+{"id": "linux-0267", "class": "literal", "kind": "literal", "pattern": "dev_dbg(&link->dev", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "linux-0268", "class": "regex", "kind": "regex", "pattern": "CURRENT_FREQ_STATE_NB__NB_LOW_POWER__SHIFT[ \\t]*\\(", "case_sensitive": true, "tercile": null, "df": null, "template": "call"}
+{"id": "linux-0270", "class": "regex", "kind": "regex", "pattern": "sr_reset[ \\t]*\\(", "case_sensitive": true, "tercile": null, "df": null, "template": "call"}
+{"id": "linux-0272", "class": "identifier", "kind": "literal", "pattern": "rmnet_get_size", "case_sensitive": true, "tercile": 1, "df": 1, "template": null}
+{"id": "linux-0277", "class": "literal", "kind": "literal", "pattern": "enable_reg = 0x52010", "case_sensitive": false, "tercile": null, "df": null, "template": null}
+{"id": "linux-0281", "class": "identifier", "kind": "literal", "pattern": "span", "case_sensitive": true, "tercile": 2, "df": 451, "template": null}
+{"id": "linux-0285", "class": "regex", "kind": "regex", "pattern": "cache.*refcnt", "case_sensitive": true, "tercile": null, "df": null, "template": "co_occurrence"}
+{"id": "linux-0290", "class": "literal", "kind": "literal", "pattern": "dev, \"mt8173_afe_init_audio_clk fail", "case_sensitive": false, "tercile": null, "df": null, "template": null}
+{"id": "linux-0295", "class": "identifier", "kind": "literal", "pattern": "minor", "case_sensitive": true, "tercile": 3, "df": 2125, "template": null}
+{"id": "linux-0296", "class": "regex", "kind": "regex", "pattern": "E4XSTORMROCECONNAGCTXDQEXTLDPART_RULE4EN_SHIFT[ \\t]*\\(", "case_sensitive": true, "tercile": null, "df": null, "template": "call"}
+{"id": "linux-0300", "class": "regex", "kind": "regex", "pattern": "\\bSYSKT_POWER_300\\b", "case_sensitive": true, "tercile": null, "df": null, "template": "word"}
+{"id": "linux-0307", "class": "identifier", "kind": "literal", "pattern": "devfreq", "case_sensitive": true, "tercile": 2, "df": 99, "template": null}
+{"id": "linux-0312", "class": "identifier", "kind": "literal", "pattern": "dev_warn", "case_sensitive": true, "tercile": 3, "df": 3522, "template": null}
+{"id": "linux-0317", "class": "regex", "kind": "regex", "pattern": "tcfa_flags.*flags", "case_sensitive": true, "tercile": null, "df": null, "template": "co_occurrence"}
+{"id": "linux-0324", "class": "identifier", "kind": "literal", "pattern": "ib_gid_attr", "case_sensitive": true, "tercile": 2, "df": 43, "template": null}
+{"id": "linux-0337", "class": "literal", "kind": "literal", "pattern": "__releases(RCU", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "linux-0338", "class": "identifier", "kind": "literal", "pattern": "spin_lock", "case_sensitive": true, "tercile": 3, "df": 2799, "template": null}
+{"id": "linux-0357", "class": "identifier", "kind": "literal", "pattern": "sg_miter_next", "case_sensitive": true, "tercile": 2, "df": 43, "template": null}
+{"id": "linux-0363", "class": "literal", "kind": "literal", "pattern": "rk_phy->reg_base, rk_phy->phy_data", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "linux-0367", "class": "identifier", "kind": "literal", "pattern": "PIN_RGMII0_TXD2", "case_sensitive": true, "tercile": 1, "df": 4, "template": null}
+{"id": "linux-0369", "class": "regex", "kind": "regex", "pattern": "(?:MT6360_PMU_CHG_CTRL3|ti_sci_cmd_clk_get_num_parents)", "case_sensitive": true, "tercile": null, "df": null, "template": "alternation"}
+{"id": "linux-0371", "class": "identifier", "kind": "literal", "pattern": "DRV_MB_PARAM_PMBUS_LEN_MASK", "case_sensitive": false, "tercile": 1, "df": 1, "template": null}
+{"id": "linux-0372", "class": "identifier", "kind": "literal", "pattern": "acquire", "case_sensitive": false, "tercile": 2, "df": 1254, "template": null}
+{"id": "linux-0379", "class": "literal", "kind": "literal", "pattern": "GPIO165/LAD1", "case_sensitive": false, "tercile": null, "df": null, "template": null}
+{"id": "linux-0382", "class": "identifier", "kind": "literal", "pattern": "flush_delayed_work", "case_sensitive": true, "tercile": 2, "df": 76, "template": null}
+{"id": "linux-0385", "class": "identifier", "kind": "literal", "pattern": "message", "case_sensitive": true, "tercile": 3, "df": 4536, "template": null}
+{"id": "linux-0387", "class": "literal", "kind": "literal", "pattern": "group desc", "case_sensitive": false, "tercile": null, "df": null, "template": null}
+{"id": "linux-0392", "class": "identifier", "kind": "literal", "pattern": "_LINUX_KSMBD_SERVER_H", "case_sensitive": true, "tercile": 1, "df": 1, "template": null}
+{"id": "linux-0394", "class": "literal", "kind": "literal", "pattern": "read and write access", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "linux-0397", "class": "regex", "kind": "regex", "pattern": "\\bmmNIC4_QM0_PQ_ARUSER_31_11_3\\b", "case_sensitive": false, "tercile": null, "df": null, "template": "word"}
+{"id": "linux-0406", "class": "regex", "kind": "regex", "pattern": "\\bFTDI_VNHCPCUSB_D_PID\\b", "case_sensitive": true, "tercile": null, "df": null, "template": "word"}
+{"id": "linux-0410", "class": "identifier", "kind": "literal", "pattern": "ATH12K_ACPI_DBS_BACKOFF_DATA_OFFSET", "case_sensitive": true, "tercile": 1, "df": 2, "template": null}
+{"id": "linux-0416", "class": "literal", "kind": "literal", "pattern": "1) * sizeof(xfs_bmbt_ptr_t", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "linux-0418", "class": "regex", "kind": "regex", "pattern": "^[ \\t]*mmal_msg_port_action_port\\b", "case_sensitive": true, "tercile": null, "df": null, "template": "line_start"}
+{"id": "linux-0419", "class": "identifier", "kind": "literal", "pattern": "vidioc_g_fmt_vid_cap_mplane", "case_sensitive": true, "tercile": 2, "df": 54, "template": null}
+{"id": "linux-0422", "class": "regex", "kind": "regex", "pattern": "(?:fou_recv_pull|nfssvc_release_attrstat)", "case_sensitive": true, "tercile": null, "df": null, "template": "alternation"}
+{"id": "linux-0426", "class": "regex", "kind": "regex", "pattern": "rxrpc\\w*space", "case_sensitive": true, "tercile": null, "df": null, "template": "prefix_suffix"}
+{"id": "linux-0434", "class": "identifier", "kind": "literal", "pattern": "mt6397_irq_disable", "case_sensitive": true, "tercile": 1, "df": 1, "template": null}
+{"id": "linux-0439", "class": "literal", "kind": "literal", "pattern": "0x1, 0x2, KEY_LEFT)       /* ROW1", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "linux-0445", "class": "identifier", "kind": "literal", "pattern": "BYTES_TO_WORDS", "case_sensitive": true, "tercile": 1, "df": 1, "template": null}
+{"id": "linux-0447", "class": "identifier", "kind": "literal", "pattern": "show", "case_sensitive": true, "tercile": 3, "df": 2172, "template": null}
+{"id": "linux-0448", "class": "identifier", "kind": "literal", "pattern": "BRKINT", "case_sensitive": true, "tercile": 2, "df": 50, "template": null}
+{"id": "linux-0454", "class": "identifier", "kind": "literal", "pattern": "policy", "case_sensitive": true, "tercile": 3, "df": 1570, "template": null}
+{"id": "linux-0460", "class": "literal", "kind": "literal", "pattern": "if (ap == NULL", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "linux-0474", "class": "regex", "kind": "regex", "pattern": "^[ \\t]*LOUT1V_LHP_VOL\\b", "case_sensitive": false, "tercile": null, "df": null, "template": "line_start"}
+{"id": "linux-0476", "class": "regex", "kind": "regex", "pattern": "^[ \\t]*T_TA_WAIT_CNT_MASK\\b", "case_sensitive": false, "tercile": null, "df": null, "template": "line_start"}
+{"id": "linux-0478", "class": "regex", "kind": "regex", "pattern": "\\bULPI_FUNC_CTRL_RESET\\b", "case_sensitive": true, "tercile": null, "df": null, "template": "word"}
+{"id": "linux-0480", "class": "regex", "kind": "regex", "pattern": "\\bSQ_RAWQP1SEND_V3_CFA_ACTION_HIGH_SFT\\b", "case_sensitive": true, "tercile": null, "df": null, "template": "word"}
+{"id": "linux-0482", "class": "regex", "kind": "regex", "pattern": "\\bRT5645_OT_STKY_DIS\\b", "case_sensitive": true, "tercile": null, "df": null, "template": "word"}
+{"id": "linux-0483", "class": "identifier", "kind": "literal", "pattern": "CTIO7_NHANDLE_UNRECOGNIZED", "case_sensitive": false, "tercile": 1, "df": 2, "template": null}
+{"id": "linux-0485", "class": "regex", "kind": "regex", "pattern": "^[ \\t]*SRE_SUVD_CGC_CTRL__MPCMIF_MODE_MASK\\b", "case_sensitive": true, "tercile": null, "df": null, "template": "line_start"}
+{"id": "linux-0491", "class": "identifier", "kind": "literal", "pattern": "default_trigger", "case_sensitive": true, "tercile": 2, "df": 107, "template": null}
+{"id": "linux-0495", "class": "identifier", "kind": "literal", "pattern": "GCC_GP2_CLK", "case_sensitive": false, "tercile": 2, "df": 112, "template": null}
+{"id": "linux-0510", "class": "regex", "kind": "regex", "pattern": "(?:DCORE0_VDEC0_BRDG_CTRL_HBW_AXI_VIOL_CAUSE_AWLEN_GT_31_MASK|nxp_sar_adc_probe)", "case_sensitive": false, "tercile": null, "df": null, "template": "alternation"}
+{"id": "linux-0516", "class": "identifier", "kind": "literal", "pattern": "drm_plane", "case_sensitive": true, "tercile": 2, "df": 344, "template": null}
+{"id": "linux-0526", "class": "literal", "kind": "literal", "pattern": "if (hdev->support_preboot_binning", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "linux-0531", "class": "literal", "kind": "literal", "pattern": "type = \"critical", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "linux-0544", "class": "identifier", "kind": "literal", "pattern": "RTW89_C2H_SCANOFLD_W2_PRI_CH", "case_sensitive": false, "tercile": 1, "df": 2, "template": null}
+{"id": "linux-0545", "class": "identifier", "kind": "literal", "pattern": "region", "case_sensitive": false, "tercile": 3, "df": 4065, "template": null}
+{"id": "linux-0549", "class": "literal", "kind": "literal", "pattern": "TF_SF(CM0_CM_HIST_STATUS", "case_sensitive": false, "tercile": null, "df": null, "template": null}
+{"id": "linux-0560", "class": "regex", "kind": "regex", "pattern": "(?:regDAGB4_FATAL_ERROR_CLEAR|DSPDMAC_CHNLPROP_AC_LOBIT)", "case_sensitive": true, "tercile": null, "df": null, "template": "alternation"}
+{"id": "linux-0566", "class": "identifier", "kind": "literal", "pattern": "This", "case_sensitive": false, "tercile": 3, "df": 30304, "template": null}
+{"id": "linux-0569", "class": "regex", "kind": "regex", "pattern": "__platform_mask_index[ \\t]*\\(", "case_sensitive": true, "tercile": null, "df": null, "template": "call"}
+{"id": "linux-0573", "class": "identifier", "kind": "literal", "pattern": "mmATC_VMID28_PASID_MAPPING_BASE_IDX", "case_sensitive": true, "tercile": 1, "df": 3, "template": null}
+{"id": "linux-0576", "class": "identifier", "kind": "literal", "pattern": "__FB_DEFAULT_IOMEM_OPS_RDWR", "case_sensitive": true, "tercile": 2, "df": 42, "template": null}
+{"id": "linux-0581", "class": "identifier", "kind": "literal", "pattern": "kvm_for_each_vcpu", "case_sensitive": false, "tercile": 2, "df": 47, "template": null}
+{"id": "linux-0582", "class": "literal", "kind": "literal", "pattern": "frev, &crev, &data_offset", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "linux-0586", "class": "literal", "kind": "literal", "pattern": "lname, &policy(page", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "linux-0587", "class": "literal", "kind": "literal", "pattern": "case DRM_FORMAT_ARGB1555", "case_sensitive": false, "tercile": null, "df": null, "template": null}
+{"id": "linux-0591", "class": "regex", "kind": "regex", "pattern": "get_bitmap_bits[ \\t]*\\(", "case_sensitive": true, "tercile": null, "df": null, "template": "call"}
+{"id": "linux-0595", "class": "identifier", "kind": "literal", "pattern": "IMGU_STATE_PM_FSM_MASK", "case_sensitive": false, "tercile": 1, "df": 1, "template": null}
+{"id": "linux-0597", "class": "identifier", "kind": "literal", "pattern": "__user", "case_sensitive": false, "tercile": 3, "df": 2616, "template": null}
+{"id": "linux-0600", "class": "identifier", "kind": "literal", "pattern": "takes", "case_sensitive": true, "tercile": 3, "df": 2548, "template": null}
+{"id": "linux-0601", "class": "identifier", "kind": "literal", "pattern": "strcmp", "case_sensitive": true, "tercile": 3, "df": 2432, "template": null}
+{"id": "linux-0610", "class": "regex", "kind": "regex", "pattern": "trap_compare[ \\t]*\\(", "case_sensitive": false, "tercile": null, "df": null, "template": "call"}
+{"id": "linux-0616", "class": "regex", "kind": "regex", "pattern": "\\bADXL355_PARTID_REG\\b", "case_sensitive": true, "tercile": null, "df": null, "template": "word"}
+{"id": "linux-0617", "class": "identifier", "kind": "literal", "pattern": "smu_v14_0_setup_pptable", "case_sensitive": true, "tercile": 1, "df": 2, "template": null}
+{"id": "linux-0622", "class": "identifier", "kind": "literal", "pattern": "states", "case_sensitive": true, "tercile": 3, "df": 2647, "template": null}
+{"id": "linux-0629", "class": "literal", "kind": "literal", "pattern": "you don't", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "linux-0636", "class": "identifier", "kind": "literal", "pattern": "WRITE", "case_sensitive": true, "tercile": 2, "df": 572, "template": null}
+{"id": "linux-0656", "class": "identifier", "kind": "literal", "pattern": "zone", "case_sensitive": true, "tercile": 2, "df": 750, "template": null}
+{"id": "linux-0670", "class": "identifier", "kind": "literal", "pattern": "BPF_JLE", "case_sensitive": false, "tercile": 2, "df": 41, "template": null}
+{"id": "linux-0674", "class": "identifier", "kind": "literal", "pattern": "u64_stats_init", "case_sensitive": true, "tercile": 2, "df": 67, "template": null}
+{"id": "linux-0679", "class": "regex", "kind": "regex", "pattern": "(?:vsp1_drm_pipeline|serio_set_bind_mode)", "case_sensitive": false, "tercile": null, "df": null, "template": "alternation"}
+{"id": "linux-0686", "class": "identifier", "kind": "literal", "pattern": "mmMME2_CTRL_SHADOW_2_TENSOR_O_LOOP_STRIDE_4", "case_sensitive": true, "tercile": 1, "df": 1, "template": null}
+{"id": "linux-0688", "class": "identifier", "kind": "literal", "pattern": "mem_type", "case_sensitive": true, "tercile": 2, "df": 228, "template": null}
+{"id": "linux-0693", "class": "identifier", "kind": "literal", "pattern": "impl", "case_sensitive": true, "tercile": 2, "df": 444, "template": null}
+{"id": "linux-0697", "class": "identifier", "kind": "literal", "pattern": "NI_M_GEN_PWM_REG", "case_sensitive": false, "tercile": 1, "df": 1, "template": null}
+{"id": "linux-0698", "class": "identifier", "kind": "literal", "pattern": "scsi_cmd_to_rq", "case_sensitive": true, "tercile": 2, "df": 71, "template": null}
+{"id": "linux-0699", "class": "identifier", "kind": "literal", "pattern": "GCC_BLSP1_QUP2_I2C_APPS_CLK", "case_sensitive": true, "tercile": 2, "df": 61, "template": null}
+{"id": "linux-0702", "class": "literal", "kind": "literal", "pattern": "Etherlink III (3c509, 3c509B", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "linux-0706", "class": "identifier", "kind": "literal", "pattern": "firmware", "case_sensitive": true, "tercile": 3, "df": 6297, "template": null}
+{"id": "linux-0708", "class": "literal", "kind": "literal", "pattern": "interrupt-parent = <&qeic", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "linux-0710", "class": "identifier", "kind": "literal", "pattern": "DRV_NAME", "case_sensitive": false, "tercile": 2, "df": 593, "template": null}
+{"id": "linux-0717", "class": "regex", "kind": "regex", "pattern": "GL2A_PERFCOUNTER3_SELECT__PERF_MODE_MASK[ \\t]*\\(", "case_sensitive": false, "tercile": null, "df": null, "template": "call"}
+{"id": "linux-0726", "class": "identifier", "kind": "literal", "pattern": "emulator_fix_hypercall", "case_sensitive": true, "tercile": 1, "df": 1, "template": null}
+{"id": "linux-0727", "class": "identifier", "kind": "literal", "pattern": "IPCB", "case_sensitive": true, "tercile": 2, "df": 48, "template": null}
+{"id": "linux-0730", "class": "identifier", "kind": "literal", "pattern": "DAQP_SCANLIST_START", "case_sensitive": true, "tercile": 1, "df": 1, "template": null}
+{"id": "linux-0735", "class": "literal", "kind": "literal", "pattern": "enable_reg = 0x52008", "case_sensitive": false, "tercile": null, "df": null, "template": null}
+{"id": "linux-0752", "class": "literal", "kind": "literal", "pattern": "Counter\": \"3", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "linux-0754", "class": "identifier", "kind": "literal", "pattern": "memblock_reserve", "case_sensitive": true, "tercile": 2, "df": 86, "template": null}
+{"id": "linux-0763", "class": "regex", "kind": "regex", "pattern": "AU1000_DEF_MSG_ENABLE[ \\t]*\\(", "case_sensitive": true, "tercile": null, "df": null, "template": "call"}
+{"id": "linux-0767", "class": "literal", "kind": "literal", "pattern": "vha, int", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "linux-0768", "class": "identifier", "kind": "literal", "pattern": "holding", "case_sensitive": true, "tercile": 3, "df": 1723, "template": null}
+{"id": "linux-0769", "class": "identifier", "kind": "literal", "pattern": "IPPROTO_GRE", "case_sensitive": false, "tercile": 2, "df": 61, "template": null}
+{"id": "linux-0789", "class": "identifier", "kind": "literal", "pattern": "irqreturn", "case_sensitive": true, "tercile": 2, "df": 137, "template": null}
+{"id": "linux-0799", "class": "identifier", "kind": "literal", "pattern": "MODULE_PARM_DESC", "case_sensitive": true, "tercile": 3, "df": 2134, "template": null}
+{"id": "linux-0809", "class": "identifier", "kind": "literal", "pattern": "regUMCCH4_1_EccErrCnt", "case_sensitive": true, "tercile": 1, "df": 1, "template": null}
+{"id": "linux-0812", "class": "identifier", "kind": "literal", "pattern": "mlog_errno", "case_sensitive": true, "tercile": 2, "df": 41, "template": null}
+{"id": "linux-0815", "class": "literal", "kind": "literal", "pattern": "__entry->ata_opcode = ata_opcode", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "linux-0816", "class": "regex", "kind": "regex", "pattern": "(?:LINEO_INTERFACE_SUBCLASS_SAFESERIAL|pp_page_to_nmdesc)", "case_sensitive": true, "tercile": null, "df": null, "template": "alternation"}
+{"id": "linux-0818", "class": "regex", "kind": "regex", "pattern": "\\bnetdev_nl_page_pool_get_doit\\b", "case_sensitive": true, "tercile": null, "df": null, "template": "word"}
+{"id": "linux-0838", "class": "literal", "kind": "literal", "pattern": "qla4xxx_set_flash(ha, fw_ddb_entry_dma", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "linux-0839", "class": "literal", "kind": "literal", "pattern": "int risp_io_open", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "linux-0840", "class": "identifier", "kind": "literal", "pattern": "probe", "case_sensitive": true, "tercile": 3, "df": 12062, "template": null}
+{"id": "linux-0849", "class": "identifier", "kind": "literal", "pattern": "AQ_CFG_RXDS_DEF", "case_sensitive": true, "tercile": 1, "df": 3, "template": null}
+{"id": "linux-0863", "class": "literal", "kind": "literal", "pattern": "regulator-fixed", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "linux-0864", "class": "regex", "kind": "regex", "pattern": "\\bTn_INT_TYPE_CNF_MASK\\b", "case_sensitive": true, "tercile": null, "df": null, "template": "word"}
+{"id": "linux-0865", "class": "literal", "kind": "literal", "pattern": "clocks = <&cru HCLK_VO", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "linux-0866", "class": "identifier", "kind": "literal", "pattern": "TUL_PLTR", "case_sensitive": true, "tercile": 1, "df": 1, "template": null}
+{"id": "linux-0872", "class": "identifier", "kind": "literal", "pattern": "Version", "case_sensitive": true, "tercile": 3, "df": 2264, "template": null}
+{"id": "linux-0878", "class": "identifier", "kind": "literal", "pattern": "variable", "case_sensitive": false, "tercile": 3, "df": 2763, "template": null}
+{"id": "linux-0885", "class": "identifier", "kind": "literal", "pattern": "to_rm692e5_panel", "case_sensitive": true, "tercile": 1, "df": 1, "template": null}
+{"id": "linux-0890", "class": "identifier", "kind": "literal", "pattern": "SMBUS_SLV_CNTL__SMB_SLV_ADR__SHIFT", "case_sensitive": true, "tercile": 1, "df": 1, "template": null}
+{"id": "linux-0894", "class": "identifier", "kind": "literal", "pattern": "work_struct", "case_sensitive": true, "tercile": 3, "df": 3610, "template": null}
+{"id": "linux-0895", "class": "regex", "kind": "regex", "pattern": "regmap.*OV5647_REG_TIMING_TC_V", "case_sensitive": true, "tercile": null, "df": null, "template": "co_occurrence"}
+{"id": "linux-0896", "class": "regex", "kind": "regex", "pattern": "(?:UVD_LMI_ARB_CTRL2__CENC_RD_MAX_BURST__SHIFT|XGBE_GPIO_NO_RX_LOS)", "case_sensitive": true, "tercile": null, "df": null, "template": "alternation"}
+{"id": "linux-0912", "class": "regex", "kind": "regex", "pattern": "^[ \\t]*RT5645_CP_FQ_192_KHZ\\b", "case_sensitive": true, "tercile": null, "df": null, "template": "line_start"}
+{"id": "linux-0914", "class": "regex", "kind": "regex", "pattern": "\\bcfgBIF_CFG_DEV1_EPF2_0_PCIE_BAR2_CNTL\\b", "case_sensitive": true, "tercile": null, "df": null, "template": "word"}
+{"id": "linux-0916", "class": "identifier", "kind": "literal", "pattern": "BT848_PLL_X", "case_sensitive": true, "tercile": 1, "df": 2, "template": null}
+{"id": "linux-0917", "class": "literal", "kind": "literal", "pattern": "Migration covers moving", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "linux-0919", "class": "identifier", "kind": "literal", "pattern": "clock", "case_sensitive": true, "tercile": 3, "df": 14161, "template": null}
+{"id": "linux-0927", "class": "literal", "kind": "literal", "pattern": "struct device_node", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "linux-0932", "class": "regex", "kind": "regex", "pattern": "\\bhci_uart_set_flags\\b", "case_sensitive": true, "tercile": null, "df": null, "template": "word"}
+{"id": "linux-0933", "class": "identifier", "kind": "literal", "pattern": "CHIP_ENABLE_DONT_CARE", "case_sensitive": true, "tercile": 1, "df": 2, "template": null}
+{"id": "linux-0942", "class": "regex", "kind": "regex", "pattern": "\\bTXRX_CSR7_ACK_CTS_12MBS\\b", "case_sensitive": true, "tercile": null, "df": null, "template": "word"}
+{"id": "linux-0944", "class": "regex", "kind": "regex", "pattern": "(?:CLK_CMU_TOPPART|VT8231_REG_UCH_CONFIG)", "case_sensitive": true, "tercile": null, "df": null, "template": "alternation"}
+{"id": "linux-0951", "class": "regex", "kind": "regex", "pattern": "(?:VPDMA_INT_LIST0_STAT|ath9k_pending_key_del)", "case_sensitive": true, "tercile": null, "df": null, "template": "alternation"}
+{"id": "linux-0952", "class": "identifier", "kind": "literal", "pattern": "method", "case_sensitive": false, "tercile": 3, "df": 2948, "template": null}
+{"id": "linux-0956", "class": "regex", "kind": "regex", "pattern": "mmMPC_RMU0_SHAPER_RAMB_REGION_22_23[ \\t]*\\(", "case_sensitive": false, "tercile": null, "df": null, "template": "call"}
+{"id": "linux-0957", "class": "identifier", "kind": "literal", "pattern": "scsi_sg_count", "case_sensitive": false, "tercile": 2, "df": 55, "template": null}
+{"id": "linux-0968", "class": "literal", "kind": "literal", "pattern": "const struct regulator_init_data", "case_sensitive": false, "tercile": null, "df": null, "template": null}
+{"id": "linux-0975", "class": "literal", "kind": "literal", "pattern": "opipe->head", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "linux-0981", "class": "regex", "kind": "regex", "pattern": "TAS\\w*REG", "case_sensitive": true, "tercile": null, "df": null, "template": "prefix_suffix"}
+{"id": "linux-0984", "class": "literal", "kind": "literal", "pattern": "Bits 13-31 reserved", "case_sensitive": true, "tercile": null, "df": null, "template": null}
+{"id": "linux-0986", "class": "regex", "kind": "regex", "pattern": "BNX2_MISC_OSCFUNDS_CTRL_ICBUF_ADJ[ \\t]*\\(", "case_sensitive": true, "tercile": null, "df": null, "template": "call"}
+{"id": "linux-0989", "class": "literal", "kind": "literal", "pattern": "DEBUGFS_REG32(DC_CMD_WIN_C_INCR_SYNCPT_CNTRL", "case_sensitive": false, "tercile": null, "df": null, "template": null}
+{"id": "linux-0993", "class": "literal", "kind": "literal", "pattern": "define LINUX_KALLSYMS_INTERNAL_H_", "case_sensitive": false, "tercile": null, "df": null, "template": null}

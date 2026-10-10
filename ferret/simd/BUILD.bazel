@@ -1,0 +1,143 @@
+load("@rules_cc//cc:cc_binary.bzl", "cc_binary")
+load("@rules_cc//cc:cc_library.bzl", "cc_library")
+load("@rules_cc//cc:cc_test.bzl", "cc_test")
+load("//bazel:copts.bzl", "FERRET_DEFAULT_COPTS", "FERRET_STRICT_SIGN_COPTS", "FERRET_TEST_COPTS")
+
+# Sorted id-list kernels. The NEON variants build only on AArch64; everywhere
+# else the dispatchers use the scalar kernels.
+package(default_visibility = ["//visibility:private"])
+
+cc_library(
+    name = "dispatch",
+    hdrs = ["dispatch.h"],
+    copts = FERRET_DEFAULT_COPTS + FERRET_STRICT_SIGN_COPTS,
+    visibility = ["//ferret:internal"],
+)
+
+cc_test(
+    name = "dispatch_test",
+    size = "small",
+    srcs = ["dispatch_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":dispatch",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_library(
+    name = "compress_store",
+    hdrs = ["internal/compress_store.h"],
+    copts = FERRET_DEFAULT_COPTS + FERRET_STRICT_SIGN_COPTS,
+    target_compatible_with = ["@platforms//cpu:aarch64"],
+    deps = ["@abseil-cpp//absl/base:nullability"],
+)
+
+cc_library(
+    name = "intersect",
+    srcs = ["intersect.cc"] + select({
+        "@platforms//cpu:aarch64": ["intersect_neon.cc"],
+        "//conditions:default": [],
+    }),
+    hdrs = ["intersect.h"],
+    copts = FERRET_DEFAULT_COPTS + FERRET_STRICT_SIGN_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        ":dispatch",
+        "//ferret/base:ablation",
+        "@abseil-cpp//absl/base:nullability",
+        "@abseil-cpp//absl/types:span",
+    ] + select({
+        "@platforms//cpu:aarch64": [":compress_store"],
+        "//conditions:default": [],
+    }),
+)
+
+cc_test(
+    name = "intersect_test",
+    size = "small",
+    srcs = ["intersect_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":dispatch",
+        ":intersect",
+        "//ferret/simd/testing:exact_id_array",
+        "//ferret/simd/testing:random_ids",
+        "//ferret/testing:test_seed",
+        "@abseil-cpp//absl/base:nullability",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/types:span",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_binary(
+    name = "intersect_benchmark",
+    testonly = True,
+    srcs = ["intersect_benchmark.cc"],
+    copts = FERRET_DEFAULT_COPTS,
+    tags = ["benchmark"],
+    deps = [
+        ":intersect",
+        "//ferret/simd/testing:random_ids",
+        "@abseil-cpp//absl/base:nullability",
+        "@abseil-cpp//absl/types:span",
+        "@google_benchmark//:benchmark",
+        "@google_benchmark//:benchmark_main",
+    ],
+)
+
+cc_library(
+    name = "union",
+    srcs = ["union.cc"] + select({
+        "@platforms//cpu:aarch64": ["union_neon.cc"],
+        "//conditions:default": [],
+    }),
+    hdrs = ["union.h"],
+    copts = FERRET_DEFAULT_COPTS + FERRET_STRICT_SIGN_COPTS,
+    visibility = ["//ferret:internal"],
+    deps = [
+        ":dispatch",
+        "@abseil-cpp//absl/base:nullability",
+        "@abseil-cpp//absl/types:span",
+    ] + select({
+        "@platforms//cpu:aarch64": [":compress_store"],
+        "//conditions:default": [],
+    }),
+)
+
+cc_test(
+    name = "union_test",
+    size = "small",
+    srcs = ["union_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":union",
+        "//ferret/simd/testing:exact_id_array",
+        "//ferret/simd/testing:random_ids",
+        "//ferret/testing:test_seed",
+        "@abseil-cpp//absl/base:nullability",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/types:span",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_binary(
+    name = "union_benchmark",
+    testonly = True,
+    srcs = ["union_benchmark.cc"],
+    copts = FERRET_DEFAULT_COPTS,
+    tags = ["benchmark"],
+    deps = [
+        ":union",
+        "//ferret/simd/testing:random_ids",
+        "@abseil-cpp//absl/base:nullability",
+        "@abseil-cpp//absl/types:span",
+        "@google_benchmark//:benchmark",
+        "@google_benchmark//:benchmark_main",
+    ],
+)

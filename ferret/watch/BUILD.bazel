@@ -1,0 +1,286 @@
+load("@rules_cc//cc:cc_binary.bzl", "cc_binary")
+load("@rules_cc//cc:cc_library.bzl", "cc_library")
+load("@rules_cc//cc:cc_test.bzl", "cc_test")
+load("//bazel:copts.bzl", "FERRET_DEFAULT_COPTS", "FERRET_TEST_COPTS")
+
+package(default_visibility = ["//visibility:private"])
+
+cc_library(
+    name = "batcher",
+    srcs = ["internal/event_batcher.cc"],
+    hdrs = ["internal/event_batcher.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    deps = [
+        ":watcher_interface",
+        "@abseil-cpp//absl/container:btree",
+        "@abseil-cpp//absl/functional:any_invocable",
+        "@abseil-cpp//absl/log:check",
+        "@abseil-cpp//absl/time",
+    ],
+)
+
+cc_library(
+    name = "canonical_root",
+    srcs = ["internal/canonical_root.cc"],
+    hdrs = ["internal/canonical_root.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    deps = [
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+    ],
+)
+
+cc_library(
+    name = "validate_options",
+    hdrs = ["internal/validate_options.h"],
+    deps = [
+        ":watcher_interface",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/time",
+    ],
+)
+
+cc_library(
+    name = "watch_trace",
+    hdrs = ["watch_trace.h"],
+    visibility = ["//ferret:__subpackages__"],
+    deps = ["@abseil-cpp//absl/time"],
+)
+
+cc_library(
+    name = "watcher_interface",
+    hdrs = ["watcher.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:__subpackages__"],
+    deps = [
+        "@abseil-cpp//absl/functional:any_invocable",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/time",
+    ],
+)
+
+cc_library(
+    name = "polling_watcher",
+    srcs = ["polling_watcher.cc"],
+    hdrs = ["polling_watcher.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:__subpackages__"],
+    deps = [
+        ":batcher",
+        ":canonical_root",
+        ":validate_options",
+        ":watcher_interface",
+        "@abseil-cpp//absl/base:core_headers",
+        "@abseil-cpp//absl/container:flat_hash_map",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/synchronization",
+        "@abseil-cpp//absl/time",
+    ],
+)
+
+cc_library(
+    name = "cookie_directory",
+    srcs = ["internal/cookie_directory.cc"],
+    hdrs = ["internal/cookie_directory.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:__subpackages__"],
+    deps = [
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+    ],
+)
+
+cc_library(
+    name = "fsevents_watcher",
+    srcs = ["fsevents_watcher.cc"],
+    hdrs = ["fsevents_watcher.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    linkopts = ["-framework CoreServices"],
+    target_compatible_with = ["@platforms//os:macos"],
+    visibility = ["//ferret:__subpackages__"],
+    deps = [
+        ":batcher",
+        ":canonical_root",
+        ":cookie_directory",
+        ":validate_options",
+        ":watch_trace",
+        ":watcher_interface",
+        "@abseil-cpp//absl/base:core_headers",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/synchronization",
+        "@abseil-cpp//absl/time",
+    ],
+)
+
+cc_library(
+    name = "watcher",
+    srcs = ["watcher.cc"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:__subpackages__"],
+    deps = [
+        ":watcher_interface",
+        ":polling_watcher",
+        "@abseil-cpp//absl/status:statusor",
+    ] + select({
+        "@platforms//os:macos": [":fsevents_watcher"],
+        "//conditions:default": [],
+    }),
+)
+
+cc_library(
+    name = "fake_watcher",
+    testonly = True,
+    srcs = ["fake_watcher.cc"],
+    hdrs = ["fake_watcher.h"],
+    copts = FERRET_DEFAULT_COPTS,
+    visibility = ["//ferret:__subpackages__"],
+    deps = [
+        ":batcher",
+        ":canonical_root",
+        ":validate_options",
+        ":watcher_interface",
+        "@abseil-cpp//absl/base:core_headers",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:statusor",
+        "@abseil-cpp//absl/synchronization",
+        "@abseil-cpp//absl/time",
+    ],
+)
+
+cc_test(
+    name = "event_batcher_test",
+    size = "small",
+    srcs = ["internal/event_batcher_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":batcher",
+        ":watcher_interface",
+        "@abseil-cpp//absl/time",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_test(
+    name = "fake_watcher_test",
+    size = "small",
+    srcs = ["fake_watcher_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":fake_watcher",
+        ":watcher_interface",
+        "//ferret/testing:temp_dir",
+        "@abseil-cpp//absl/time",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_library(
+    name = "watcher_conformance_test_lib",
+    testonly = True,
+    srcs = ["watcher_conformance_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    # Compiled in the sandbox so layering_check sees only declared headers.
+    alwayslink = True,
+    deps = [
+        ":polling_watcher",
+        ":watcher_interface",
+        ":watcher",
+        "//ferret/testing:temp_dir",
+        "@abseil-cpp//absl/base:core_headers",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/synchronization",
+        "@abseil-cpp//absl/time",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ] + select({
+        "@platforms//os:macos": [":fsevents_watcher"],
+        "//conditions:default": [],
+    }),
+)
+
+cc_test(
+    name = "watcher_conformance_test",
+    size = "medium",
+    # FSEvents is not reliably delivered across the Bazel macOS sandbox
+    # boundary. Only linking and running happen outside the sandbox.
+    tags = ["no-sandbox"],
+    deps = [":watcher_conformance_test_lib"],
+)
+
+cc_test(
+    name = "polling_watcher_test",
+    size = "small",
+    srcs = ["polling_watcher_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    deps = [
+        ":polling_watcher",
+        ":watcher_interface",
+        "//ferret/testing:status_matchers",
+        "//ferret/testing:temp_dir",
+        "@abseil-cpp//absl/cleanup",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_matchers",
+        "@abseil-cpp//absl/strings",
+        "@abseil-cpp//absl/time",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_library(
+    name = "fsevents_watcher_test_lib",
+    testonly = True,
+    srcs = ["fsevents_watcher_test.cc"],
+    copts = FERRET_TEST_COPTS,
+    target_compatible_with = ["@platforms//os:macos"],
+    # Compiled in the sandbox so layering_check sees only declared headers.
+    alwayslink = True,
+    deps = [
+        ":fsevents_watcher",
+        ":watcher_interface",
+        "//ferret/testing:status_matchers",
+        "//ferret/testing:temp_dir",
+        "@abseil-cpp//absl/base:core_headers",
+        "@abseil-cpp//absl/cleanup",
+        "@abseil-cpp//absl/status",
+        "@abseil-cpp//absl/status:status_matchers",
+        "@abseil-cpp//absl/synchronization",
+        "@abseil-cpp//absl/time",
+        "@googletest//:gtest",
+        "@googletest//:gtest_main",
+    ],
+)
+
+cc_test(
+    name = "fsevents_watcher_test",
+    size = "medium",
+    # FSEvents is not reliably delivered across the Bazel macOS sandbox
+    # boundary. Only linking and running happen outside the sandbox.
+    tags = ["no-sandbox"],
+    target_compatible_with = ["@platforms//os:macos"],
+    deps = [":fsevents_watcher_test_lib"],
+)
+
+cc_binary(
+    name = "fsevents_flush_experiment",
+    testonly = True,
+    srcs = ["fsevents_flush_experiment.cc"],
+    copts = FERRET_DEFAULT_COPTS,
+    linkopts = ["-framework CoreServices"],
+    deps = [
+        "@abseil-cpp//absl/base:core_headers",
+        "@abseil-cpp//absl/synchronization",
+    ],
+    tags = ["benchmark"],
+    target_compatible_with = ["@platforms//os:macos"],
+)
